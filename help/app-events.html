@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App events</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App events
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App events
+   </h2>
+
+   <p class="mt-3">
+    The app provide to us several events to be used. We can use this events (like any other app view event, app dialog event or app control event) to perform any task that we need. Below are referred all the available and ready to be use app events.
+   </p>
+
+   <div class="row mt-3">
+    <div class="col-md-3">
+     <ul>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#mounted-event" title="More information and details">Mounted event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#domready-event" title="More information and details">DomReady event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#deviceready-event" title="More information and details">DeviceReady event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#created-event" title="More information and details">Created event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#instanced-event" title="More information and details">Instanced event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#colorschemechange-event" title="More information and details">ColorSchemeChange event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebaritemclick-event" title="More information and details">SidebarItemClick event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarheaderclick-event" title="More information and details">SidebarHeaderClick event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#javascripterror-event" title="More information and details">JavascriptError event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#rendererror-event" title="More information and details">RenderError event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#pause-event" title="More information and details">Pause event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#resume-event" title="More information and details">Resume event</a></li>
+     </ul>
+    </div>
+    <div class="col-md-3">
+     <ul>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#resize-event" title="More information and details">Resize event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#message-event" title="More information and details">Message event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#online-event" title="More information and details">Online event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#offline-event" title="More information and details">Offline event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#viewchange-event" title="More information and details">ViewChange event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#orientationchange-event" title="More information and details">OrientationChange event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#backbutton-event" title="More information and details">BackButton event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#batterystatus-event" title="More information and details">BatteryStatus event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#batterylow-event" title="More information and details">BatteryLow event</a></li>
+     </ul>
+    </div>
+	<div class="col-md-3">
+	 <ul>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#batterycritical-event" title="More information and details">BatteryCritical event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#volumeupbutton-event" title="More information and details">VolumeUpButton event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#volumedownbutton-event" title="More information and details">VolumeDownButton event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#swiperight-event" title="More information and details">SwipeRight event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#swipeleft-event" title="More information and details">SwipeLeft event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+     </ul>
+	</div>
+	<div class="col-md-3">
+	 <ul>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#keyup-event" title="More information and details">KeyUp event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#keydown-event" title="More information and details">KeyDown event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+     </ul>
+	</div>
+   </div>
+
+   <h2 class="mt-3">
+    App events
+   </h2>
+
+   <h2 id="mounted-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Mounted event
+   </h2>
+   <p class="mt-3">
+    The app Mounted event is the first one which is fired when the app start. Only the "app" variable is available inside this event, of course with their <a href="app-properties.html" title="Go to this help topic">app properties</a>, <a href="app-methods.html" title="Go to this help topic">app methods</a> and the available <a href="app-user-functions.html" title="Go to this help topic">app user functions</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="domready-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App DomReady event
+   </h2>
+   <p class="mt-3">
+    The app DomReady event is fired when the main first app view DOM (Document Object Model) is ready to be used. For example, you can change the <a href="control-push-button.html#text-variable" title="Go to this help topic">Text property</a> of a <a href="control-push-button.html" title="Go to this help topic">Push button control</a> in a secure way, that is, because the Push button control HTML markup is ready to be use and modified. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="deviceready-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App DeviceReady event
+   </h2>
+   <p class="mt-3">
+    The app DeviceReady event is only fired if our app has been compiled with <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a>, that is, is intended to run in platforms like Android, Apple iOS or Microsoft Windows. When the app DeviceReady event is fired we can access to the Apache Cordova stuff, as well the Apache Cordova plugins that we want to use. In fact, it's mandatory to wait for the app DeviceReady event in order to access to the referred stuff in a secure way, in other words, we can't access to the Apache Cordova stuff from the app <a href="#mounted-event" title="More information and details">Mounted event</a>, just because that stuff has not been properly initialized yet. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="created-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Created event
+   </h2>
+   <p class="mt-3">
+    The app Created event is fired when the app internal component is created. This method is only for advanced users! You commonly will use the app <a href="#mounted-event" title="More information and details">Mounted event</a>, for example, to establish some app global reactive variable ready to use along the app. The app Created event allows us, for example, to prepare some JavaScript object for a component (to be used inside an <a href="control-html.html" title="Go to this help topic">HTML control</a>, for example, placed in some view or dialog) established in the app <a href="#instanced-event" title="More information and details">Instanced event</a>. See below the app <a href="#instanced-event" title="More information and details">Instanced event</a> for more information about this.
+   </p>
+
+   <h2 id="instanced-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Instanced event
+   </h2>
+   <p class="mt-3">
+    The app Instanced event allows to advanced users to use the instance object of the app. You need more or less knowledge about the <a href="https://vuejs.org/" title="Press here for more information and details">Vue framework</a> in order to use this app method appropriately, as well also knowledge of the app JavaScript template (app.js). Inside this app method you can use the "appInstance" JavaScript variable. Using this variable you can configure some aspects of the app, as well, for example, to insert components to be available in all the <a href="app-view.html" title="Go to this help topic">app views</a> and <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>.
+   </p>
+   <div class="text-center alert alert-primary">
+    <i class="fas fa-info-circle"></i>
+    Note that if you want to extend the app with new components, a possible better approach is to create your own <a href="app-plugins.html" title="Go to this help topic">app plugin</a>: an app plugin allows you, for example, to share the plugin among various apps only by adding that plugin available for them.
+   </div>
+   <p>
+    To prepare a custom component in the app Instanced event you can start writing your component in the app Instanced event like below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This is the app Instance event.
+
+// Define our "myCustomButton" component:
+const myCustomButton = {
+  props: {
+    text: String,
+    title: String,
+    clickHandler: Function
+  },
+  data() {
+    return {
+	  // This is not 100% required, but, allows us to use
+	  // the app variable inside our component template.
+      app: this.$root
+    }
+  },
+  template: `<button :title="title" @click="clickHandler">{{text}} {{app.name}}</button>`
+};
+
+// Use the "appInstance" variable to add your component.
+appInstance.component('my-custom-button', myCustomButton);
+</textarea>
+
+<p class="mt-3">
+ After your write your component definition in the app Instanced event you can use the <a href="app-view.html#created-event" title="Go to this help topic">app view Created event</a>, the <a href="app-dialog.html#created-event" title="Go to this help topic">app dialog Created event</a> or even the <a href="#created-event" title="Go to this help topic">app Created event</a>, to prepare a Javascript object which instantiantes your component: if you use the <a href="#created-event" title="Go to this help topic">app Created event</a> then that component will be available to use in all app views and dialogs, and, if you use the <a href="app-view.html#created-event" title="Go to this help topic">app view Created event</a> or the <a href="app-dialog.html#created-event" title="Go to this help topic">app dialog Created event</a>, then the component will be only available for that app view or app dialog. You can write in one of the Created events a Javascript object like below:
+</p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This can be placed in an app view Created event,
+// an app dialog event or the app Created event.
+
+// Here "this.myCustomButton" refers to a JavaScript
+// object of the app view, app dialog or the app itself,
+// depending what Created event you are using.
+
+this.myCustomButton = {
+  text: 'My custom button!',
+  title: 'My custom button!',
+  clickHandler(event) {
+    let
+      self = this,
+	  // Accesing internal methods of the app variable (see app.js) is
+	  // completely optional and depends on your component needs.
+      view = app._getCurrentView(),
+      views = app._getLoadedViews(),
+      frames = app._getLoadedFrames(),
+      dialogs = app._getLoadedDialogs();
+    self.event = event;
+
+    alert('Hello from my custom button!');
+  }
+};
+</textarea>
+
+<p class="mt-3">
+ Once you prepare the above stuff, you will be capable to use the "myCustomButton" component in your app view, app dialog or in all of them if you use the app Created event. To use the component you can place the right HTML markup in the HTML property of an <a href="control-html.html" title="Go to this help topic">HTML control</a>, for example, just like below:
+</p>
+
+<textarea class="code-editor" data-mode="htmlmixed">
+
+<!-- This HTML markup can be placed in an HTML control, for example -->
+
+<div class="text-center">
+ <my-custom-button v-bind="app.myCustomButton"></my-custom-button>
+</div>
+</textarea>
+
+   <div class="mt-3 text-center alert alert-primary">
+    <i class="fas fa-info-circle"></i>
+    There is a Instanced sample app included with the installation of the product, so you can take a look at it to see the above working!
+   </div>
+
+   <h2 id="colorschemechange-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ColorSchemeChange event
+   </h2>
+   <p class="mt-3">
+    The app ColorSchemeChange event is fired when the system color scheme is changed, so you can, for example, change the app's theme, according to the used color scheme. To find what color scheme is configured you can use the <a href="app-methods.html#getappcolorscheme-method" title="More information and details">getAppColorScheme() app method</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+   <p class="mt-3">
+    Note that you can change the app theme, but also the <a href="app-properties.html#themecolor-property" title="More information and details">app ThemeColor property</a> using the <a href="app-methods.html#setappthemecolor-method" title="Go to this help topic">app.setAppThemeColor() method</a>.
+   </p>
+
+   <h2 id="sidebaritemclick-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SidebarItemClick event
+   </h2>
+   <p class="mt-3">
+    The app SidebarItemClick event is fired when the user click on an item or subitem of the optional app sidebar. Here in this event you have at your disposition the <a href="app-properties.html#sidebaritem-property" title="More information and details">Sidebar.Item</a>, <a href="app-properties.html#sidebaritemindex-property" title="More information and details">Sidebar.Item.Index</a> and the <a href="app-properties.html#sidebaritemsubindex-property" title="More information and details">Sidebar.Item.Subindex</a> app properties.
+   </p>
+
+   <h2 id="sidebarheaderclick-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SidebarHeaderClick event
+   </h2>
+   <p class="mt-3">
+    The app SidebarHeaderClick event is fired when the user click on the header of the optional app sidebar. Take a look at the <a href="app-options.html#sidebar-options" title="Go to this help topic">app sidebar options</a> for more information.
+   </p>
+
+   <h2 id="javascripterror-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App JavascriptError event
+   </h2>
+   <p class="mt-3">
+    The app JavascriptError event is fired when a JavaScript error occurs. If so, in this event the app <a href="app-properties.html#error-property" title="More information and details">Error property</a> is filled with the below properties:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">app.error.message</td>
+       <td class="text-secondary">String</td>
+       <td>
+        An error message that must describe the JavaScript error.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app.error.url</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The URL of the script that causes the JavaScript error.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app.error.lineNumber</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The line number of the script that causes the JavaScript error.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 id="rendererror-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App RenderError event
+   </h2>
+   <p class="mt-3">
+    The app RenderError event is fired for uncaught errors propagating from within the application. Here in this event you have at your disposition the app <a href="app-properties.html#error-property" title="More information and details">Error property</a> which is a JavaScript object with the below properties:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">app.error.error</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The error itself.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app.error.instance</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        The component instance that triggered the error.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app.error.info</td>
+       <td class="text-secondary">String</td>
+       <td>
+        An information string specifying the error source type.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 id="pause-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Pause event
+   </h2>
+   <div class="mt-3">
+    <p>
+     The app Pause event is only fired if our app has been compiled with <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a>, that is, is intended to run in platforms like Android, Apple iOS or Microsoft Windows. This event is fired when the app become to the platform "background mode" from the platform "foreground mode". In other words, this event is fired when the app user go to another possible device app or anyway put our app in the background.
+    </p>
+    <p>
+     We are talking here about the platforms app cycle. Once an app is launched by the user, that app become the foreground app. When the user go to another app or just put the foreground app into the background, the operating system is responsible to maintain this app running or to gracefully close it, to save precious device resources.
+    </p>
+    <p>
+     The app Pause event is the right place to, for example, save certain app states, for example in the app local storage, in order to recover that saved app state when the app starts again or when the app <a href="" title="">Resume event</a> is fired. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+    </p>
+   </div>
+
+   <h2 id="resume-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Resume event
+   </h2>
+   <div class="mt-3">
+    <p>
+     The app Resume event is only fired if our app has been compiled with <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a>, that is, is intended to run in platforms like Android, Apple iOS or Microsoft Windows. This event is fired when the app become to the platform "foreground mode" from the platform "background mode". In other words, this event is fired when the app user back to your app (which has been started before) from another possible device app or anyway put our app in the foreground.
+    </p>
+    <p>
+     Before the app Resume event is fired, the app <a href="#pause-event" title="More information and details">Pause event</a> has been already fired in the past. The app Resume event is the right place, for example, to recover a previously saved app state, when the <a href="#pause-event" title="More information and details">Pause event</a> was fired. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+    </p>
+   </div>
+
+   <h2 id="resize-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Resize event
+   </h2>
+   <p class="mt-3">
+    The app Resize event is fired when the screen has been resized, for example, because the user resizes the browser window. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="message-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Message event
+   </h2>
+   <p class="mt-3">
+    The app Message event is fired when the app window receive a message from other browsing context, for example, from an IFrame control. The "app.event" variable stores a "data" property, which contains the message send from the other browsing context. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app Message event
+
+window.alert('The app receive this message from the IFrame: ' + app.event.data);
+</textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a IFrame2 sample app included with the installation of DecSoft App Builder. Take a look to see this app event in action!
+   </div>
+
+   <h2 id="online-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Online event
+   </h2>
+   <p class="mt-3">
+    The app Online event is fired when the app goes online, and the device becomes connected to the Internet. This app event requires the <a href="apache-cordova.html#networkinformation-plugin" title="More information and details">Apache Cordova Network information</a> plugin was included in the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="offline-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Offline event
+   </h2>
+   <p class="mt-3">
+    The app Offline event is fired when the app goes offline, and the device is not connected to the Internet. This app event requires the <a href="apache-cordova.html#networkinformation-plugin" title="More information and details">Apache Cordova Network information</a> plugin was included in the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="viewchange-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ViewChange event
+   </h2>
+   <div class="mt-3">
+    <p>
+     The app ViewChange event is fired when the app are going to change to another app view, because the user navigates to another app view URL, or because you go to another app view by using the <a href="app-methods.html#showview-method" title="More information and details">showView() method</a>, for example.
+    </p>
+    <p>
+     It's possible to prevent the app view change if you return "false" in this app event. You can know the app view that is going to be show by using the <a href="app-properties.html#event-nextViewName-property" title="Go to this help topic">app.event.nextViewName property</a>, and, you can know the app view which is going to be leaved by using the <a href="app-properties.html#event-prevViewName-property" title="Go to this help topic">app.event.prevViewName property</a>.
+    </p>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app ViewChange event
+
+if (!views.view1.switch1.value) {
+  alert(
+    'The app going from the view ' +
+    app.event.prevViewName +
+    ' to the view ' +
+    app.event.nextViewName +
+    ' but the change is not allowed'
+  );
+
+  // Disallow the app view change
+  return false;
+}
+</textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a ViewChange sample app included with the installation of DecSoft App Builder. Take a look to see this app event in action!
+   </div>
+
+   <h2 id="orientationchange-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App OrientationChange event
+   </h2>
+   <p class="mt-3">
+    The app OrientationChange event is fired when the screen orientation changes. This app event requires the <a href="apache-cordova.html#screenorientation-plugin" title="More information and details">Apache Screen Orientation</a> plugin was included in the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="backbutton-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App BackButton event
+   </h2>
+   <p class="mt-3">
+    The app BackButton event is fired when the user presses the device's back button (Android and Windows only). <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="batterystatus-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App BatteryStatus event
+   </h2>
+   <p class="mt-3">
+    The app BatteryStatus event is fired when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. This event requires the <a href="apache-cordova.html#batterystatus-plugin" title="Go to this help topic">Apache Cordova Battery Status</a> to be included in the app. Inside this event you can use the referred plugin <a href="apache-cordova.html#app.cordova.battery.level" title="More information and details">app.cordova.battery.level</a> and <a href="apache-cordova.html#app.cordova.battery.isPlugged" title="More information and details">app.cordova.battery.isPlugged</a> variables.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app BatteryStatus event
+
+alert(
+  'Battery level STATUS event: ' +
+  app.cordova.battery.level +
+  ' - Device is plugged: ' +
+  app.cordova.battery.isPlugged
+);
+</textarea>
+
+   <h2 id="batterylow-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App BatteryLow event
+   </h2>
+   <p class="mt-3">
+    The app BatteryLow event is fired when the battery charge percentage reaches the low charge threshold. This threshold value is device-specific. This event requires the <a href="apache-cordova.html#batterystatus-plugin" title="Go to this help topic">Apache Cordova Battery Status</a> to be included in the app. Inside this event you can use the referred plugin <a href="apache-cordova.html#app.cordova.battery.level" title="More information and details">app.cordova.battery.level</a> and <a href="apache-cordova.html#app.cordova.battery.isPlugged" title="More information and details">app.cordova.battery.isPlugged</a> variables.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app BatteryStatus event
+
+alert(
+  'Battery level LOW event: ' +
+  app.cordova.battery.level +
+  ' - Device is plugged: ' +
+  app.cordova.battery.isPlugged
+);
+</textarea>
+
+   <h2 id="batterycritical-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App BatteryCritical event
+   </h2>
+   <p class="mt-3">
+    The app BatteryCritical event is fired when the battery charge percentage reaches the critical charge threshold. This threshold value is device-specific. This event requires the <a href="apache-cordova.html#batterystatus-plugin" title="Go to this help topic">Apache Cordova Battery Status</a> to be included in the app. Inside this event you can use the referred plugin <a href="apache-cordova.html#app.cordova.battery.level" title="More information and details">app.cordova.battery.level</a> and <a href="apache-cordova.html#app.cordova.battery.isPlugged" title="More information and details">app.cordova.battery.isPlugged</a> variables.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app BatteryStatus event
+
+alert(
+  'Battery level CRITICAL event: ' +
+  app.cordova.battery.level +
+  ' - Device is plugged: ' +
+  app.cordova.battery.isPlugged
+);
+</textarea>
+
+   <h2 id="volumeupbutton-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App VolumeUpButton event
+   </h2>
+   <p class="mt-3">
+    The app VolumeUpButton event is fired when the user press the device's volume up button (Android only). <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="volumedownbutton-event" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App VolumDownpButton event
+   </h2>
+   <p class="mt-3">
+    The app VolumeDownButton event is fired when the user press the device's volume down button (Android only). <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="keyup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App KeyUp event
+   </h3>
+   <p class="mt-3">
+    The app KeyUp event is fired when the user release up a key in the keyboard while the app has the focus. You can find information about what key has been pressed, for example, using the Event variable which is available also in this control event. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="keydown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    app KeyDown event
+   </h3>
+   <p class="mt-3">
+    The app KeyDown event is fired when the user press a key while the app has the focus. You can find information about what key has been pressed, for example, using the Event variable which is available also in this control event. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swiperight-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeRight event
+   </h3>
+   <p class="mt-3">
+    The SwipeRight event handler is fired when the user made the swipe right gesture with the mouse (browsers) or with the finger (devices). <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swipeleft-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeLeft event
+   </h3>
+   <p class="mt-3">
+    The SwipeLeft event handler is fired when the user made the swipe left gesture with the mouse (browsers) or with the finger (devices). <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the app, which occur when the user click with the right mouse button into the app. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="events-variables" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App events variables
+   </h2>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred App events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all app events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the app object. This is a shortcut to the "app" variable, and it's available since we are talking about specific app events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <div class="alert alert-primary text-center mt-5">
+    Note that the app <a class="alert-link" href="#mounted-event" title="More information and details">Mounted event</a>, which is the first one to be fired when the app start, don't provide the above referred variables, except the "app" variable, with their <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>, and, additionally, the available <a href="app-user-functions.html" title="Go to this help topic">app user functions</a>.
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

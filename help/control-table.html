@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Table</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Table</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Table description
+   </h2>
+   <p class="mt-3">
+    The Table control allows to show an arbitrary array of objects in an HTML table that you can customize in several ways. The key of this control is their <a href="#data-variable" title="More information and details">Data property</a>, which can be set to an arbitrary array of objects. That objects are then show to the user thanks to the <a href="#rows-variable" title="More information and details">Rows property</a> and the <a href="#header-variable" title="More information and details">Header property</a>.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Table sample app included with the installation of DecSoft App Builder. Take a look to see this control in action!
+   </div>
+
+   <h2 class="pt-4" id="style-options">
+    Table CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     This control has a default style, and, some control JavaScript properties (see below), can also changes the control style, not to mention the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the control.
+    </p>
+    <p>
+     In addition to that style, you can also set custom CSS rules for the control by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>. If this is not enough, you can include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    </p>
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the control, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    Table at designtime
+   </h2>
+   <p class="mt-3">
+    The Table control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Table at runtime
+   </h2>
+   <p class="mt-3">
+    The Table control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#event-variable" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#data-variable" title="More information and details">Data property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#record-variable" title="More information and details">Record property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#header-variable" title="More information and details">Header property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rows-variable" title="More information and details">Rows property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#bordered-variable" title="More information and details">Bordered property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#borderless-variable" title="More information and details">Borderless property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#headerstyle-variable" title="More information and details">HeaderStyle property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#headersticked-variable" title="More information and details">HeaderSticked property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#tablestyle-variable" title="More information and details">TableStyle property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hover-variable" title="More information and details">Hover property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#responsive-variable" title="More information and details">Responsive property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#responsivebreak-variable" title="More information and details">ResponsiveBreak property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#small-variable" title="More information and details">Small property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#striped-variable" title="More information and details">Striped property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#title-variable" title="More information and details">Title property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hidden-variable" title="More information and details">Hidden property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Table events
+   </h2>
+   <p class="mt-3">
+    The Table control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#rowclick-event" title="More information and details">RowClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#rowdblclick-event" title="More information and details">RowDblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseenter-event" title="More information and details">MouseEnter event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseleave-event" title="More information and details">MouseLeave event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Table designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Table Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Table Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Table Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Table Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Table Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Table runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Table control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "table1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="event-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Event property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Event control property stores the "event" variable received in all the control events. This variable can contain the target (HTML element of the control) that fire the event and more useful stuff.
+   </p>
+
+   <h3 id="data-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Data property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. Array of objects variable.</span>
+     The Data control property is the key of the control, and, can stores any arbitrary array of objects, which are then show in the HTML table following the Html markup established in the <a href="#header-variable" title="More information and details">Header property</a> and the <a href="#rows-variable" title="More information and details">Rows property</a>.
+    </p>
+    <p>
+     Any changes in the Data property are automatically reflected in the Table control, so it's more or less easy to fill this variable with what we wanted to show in the final HTML table. Filter this variable, means filter what is show the HTML table.
+    </p>
+    <p>
+     The objects in the Data property are completely arbitrary, that is, can contain any number and types of object properties.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    Below you can see a sample of Data property
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be placed in an app view Show event, for example
+
+views.view1.table1.data = [
+
+  {name: 'Peter', sport: 'Tennis', phone: 8798261},
+  {name: 'Danny', sport: 'Futbol', phone: 5673436},
+  {name: 'David', sport: 'Basket', phone: 3729642},
+  {name: 'Samuel', sport: 'Golf', phone: 9382791},
+  {name: 'Marcos', sport: 'Cars', phone: 2716391},
+
+];
+</textarea>
+
+   <p class="mt-3">
+    Since the objects are completely arbitraries, you must fill the <a href="#header-variable" title="More information and details">Header property</a> and the <a href="#rows-variable" title="More information and details">Rows property</a> accordingly (see below).
+   </p>
+
+   <h3 id="header-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Header property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. String variable.</span>
+     The Header control property allows to set an optional HTML table header, according with the data that you use in the <a href="#data-variable" title="More information and details">Data property</a>. For example, the below HTML markup can be provided for the above sample data:
+    </p>
+   </div>
+
+<textarea class="code-editor" data-mode="htmlmixed">
+<th>
+ Name
+</th>
+
+<th>
+ Sport
+</th>
+
+<th>
+ Phone
+</th>
+</textarea>
+
+   <h3 id="record-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Record property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span>
+    The Record control property is available in the control <a href="#rowclick-event" title="More information and details">RowClick event</a>. This variable is filled with the appropriate object associated with the HTML table row that has been clicked by the user.
+   </p>
+
+   <h3 id="rows-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Rows property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. String variable.</span>
+     The Rows control property is similar than the <a href="#header-variable" title="More information and details">Header property</a> and must store the right HTML markup to show an specific HTML table row, based in the value that you set for the <a href="#data-variable" title="More information and details">Data property</a>.
+    </p>
+    <p>
+     The Rows property is similar also to the <a href="control-html.html#html-variable" title="Go to this help topic">Html property</a> of the <a href="control-html.html" title="Go to this help topic">HTML control</a>, that is, we can use HTML markup powered by the Boostrap CSS framework and also the template syntax.
+    </p>
+   </div>
+
+<textarea class="code-editor" data-mode="htmlmixed">
+<td>
+ {{record.name}}
+</td>
+
+<td>
+ {{record.sport}}
+</td>
+
+<td>
+ {{record.phone}}
+</td>
+</textarea>
+
+   <p class="mt-3">
+    Note how the Rows property is prepared. You have at your disposition with the <a href="#record-variable" title="More information and details">Record property</a>. This Record property is set to one of the objects that you previously set in the <a href="#data-variable" title="More information and details">Data property</a>. Here you can see that the "record" variable can contain any arbitrary property: exactly the properties that of the objects that you set in the <a href="#data-variable" title="More information and details">Data property</a>.
+   </p>
+
+   <h3 id="bordered-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Bordered property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Bordered control property determines if the HTML table and table rows appear bordered or not. This property is set to "true" by default, but you can set to "false" to remove the referred borders.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the table borders
+views.view1.table1.bordered = true;
+
+// Hide the table borders
+views.view1.table1.bordered = false;
+
+// Toggle the table borders
+views.view1.table1.bordered = !views.view1.table1.bordered;
+</textarea>
+
+   <h3 id="borderless-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Borderless property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Borderless control property determines if the HTML table must hide all the borders or not. This property is set to "false" by default, but you can set to "true" to hide all the borders.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Hide all table borders
+views.view1.table1.borderless = true;
+
+// Show table borders
+views.view1.table1.borderless = false;
+
+// Toggle table borders
+views.view1.table1.borderless = !views.view1.table1.borderless;
+</textarea>
+
+   <h3 id="headerstyle-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table HeaderStyle property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The HeaderStyle control property determines the style of the optional table header. This property can be set using the "app.kind.*" constants values. This property is an empty string by default, means no header style is applied.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the header style to dark
+views.view1.table1.headerStyle = app.kind.dark;
+
+// Set the header style to light
+views.view1.table1.headerStyle = app.kind.light;
+
+// Set the header style to primary
+views.view1.table1.headerStyle = app.kind.primary;
+</textarea>
+
+   <h3 id="headersticked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table HeaderSticked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The HeaderSticked control property determines if the table header (if any) must remain sticked. By default this property is "false", but you can set to "true" if you want that the table header remain sticked.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the header sticked
+views.view1.table1.headerSticked = true;
+
+// Set the header non sticked (by default)
+views.view1.table1.headerSticked = false;
+</textarea>
+
+   <h3 id="tablestyle-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table TableStyle property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The TableStyle control determines the style of the HTML table.  This property can be set using the "app.kind.*" constants values. This property is an empty string by default, means no table style is applied.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the table style to dark
+views.view1.table1.tableStyle = app.kind.dark;
+
+// Set the table style to light
+views.view1.table1.tableStyle = app.kind.light;
+
+// Set the table style to primary
+views.view1.table1.tableStyle = app.kind.primary;
+</textarea>
+
+   <h3 id="hover-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Hover property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hover control property determines if the HTML table rows background must change when the user over the mouse on it. This property is set to "true" by default, but you can set to "false" to hide the hover effect.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Made the table hoverable
+views.view1.table1.hover = true;
+
+// Made the table no hoverable
+views.view1.table1.hover = true;
+
+// Made the table hoverable
+views.view1.table1.hover = !views.view1.table1.hover;
+</textarea>
+
+   <h3 id="responsive-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Responsive property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Responsive control property determines if the HTML table must be show in a responsive way. This means, for example, that an horizontal scroll appear if the table cannot be show completely in the scren.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Made the table responsive
+views.view1.table1.responsive = true;
+
+// Made the table no responsive
+views.view1.table1.responsive = true;
+
+// Toggle the table responsive
+views.view1.table1.responsive = !views.view1.table1.responsive;
+</textarea>
+
+   <h3 id="responsivebreak-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table ResponsiveBreak property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The ResponsiveBreak control property determines the break point for the responsive behaviour. To use a responsive break point the <a href="#reponsive-variable" title="More information and details">Responsive property</a> must be set to "true". We can use any of the "app.size.*" constants values, or with an empty string, means the table must be show always responsive, no matter the screen size. This property has an empy string value by default.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the table always responsive
+views.view1.table1.responsiveBreak = '';
+
+// Set the table responsive break point to "sm" (small)
+views.view1.table1.responsiveBreak = app.size.sm;
+
+// Set the table responsive break point to "md" (medium)
+views.view1.table1.responsiveBreak = app.size.md;
+
+// Set the table responsive break point to "lg" (large)
+views.view1.table1.responsiveBreak = app.size.lg;
+
+// Set the table responsive break point to "xl" (extra large)
+views.view1.table1.responsiveBreak = app.size.xl;
+</textarea>
+
+   <h3 id="small-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Small property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Small control property determines if the Table contents text and padding, etc., must be smallest than the regular size. This property is set to "false" by default, but you can set to "true" to change the table to the "small" look.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the table small
+views.view1.table1.small = true;
+
+// Set the table normal
+views.view1.table1.small = false;
+
+// Toggle the table small
+views.view1.table1.small = !views.view1.table1.small;
+</textarea>
+
+   <h3 id="striped-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Striped property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Striped control property determines if the Table rows must appear striped, that is, odd rows with certain background color, and pair rows with another background color, alternatively. This property is "true" by default, but you can set to "false" to hide the striped effect.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the table striped
+views.view1.table1.striped = true;
+
+// Set the table no striped
+views.view1.table1.striped = false;
+
+// Toggle the table striped
+views.view1.table1.striped = !views.view1.table1.striped;
+</textarea>
+
+   <h3 id="title-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Title property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Title control property stores some small but descriptive text, mainly to be used to be show that text when the user place the mouse cursor into the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new title for the control
+views.view1.table1.title = 'My new title';
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Classes control property stores one or more additionals CSS classes (space separated) to be applied to the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the control
+views.view1.table1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="hidden-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Table Hidden property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hidden control property determines if the control appear visible to the user or not. Set to "true" to hide the control, or to "false" to show the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Hide table1
+views.view1.table1.hidden = true;
+
+// Show table1
+views.view1.table1.hidden = false;
+
+// Toggle table1
+views.view1.table1.hidden = !views.view1.table1.hidden;
+</textarea>
+
+   <h2 class="mt-5">
+    Table events
+   </h2>
+
+   <h3 id="rowclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table RowClick event
+   </h3>
+   <p class="mt-3">
+    The RowClick event handler is fired when the user click or tap in one of the HTML table rows. Here in this event you have at your disposition the <a href="#record-variable" title="More information and details">Record property</a>, which stores the object associated with the table row. Remember that this object is arbitrary, depending on the value of the <a href="#data-variable" title="More information and details">Data property</a>. Only the "index" property of the Record property is added with the index (starting by zero) of the row in the HTML table.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the Table control RowClick event
+
+// Show the record row index which has been clicked by the user
+alert(
+  'Pressed row with index: ' + views.view1.table1.record.index
+);
+</textarea>
+
+
+   <h3 id="rowdblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table RowDblClick event
+   </h3>
+   <p class="mt-3">
+    The RowDblClick event handler is fired when the user double click or double tap in one of the HTML table rows. Here in this event you have at your disposition the <a href="#record-variable" title="More information and details">Record property</a>, which stores the object associated with the table row. Remember that this object is arbitrary, depending on the value of the <a href="#data-variable" title="More information and details">Data property</a>. Only the "index" property of the Record property is added with the index (starting by zero) of the row in the HTML table.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the Table control RowDblClick event
+
+// Show the record row index which has been double clicked by the user
+alert(
+  'Double press row with index: ' + views.view1.table1.record.index
+);
+</textarea>
+
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseenter-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table MouseEnter event
+   </h3>
+   <p class="mt-3">
+    The MouseEnter event handler is fired when the user enter the mouse into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseleave-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table MouseLeave event
+   </h3>
+   <p class="mt-3">
+    The MouseLeave event handler is fired when the user leave the mouse from the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the Table control, which occur when the user click with the right mouse button into the Table control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Table events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Table control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all control events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

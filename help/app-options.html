@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App options</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App options
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App options
+   </h2>
+
+   <p class="mt-3">
+    The app options panel allows to set the appropriate options for the app that you are developing. The app options panel is divided by sections to made easy to navigate between these sections using the menu that is placed at the left of the app options panel.
+   </p>
+
+   <div class="row mt-4">
+    <div class="col-md-6">
+     <strong>App options</strong>
+     <ul class="mt-2">
+      <li><a href="#interface-options" title="More information and details">Interface</a></li>
+      <li><a href="#information-options" title="More information and details">Information</a></li>
+      <li><a href="#sidebar-options" title="More information and details">Sidebar</a></li>
+      <li><a href="#metatags-options" title="More information and details">Metatags</a></li>
+      <li><a href="#appplugins-options" title="More information and details">App plugins</a></li>
+      <li><a href="#style-options" title="More information and details">Custom Style</a></li>
+      <li><a href="#buildprograms-options" title="More information and details">Build programs</a></li>
+      <li><a href="#webapp-options" title="More information and details">WebApp</a></li>
+      <li><a href="#webextension-options" title="More information and details">WebExtension</a></li>
+     </ul>
+    </div>
+    <div class="col-md-6">
+     <strong>Apache Cordova options</strong>
+     <ul class="mt-2">
+      <li><a href="#cordovageneral-options" title="More information and details">General</a></li>
+      <li><a href="#cordovaconfiguration-options" title="More information and details">Configuration</a></li>
+      <li><a href="#cordovatoolspaths-options" title="More information and details">Tools paths</a></li>
+      <li><a href="#cordovasplashscreens-options" title="More information and details">Splash screens</a></li>
+      <li><a href="#cordovaandroid-options" title="More information and details">Android platform</a></li>
+      <li><a href="#cordovaios-options" title="More information and details">Apple iOS platform</a></li>
+      <li><a href="#cordovaelectron-options" title="More information and details">Electron platform</a></li>
+     </ul>
+    </div>
+   </div>
+
+   <h2 class="pt-5" id="interface-options">
+    Apps options - Interface
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app Interface options window. After the image you can get information about all the app options in the Interface section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/interface.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="icon-variable">
+    Apps options - Interface - App icon
+   </h2>
+
+   <p class="mt-3">
+    Use the app icon editbox folder button to select the icon to be used in the app. It's recommended to use a 1024x1024 pixeles image here. DecSoft App Builder creates several <a href="apache-cordova.html#platformicons-integration" title="Go to this help topic">icons for Apache Cordova</a> based in the icon image that you provide here.
+   </p>
+
+   <h2 class="pt-5" id="themes-variable">
+    Apps options - Interface - App themes - Included
+   </h2>
+
+   <p class="mt-3">
+    Select one or more app themes from the themes included list in order to be available for the app. At runtime, you can find the available themes in the app <a href="app-properties.html#themes-property" title="Go to this help topic">Themes property</a>, and, also change between app themes by using the app <a href="app-methods.html#setapptheme-method" title="Go to this help topic">setAppTheme() method</a>.
+   </p>
+
+   <h2 class="pt-5" id="theme-variable">
+    Apps options - Interface - App themes - Default
+   </h2>
+
+   <p class="mt-3">
+    Select one app theme from the themes default list in order to be established as the theme when the app start. At runtime, you can find the current theme in the app <a href="app-properties.html#theme-property" title="Go to this help topic">Theme property</a>, and also the available themes in the app <a href="app-properties.html#themes-property" title="Go to this help topic">Themes property</a>, and, also change between app themes by using the app <a href="app-methods.html#setapptheme-method" title="Go to this help topic">setAppTheme() method</a>.
+   </p>
+
+   <h2 class="pt-5" id="themecolor-variable">
+    Apps options - Interface - App theme color
+   </h2>
+
+   <p class="mt-3">
+    Select one app theme color from the list in order to be established as the theme color when the app start. At runtime, you can find the current app theme color using the <a href="app-methods.html#getappthemecolor-method" title="Go to this help topic">getAppThemeColor() app method</a> and you can also change it using the <a href="app-methods.html#setappthemecolor-method" title="Go to this help topic">setAppThemeColor() app method</a>.
+   </p>
+
+   <h2 class="pt-5" id="width-variable">
+    Apps options - Interface - App Width
+   </h2>
+
+   <p class="mt-3">
+    With the app width what you establish in the app options are the app designer size for all the <a href="app-view.html" title="Go to this help topic">app views</a> and <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. The app designer size is related with the <a href="app-styles.html" title="Go to this help topic">app "fixed" and "scaled" styles</a> and the <a href="#scale-variable" title="More information and details">Autosize the app size option</a>. Use the listbox below the width and height editboxes in order to set a predefined size for the app, or just fill the width and height editboxes with your desired values.
+   </p>
+
+   <h2 class="pt-5" id="height-variable">
+    Apps options - Interface - App Height
+   </h2>
+
+   <p class="mt-3">
+    With the app height what you establish in the app options are the app designer size for all the <a href="app-view.html" title="Go to this help topic">app views</a> and <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. The app designer size is related with the <a href="app-styles.html" title="Go to this help topic">app "fixed" and "scaled" styles</a> and the <a href="#scale-variable" title="More information and details">Autosize the app size option</a>. Use the listbox below the width and height editboxes in order to set a predefined size for the app, or just fill the width and height editboxes with your desired values.
+   </p>
+
+   <h2 class="pt-5" id="textdirection-variable">
+    Apps options - Interface - App Text direction
+   </h2>
+
+   <p class="mt-3">
+    You can establish here the text direction for the app, which can be "left to right" (by default) or "right to left". You can use the app <a href="app-properties.html#textdirection-property" title="Go to this help topic">TextDirection property</a> to know the current app text direction, and, it's also possible to change the app text direction at runtime by using the <a href="app-methods.html#setapptextdirection-method" title="Go to this help topic">appSetTextDirection() method</a>.
+   </p>
+
+   <h2 class="pt-5" id="scale-variable">
+    Apps options - Interface - App screen - Autoscale app size
+   </h2>
+
+   <p class="mt-3">
+    The Autoscale app size option (which is checked / used by default) establish the app "scaled" style when the app start. Uncheck this checkbox if you want to establish the "fixed" style for the app. You can change between the "fixed" and the "scaled" styles at runtime, by using the app <a href="app-methods.html#setappfixedstyle-method" title="Go to this help topic">setAppFixedStyle() method</a> and the app <a href="app-methods.html#setappscaledstyle-method" title="Go to this help topic">setAppScaledStyle() method</a>. Take a look also at the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>.
+   </p>
+
+   <h2 class="pt-5" id="maxwidth-variable">
+    Apps options - Interface - App screen - MaxWidth
+   </h2>
+
+   <p class="mt-3">
+    The app MaxWidth option is taken in consideration if the <a href="#scale-variable" title="More information and details">Autoscale app size option</a> is checked. This option limit the app scale width, as you can see described in the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>.
+   </p>
+
+   <h2 class="pt-5" id="maxheight-variable">
+    Apps options - Interface - App screen - MaxHeight
+   </h2>
+
+   <p class="mt-3">
+    The app MaxHeight option is taken in consideration if the <a href="#scale-variable" title="More information and details">Autoscale app size option</a> is checked. This option limit the app scale height, as you can see described in the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>.
+   </p>
+
+   <h2 class="pt-5" id="information-options">
+    Apps options - Information
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app Information options window. After the image you can get information about all the app options in the Information section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/information.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="id-variable">
+    Apps options - Information - App ID
+   </h2>
+
+   <p class="mt-3">
+    The app ID option establish the ID for the app, which is used in certain platforms like Android, for example, to maintain the app well updated. The app ID is suposed to be unique per every app. You can access to the app ID at runtime by using the app <a href="app-properties.html#id-property" title="Go to this help topic">ID property</a>.
+   </p>
+
+   <h2 class="pt-5" id="language-variable">
+    Apps options - Information - App Language
+   </h2>
+
+   <p class="mt-3">
+    The app Language option establish the language code for the app (by default "en" for "English"), which is used to establish the app HTML "lang" attribute, but, also internally when <a href="app-languages.html" title="Go to this help topic">translate the apps</a>. You can access to the app Language at runtime by using the app <a href="app-properties.html#language-property" title="Go to this help topic">Language property</a>.
+   </p>
+
+   <h2 class="pt-5" id="languagename-variable">
+    Apps options - Information - App LanguageName
+   </h2>
+
+   <p class="mt-3">
+    The app Language name option establish the language name for the app (by default "English"). You can access to the app Language at runtime by using the app <a href="app-properties.html#languagename-property" title="Go to this help topic">LanguageName property</a>.
+   </p>
+
+   <h2 class="pt-5" id="version-variable">
+    Apps options - Information - App Version
+   </h2>
+
+   <p class="mt-3">
+    The app Version option establish the version for the app. You can access to the app version at runtime by using the app <a href="app-properties.html#version-property" title="Go to this help topic">Version property</a>.
+   </p>
+
+   <h2 class="pt-5" id="appname-variable">
+    Apps options - Information - App Name
+   </h2>
+
+   <p class="mt-3">
+    The app Name option establish the name for the app, which is used, for example, to set the browsers title, but also when our app is listed, or below the app icon, in other platforms. You can access to the app name at runtime by using the app <a href="app-properties.html#name-property" title="Go to this help topic">Name property</a>.
+   </p>
+
+   <h2 class="pt-5" id="shortname-variable">
+    Apps options - Information - App ShortName
+   </h2>
+
+   <p class="mt-3">
+    The app ShortName option establish a short name for the app, which is used, for example, in the Android platform, when, due to space limitations, is more convenient to use a short version of the app name. You can access to the app name at runtime by using the app <a href="app-properties.html#shortname-property" title="Go to this help topic">ShortName property</a>.
+   </p>
+
+   <h2 class="pt-5" id="buildnumber-variable">
+    Apps options - Information - App BuildNumber
+   </h2>
+
+   <p class="mt-3">
+    The app BuildNumber option set a build number for the app compilation. You can check the Autoincrement checkbox in order to auto increment the build number on every app compilation. You can access to the app name at runtime by using the app <a href="app-properties.html#buildnumber-property" title="Go to this help topic">BuildNumber property</a>.
+   </p>
+
+   <h2 class="pt-5" id="description-variable">
+    Apps options - Information - App Description
+   </h2>
+
+   <p class="mt-3">
+    The app Description option set a line of text with an small description of the app. This description is used, for example, in the app <a href="#metatags-options" title="More information and details">HTML metatags</a>. You can access to the app name at runtime by using the app <a href="app-properties.html#description-property" title="Go to this help topic">Description property</a>.
+   </p>
+
+   <h2 class="pt-5" id="authorname-variable">
+    Apps options - Information - App Author Name
+   </h2>
+
+   <p class="mt-3">
+    The app Author Name option is used, for example, to be placed in the appropriate <a href="#metatags-options" title="More information and details">HTML metatag</a>. You can access to the app name at runtime by using the app <a href="app-properties.html#authorname-property" title="Go to this help topic">AuthorName property</a>.
+   </p>
+
+   <h2 class="pt-5" id="authoremail-variable">
+    Apps options - Information - App Author Email
+   </h2>
+
+   <p class="mt-3">
+    The app Author Email option is used, for example, to be placed in the appropriate <a href="#metatags-options" title="More information and details">HTML metatag</a>. You can access to the app name at runtime by using the app <a href="app-properties.html#authoremail-property" title="Go to this help topic">AuthorEmail property</a>.
+   </p>
+
+   <h2 class="pt-5" id="authorurl-variable">
+    Apps options - Information - App Author URL
+   </h2>
+
+   <p class="mt-3">
+    The app Author URL option is used, for example, to be placed in the appropriate <a href="#metatags-options" title="More information and details">HTML metatag</a>. You can access to the app name at runtime by using the app <a href="app-properties.html#authorurl-property" title="Go to this help topic">AuthorUrl property</a>.
+   </p>
+
+   <h2 class="pt-5" id="sidebar-options">
+    Apps options - Sidebar
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app Sidebar options window. After the image you can get information about all the app options in the Sidebar section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/sidebar.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="sidebarheader-variable">
+    Apps options - Sidebar Header
+   </h2>
+
+   <p class="mt-3">
+    Set this option to a litle text to be show at the header of the optional app sidebar. The app sidebar is optional, and so the sidebar header. You can access to the app sidebar header at runtime by using the app <a href="app-properties.html#sidebarheader-property" title="Go to this help topic">app.sidebar.header property</a>.
+   </p>
+
+   <h2 class="pt-5" id="sidebarimageurl-variable">
+    Apps options - Sidebar image URL
+   </h2>
+
+   <p class="mt-3">
+    Set this option to an image URL to be show at the header of the optional app sidebar. The app sidebar is optional, and so the image URL. You can access to the app sidebar image URL at runtime by using the app <a href="app-properties.html#sidebarimageurl-property" title="Go to this help topic">app.sidebar.imageUrl property</a>.
+   </p>
+
+   <h2 class="pt-5" id="sidebarheaderkind-variable">
+    Apps options - Sidebar Header kind
+   </h2>
+
+   <p class="mt-3">
+    Set this option to the kind (color) to be used in the header of the optional app sidebar. The app sidebar is optional, and so the header kind. You can access to the app sidebar header kind at runtime by using the app <a href="app-properties.html#sidebarheaderkind-property" title="Go to this help topic">app.sidebar.headerKind property</a>.
+   </p>
+
+   <h2 class="pt-5" id="sidebarheaderalign-variable">
+    Apps options - Sidebar Header Align
+   </h2>
+
+   <p class="mt-3">
+    Set this option to the align ("left", "center", "right") to be used in the header of the optional app sidebar. The app sidebar is optional, and so the header align. You can access to the app sidebar header kind at runtime by using the app <a href="app-properties.html#sidebarheaderalign-property" title="Go to this help topic">app.sidebar.headerAlign property</a>.
+   </p>
+
+   <h2 class="pt-5" id="sidebaritems-variable">
+    Apps options - Sidebar Items
+   </h2>
+
+   <p class="mt-3">
+    Use the "Edit" buttons to establish the app sidebar items and subitems at designtime by using the <a href="dialog-sidebar-items.html" title="Go to this help topic">sidebar items dialog</a>. You can access to the app sidebar items and subitems at runtime by using the app <a href="app-properties.html#sidebaritems-property" title="Go to this help topic">app.sidebar.items property</a>.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Sidebar sample app included with the installation of DecSoft App Builder. Take a look to see the above dialog in action!
+   </div>
+
+   <h2 class="pt-5" id="metatags-options">
+    Apps options - Metatags
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app Metatags options window. After the image you can get information about all the app options in the Metatags section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/metatags.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="appplugins-options">
+    Apps options - App plugins
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app plugins options window. After the image you can get information about all the app options in the Metatags section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/appplugins.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5">
+    Apps options - App plugins - Information
+   </h2>
+
+   <p class="mt-3">
+    From the app plugins options you can see the list of available app plugins, and, also check the plugins, in order to be included in the app. Sometimes you no need to check an app plugin, for example, if the plugin has controls, and, you add some of that controls into the app, then the plugin become automatically checked and available to be used.
+   </p>
+   <p>
+    If an app plugin do not have any controls (but provide other stuff, like app methods), you explicitily need to check the plugin in the above options, in order to put it available to be used at designtime and at runtime.
+   </p>
+   <p>
+    The available plugins are also integrated in the IDE help, as you can see in the <a href="index.html" title="Go to the help index of contents">index of contents</a>. However, this specific plugins help are only available in the IDE and not in the online version of the help.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    If you are interested in develop an app plugin for DecSoft App Builder, you are welcome! <a href="app-plugins.html" title="Go to this help topic">Here is the documentation</a> that you must learn and follow.
+   </div>
+
+   <h2 class="pt-5">
+    Apps options - Metatags - Metadata
+   </h2>
+
+   <p class="mt-3">
+    Check the checkbox (it's checked by default) to include the app <a href="#authorname-variable" title="More information and details">author information</a> and the <a href="#description-variable" title="More information and details">app description</a> using the appropriate app HTML metatags.
+   </p>
+
+   <h2 class="pt-5">
+    Apps options - Metatags - Custom metadata
+   </h2>
+
+   <p class="mt-3">
+    You can use the Custom metadata app option to add more HTML metatags to be included in the app HTML.
+   </p>
+
+   <h2 class="pt-5" id="style-variable">
+    Apps options - Custom Style
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app Custom Style options window. After the image you can get information about all the app options in the Custom Style section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/customstyle.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="style-options">
+    Apps options - Custom Style - CSS style
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     In addition to the CSS stylesheets that you can include in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a> and the custom style that you can set by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>, it's also possible to use the app custom style option to place some CSS code to be applied in the entire app.
+    </p>
+    <p>
+     You can set the custom CSS style for the app using the above app option editbox, but, there is another way from the app designer, by using the right click contextual menu, as you can see in the below GIF image:
+    </p>
+   </div>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid mt-5">
+   <div class="text-center">
+    <img src="../shared/images/gifs/app-custom-style.gif" class="img-fluid" alt="">
+   </div>
+  </div>
+
+  <div class="container">
+
+   <h2 class="pt-5" id="buildprograms-options">
+    Apps options - Build programs
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the app Build programs options window. After the image you can get information about all the app options in the Build programs section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/build.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="build-variable">
+    Apps options - Build programs - Before and after build
+   </h2>
+
+   <p class="mt-3">
+    You can use the Build programs app options to establish executable programs (or BAT, or CMD files) to be executed before and after the app has been successfully compiled. Use the arguments listboxes to pick some arguments (like the app project file path or the app output directory path) to be send to the referred executable programs.
+   </p>
+
+   <h2 class="pt-5" id="webapp-options">
+    Apps options - WebApp
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the WebApp options window. After the image you can get information about all the app options in the WebApp section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/webapp.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="webapp-variable">
+    Apps options - WebApp - WebApps and Progressive WebApps
+   </h2>
+
+   <p class="mt-3">
+    You can use the WebApp options to create the appropriate stuff (some manifest files, for example) to made your app ready to be installed in modern browsers and devices, without downloading first from any app store.
+   </p>
+   <p>
+    Commonly the browsers vendors detect the app manifest and offers to the user a way to install the app, basically place an app icon in the device home screen. Then, when the app is launch from that icon, the options that you can establish here are applied.
+   </p>
+   <p>
+    Note that we are not talking here about the hybrid apps that we can also creates with DecSoft App Builder and the help of <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a>. A WebApp is running in a browser and is served from certain HTTP server. When the user use the app icon, the appropriate app URL is loaded.
+   </p>
+   <p>
+    Hybrid apps, however, can be really downloaded and installed from the different app stores, or just from your own website, and can access to the device information and capabilities too, like if they are native apps.
+   </p>
+   <p>
+    To prepare your app to be available as a WebApp and Progressive WebApp just check the "Create manifest" checkboxes, and set the WebApp and Progressive WebApp options as you wanted. Then when the app is compiled, DecSoft App Builder creates the right manifest files to be used.
+   </p>
+
+   <h2 class="pt-5" id="webextension-options">
+    Apps options - WebExtension
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the WebExtension options window. After the image you can get information about all the app options in the WebExtension section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/webextension.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="howwebextensionworks">
+    Apps options - WebExtension - WebExtension
+   </h2>
+
+   <p class="mt-3">
+    You can check the "Create a manifest file" so DecSoft App Builder creates the appropriate app manifest which allows the app to be installed in modern browsers as a plug-in or add-on, that is, as a WebExtension. The installed WebExtension app can then be show by the user clicking in the provided browser toolbar icon.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+ 	It's important to note, that, with the introduction of the Web Extensions manifest version 3, the DecSoft App Builder apps deployed as Web Extensions, must run inside a kind of sandbox. This means that our apps, running as Web Extensions, cannot access the browser's local storage nor interact with the browser's page's content. 
+   </div>
+
+   <h2 class="pt-5" id="cordovageneral-options">
+    Apache Cordova options - General
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - General options window. After the image you can get information about all the app options in the Apache Cordova - General section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-general.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="cordovaconfiggeneral-variable">
+    Apache Cordova options - General - Config file
+   </h2>
+
+   <p class="mt-3">
+    If you want to deploy your app as an hybrid app for platforms like Android, Apple iOS and Microsoft Window, then check the "Create a Cordova config file" checkbox. Doing that, DecSoft App Builder prepare the appropriate stuff (configuration file, icons, splash screens and more) to made it possible.
+   </p>
+
+   <h2 class="pt-5" id="cordovabatch-variable">
+    Apache Cordova options - General - Batch & Shell
+   </h2>
+
+   <p class="mt-3">
+    You can check as many platforms as you wanted here, so DecSoft App Builder creates the right Batch and Shell files in order to properly compile the app with <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a>. You can then execute these Batch files in Microsoft Windows, and, in the same way, execute the prepared Shell files in Apple Mac OS.
+   </p>
+   <p>
+    Note that Shell files are only prepared for the iOS and Electron platforms, since these platforms are the supported ones in Apple Mac OS. Please, read the <a href="apache-cordova.html#batchfiles-integration" title="Go to this help topic">Apache Cordova help topic</a> for more information and details about these Batch and Shell files.
+   </p>
+
+   <h2 class="pt-5" id="cordovaplugins-variable">
+    Apache Cordova options - General - plugins
+   </h2>
+
+   <p class="mt-3">
+    Check as many plugins as you wanted to be included in the app when compile it with <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a>. These plugins are the Apache Cordova officially supported plugins.
+   </p>
+   <p>
+    When you check a Cordova plugin here, DecSoft App Builder prepares the right plugin JavaScript variables and methods to be ready for use, and, include the Cordova plugin to be installed when compile the app. For example, take a look at the below GIF image: you can see how when the Cordova File plugin is checked, the IDE code editor show the appropriate variables and methods that the plugin provides to you. See here the <a href="apache-cordova.html#javascript-integration" title="Go to this help topic">Apache Cordova Javascrit APIs integration</a>.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    Take a look at the <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova help topic</a> in order to learn more about the integration of DecSoft App Builder with Apache Cordova.
+   </div>
+
+   <h2 class="pt-5" id="shellfiles-variable">
+    Apache Cordova options - General - Shell files
+   </h2>
+
+   <p class="mt-3">
+    Select from the Shell files group if DecSoft App Builder must use the NL (New Line) character or the CR (Carriage Return) character when creates the <a href="apache-cordova.html#shellfiles-integration" title="Go to this help topic">Shell files for Apple Mac OS</a>. By default the NL (New Line) character is used, but, you can change it to CR (Carriage Return) if needed.
+   </p>
+
+   <h2 class="pt-5" id="cordovacustomplugins-variable">
+    Apache Cordova options - General - Custom plugins
+   </h2>
+
+   <p class="mt-3">
+    In addition to the <a href="#cordovaplugins-variable" title="More information and details">Apache Cordova plugins which are supported "out of the box"</a>, you can use the the Custom plugins editbox to specify other Apache Cordova plugin to be used in the app. Just add one plugin ID per line in the referred editbox and that plugin will be referred in Apache Cordova configuration file and the created <a href="#cordovabatch-variable" title="More information and details">Batch and Shell files</a>.
+   </p>
+
+   <h2 class="pt-5" id="cordovaconfiguration-options">
+    Apache Cordova options - Configuration
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - Configuration options window. After the image you can get information about all the app options in the Apache Cordova - Configuration section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-configuration.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="cordovaconfigscreen-variable">
+    Apache Cordova options - Configuration - Screen
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     Check the <strong>"Run at full screen"</strong> checkbox if you want that your app run in a full screen manner, without any statusbar, for example. Run the app in full screen mode can be atractive, however, it's not the regular way in which the app run, so take careful and use this feature if your app really need to work in a full screen mode, like if you are developing certain game, for example.
+    </p>
+    <p>
+     Check the <strong>"Disallow over scroll"</strong> if you don't want the interface to display any feedback when users scroll past the beginning or end of content. On iOS, overscroll gestures cause content to bounce back to its original position. on Android, they produce a more subtle glowing effect along the top or bottom edge of the content.
+    </p>
+    <p>
+     Select from the listbox the default device orientation. You can change it at runtime by using the <a href="apache-cordova.html#screenorientation-plugin" title="Go to this help topic">Apache Cordova Screen Orientation plugin</a>.
+    </p>
+   </div>
+
+   <h2 class="pt-5" id="cordovaconfigstatusbar-variable">
+    Apache Cordova options - Configuration - Statusbar
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     Check the <strong>"Overlay WebView at startup"</strong> checkbox  to make the statusbar overlay on top of your app. Ensure that you adjust your styling accordingly so that your app's title bar or content is not covered. Uncheck the checkbox to make the statusbar solid and not overlay your app.
+    </p>
+    <p>
+     Select one of the available statusbar styles from the listbox, and, finally the default statusbar background color to be used. You can change the color and perform several other actions over thee statusbar by using the <a href="apache-cordova.html#statusbar-plugin" title="Go to this help topic">Apache Cordova Statusbar plugin</a>.
+    </p>
+   </div>
+
+   <h2 class="pt-5" id="extraxml-variable">
+    Apache Cordova options - Configuration - Extra XML config
+   </h2>
+
+   <p class="mt-3">
+    If you need to add some XML configuration into the Apache Cordova configuration file, here is the place. Some Apache Cordova plugins can require specific configuration which can be set in the Apache Cordova configuration file. Always that you need to add some XML code into the Apache Cordova configuration file, use the above Extra XML configuration editbox.
+   <p>
+
+   <h2 class="pt-5" id="cordovatoolspaths-options">
+    Apache Cordova options - Tools Paths
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - Tools Paths options window. After the image you can get information about all the app options in the Apache Cordova - Tools Paths section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-tools.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="cordovastoolpaths-variable">
+    Apache Cordova options - Tools Paths
+   </h2>
+
+   <p class="mt-3">
+    In principle, you can ommit these options, that is, only if you need to specify special paths for the Java home, the Ant home and the Android home, you can use the above editboxes to do it.
+   </p>
+
+   <h2 class="pt-5" id="cordovasplashscreens-options">
+    Apache Cordova options - Splash screens
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - Splash screens options window. After the image you can get information about all the app options in the Apache Cordova - Splash screens section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-splash.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="cordovasplash-variable">
+    Apache Cordova options - Splash screens - Splash screens
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     DecSoft App Builder creates several <a href="apache-cordova.html#platformicons-integration" title="Go to this help topic">icons for Apache Cordova</a> as well several <a href="apache-cordova.html#splashscreens-integration" title="Go to this help topic">splash screens for Apache Cordova</a>. Here you can set splash screens specific options, for example, you can set the <strong>duration</strong>, in milliseconds, that the splash screen is visible when your app starts. By default the splash screen appear during 3000 ms (three seconds). You can set the duration to "0" (zero) in order to avoid the splash screen usage.
+    </p>
+    <p>
+     Pick also the splash screen <strong>Spinner color</strong>. Check the <strong>Fading in and out...</strong> checkbox to apply a fade effect to the splash screen when it's show and hide. Check the <strong>Show the native spinner...</strong> checkbox to show the splash screen spinner: remember that you can set the color of that spinner too.
+    </p>
+	<p>
+	 Determine the splash screen pixels width and height and the splash screen background color. These specific options are only effective for the Apache Cordova "Browser" and "Electron" platforms.
+	</p>
+    <p>
+     Last, but not least, choose an image file to be used as your app splash screen. A 1024x1024 image size can be good here, then DecSoft App Builder creates several <a href="apache-cordova.html#splashscreens-integration" title="Go to this help topic">splash screens for Apache Cordova</a> based in your provided image. Note that, if you did not provide an image here, the app icon is used for the app splash screen. Choose also a dark splash screen to be used for Android and iOS when the dark mode is used: if you did not provide a dark splash screen image, DecSoft App Builder uses the normal splash screen image instead.
+    </p>
+   </div>
+
+   <h2 class="pt-5" id="cordovaandroid-options">
+    Apache Cordova options - Android platform
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - Android platform options window. After the image you can get information about all the app options in the Apache Cordova - Android platform section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-android.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-3" id="keeprunning-variable">
+    Apache Cordova options - Android platform - Keep running
+   </h2>
+   <p class="mt-3">
+    The <strong>"Keep running"</strong> option checkbox determines whether the application stays running in the background even after an app <a href="app-events.html#pause-event" title="Go to this help topic">Pause event</a> fires. Uncheking this checkbox does not kill the app after an app <a href="app-events.html#pause-event" title="Go to this help topic">Pause event</a>, but simply halts execution of code within the Cordova webview while the app is in the background.
+   </p>
+
+   <h2 class="pt-5" id="showtitle-variable">
+    Apache Cordova options - Android platform - Show title
+   </h2>
+   <p class="mt-3">
+    The <strong>"Show title"</strong> option checkbox determines if the app title must appear at the top of the screen. This is "false" (unchecked) by default.
+   </p>
+
+   <h2 class="pt-5" id="versioncode-variable">
+    Apache Cordova options - Android platform - Version code
+   </h2>
+   <p class="mt-3">
+    Sets the version code for the application. This version code must be increased when everytime the app is uploaded to the Play Store.
+   </p>
+
+   <h2 class="pt-5" id="androidappid-variable">
+    Apache Cordova options - Android platform - App ID
+   </h2>
+   <p class="mt-3">
+    Set here a specific app ID for Android. This value overrides the general <a href="#id-variable" title="More information and details">app ID</a>. If this value is not set the general app ID is used.
+   </p>
+
+   <h2 class="pt-5" id="androidcordovaversion-variable">
+    Apache Cordova options - Android platform - Cordova version
+   </h2>
+   <p class="mt-3">
+    You can specify here the version of Cordova Android that you want to use. You can set this option to a specific version, but also you can set this option with the "latest" word (without quotes), which means that you want to use the latest version of Cordova Android.
+   </p>
+
+   <h2 class="pt-5" id="maintainsplashratio-variable">
+    Apache Cordova options - Android platform - Splash screen
+   </h2>
+   <p class="mt-3">
+    If set check the Splash screen "Maintain aspect ratio" checkbox, the splash screen drawable is not stretched to fit screen, but instead simply "covers" the screen, like CSS "background-size:cover". This is very useful when splash screen images cannot be distorted in any way, for example when they contain scenery or text. This setting works best with images that have large margins (safe areas) that can be safely cropped on screens with different aspect ratios. Take a look at the <a href="#cordovasplashscreens-options" title="More information and details">Splash screens options</a>.
+   </p>
+
+   <h2 class="pt-5" id="minandroidsdk-variable">
+    Apache Cordova options - Android platform - Min Android SDK
+   </h2>
+   <p class="mt-3">
+    Choose from the listbox the minimum Android SDK API to be used for your app. This option sets the "minSdkVersion" attribute of the "uses-sdk" tag in the project's "AndroidManifest.xml" file.
+   </p>
+
+   <h2 class="pt-5" id="targetandroidsdk-variable">
+    Apache Cordova options - Android platform - Target SDK
+   </h2>
+   <p class="mt-3">
+    Choose from the listbox the target Android SDK API to be used for your app. This option sets the "targetSdkVersion" attribute of the "uses-sdk" tag in the project's "AndroidManifest.xml" file.
+   </p>
+
+   <h2 class="pt-5" id="androidsigning-variable">
+    Apache Cordova options - Android platform - Signing
+   </h2>
+   <p class="mt-3">
+    Use the debug and release Signing groupboxes to provide the required stuff in order to properly sign your app APK file. This is mandatory if you want to deploy your APK in the Google Store and probably other stores. When you compile the app, the signing information was stored in the right <a href="apache-cordova.html#jsonfiles-integration" title="Go to this help topic">JSON files</a>, which is later used by <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a> when compile the app.
+   </p>
+   <p>
+    You can create Key Store files to signing your apps using the DecSoft App Builder provided <a href="dialog-keystore-file.html" title="Go to this help topic">Key Store tool</a>.
+   </p>
+
+   <h2 class="pt-5" id="adaptativeicons-variable">
+    Apache Cordova options - Android platform - Adaptative icons
+   </h2>
+   <p class="mt-3">
+    In addition to the <a href="#icon-variable" title="More information and details">app icon that you can provide</a>, you can specify here additional icons for the Android platform. These optional adaptative icons are intended to be used in the supported Android versions (Android 9+) and are just ignored in versions who don't support these kind of icons. DecSoft App Builder generates the right <a href="apache-cordova.html#platformicons-integration" title="Go to this help topic">platform icons</a> based in your provided adaptative icons.
+   </p>
+
+   <h2 class="pt-5" id="cordovaios-options">
+    Apache Cordova options - Apple iOS platform
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - Apple iOS platform options window. After the image you can get information about all the app options in the Apache Cordova - Apple iOS platform section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-ios.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="cordovaios-variable">
+    Apache Cordova options - Apple IOS Platform
+   </h2>
+   <p class="mt-3">
+    Specify the "Bundle version" for the Apple iOS platform, as well the "Deployment target" and the "Target device". You can provide here an app ID specifically to be used in the Apple iOS platform. This app ID overrites the general <a href="#id-variable" title="More information and details">app ID</a>.
+   </p>
+   <p>
+    Set the "Signing" groupboxes controls in order to provide the information to sign your IPA files. When you compile the app, the signing information was stored in the right <a href="apache-cordova.html#jsonfiles-integration" title="Go to this help topic">JSON files</a>, which is later used by <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a> when compile the app.
+   </p>
+   <p>
+    Check the "Use the modern WKWebView" checkbox (checked by default) in order to use the modern WKWebView for our iOS apps. You can uncheck this option in order to use the old WebView for iOS, but, take in consideration, that, currently the Apple Store only accept apps compiled with the modern WKWebView.
+   </p>
+   <p>
+    In the Cordova version edit box you can specify the version of Cordova iOS that you want to use. You can set this option to a specific version, but also you can set this option with the "latest" word (without quotes), which means that you want to use the latest version of Cordova iOS.
+   </p>
+
+   <h2 class="pt-5" id="cordovaelectron-options">
+    Apache Cordova options - Electron platform
+   </h2>
+
+   <p class="mt-3">
+    Below you can see the Apache Cordova - Electron platform options window. After the image you can get information about all the app options in the Apache Cordova - Electron platform section.
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/app-options/cordova-electron.png" class="img-fluid" alt="">
+   </div>
+
+   <h2 class="pt-5" id="cordovaelectron-variable">
+    Apache Cordova options - Electron platform
+   </h2>
+   <p class="mt-3">
+    The Apache Cordova Electron platform is quite interesting, since allows to deploy the app in the Microsoft Windows and Mac OS platforms. You can use the <a href="#cordovawindows-variable" title="More information and details">Apache Cordova Windows platform</a> to deploy your apps in the Universal Windows platform, but with the Apache Cordova Electron platform, what you get are executable files of your app, ready to be deployed in the regular Microsoft Windows platform.
+   </p>
+   <p>
+    Use the "Settings" editbox to place the JSON settings for the Electron platform. There are lot of posible options to be used, as you can see by clicking the "Electron's Docs" link. Then you can use the "Signing" groupboxes to sets the information in order to sign your apps for both Microsoft Windows and Apple Mac OS platforms. When you compile the app, the signing information was stored in the right <a href="apache-cordova.html#jsonfiles-integration" title="Go to this help topic">JSON files</a>, which is later used by <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova</a> when compile the app.
+   </p>
+   <p>
+    By default NodeJS modules are not integrated in your Electron's app. If you set to "true" the "nodeIntegration" setting, then you can use the "window.nodeRequire" variable instead of "require", in order to deal with the Node JS modules:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+var electronApp = window.nodeRequire('electron').remote.app;
+alert(electronApp.getAppPath());
+</textarea>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

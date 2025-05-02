@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Color input</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Color input</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Color input description
+   </h2>
+   <p class="mt-3">
+    The Color input control allows to get an HTML color picked by the user. There are other specific input controls like the <a href="control-email-input.html" title="Go to this help topic">Email input</a>, <a href="control-phone-input.html" title="Go to this help topic">Phone input</a>, <a href="control-number-input.html" title="Go to this help topic">Number input</a>, etc. The different browsers and platforms allows the user to choose a color when press into this control, by using a color picker dialog, for example.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    Remember the importance to validate all the user input, not only in the client side (that is, in the same app), but also in the server side, if we send that user input to the app server. The rule is not to trust in the user input, and validate all the input to assert that we have the expected possible values.
+   </div>
+
+   <h2 class="pt-4" id="style-options">
+    Color input CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     This control has a default style, and, some control JavaScript properties (see below), can also changes the control style, not to mention the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the control.
+    </p>
+    <p>
+     In addition to that style, you can also set custom CSS rules for the control by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>. If this is not enough, you can include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    </p>
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the control, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    Color input at designtime
+   </h2>
+   <p class="mt-3">
+    The Color input control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Color input at runtime
+   </h2>
+   <p class="mt-3">
+    The Color input control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#event-variable" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#value-variable" title="More information and details">Value property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#placeholder-variable" title="More information and details">Placeholder property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#readonly-variable" title="More information and details">Readonly property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#title-variable" title="More information and details">Title property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hidden-variable" title="More information and details">Hidden property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#disabled-variable" title="More information and details">Disabled property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#size-variable" title="More information and details">Size property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#tabindex-variable" title="More information and details">TabIndex property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Color input events
+   </h2>
+   <p class="mt-3">
+    The Color input control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#input-event" title="More information and details">Input event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#change-event" title="More information and details">Change event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#focus-event" title="More information and details">Focus event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#blur-event" title="More information and details">Blur event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#copy-event" title="More information and details">Copy event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#cut-event" title="More information and details">Cut event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#paste-event" title="More information and details">Paste event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#keyup-event" title="More information and details">KeyUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#keydown-event" title="More information and details">KeyDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseenter-event" title="More information and details">MouseEnter event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseleave-event" title="More information and details">MouseLeave event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Color input designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Color input Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Color input Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Color input Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Color input Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Color input Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Color input runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Color input control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "input1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="event-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Event property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Event control property stores the "event" variable received in all the control events. This variable can contain the target (HTML element of the control) that fire the event and more useful stuff.
+   </p>
+
+   <h3 id="title-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Title property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Title control property stores some small but descriptive text, mainly to be used to be show that text when the user place the mouse cursor into the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new title for the control
+views.view1.input1.title = 'My new title';
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Classes control property stores one or more additionals CSS classes (space separated) to be applied to the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the control
+views.view1.input1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="hidden-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Hidden property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hidden control property determines if the control appear visible to the user or not. Set to "true" to hide the control, or to "false" to show the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Hide input1
+views.view1.input1.hidden = true;
+
+// Show input1
+views.view1.input1.hidden = false;
+
+// Toggle input1
+views.view1.input1.hidden = !views.view1.input1.hidden;
+</textarea>
+
+   <h3 id="disabled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Disabled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Disabled control property determines if the control appear disabled to the user or not. Set to "true" to disable the control, or to "false" to enable the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Disable input1
+views.view1.input1.disabled = true;
+
+// Enable input1
+views.view1.input1.disabled = false;
+</textarea>
+
+   <h3 id="value-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Value property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Value control property stores an HTML color string, like #ffffff (white), #000000 (black), etc., because has been picked by the user, or because is the designtime established value.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new value for input1
+views.view1.input1.value = 'My new value is here!';
+</textarea>
+
+   <h3 id="placeholder-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Placeholder property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Placeholder control property stores the text that appear in the control if no value is set. This can be considered like a tip for the user about what is expected to be in the input control value.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a placeholder for input1
+views.view1.input1.placeholder = 'Type here your name';
+</textarea>
+
+   <h3 id="readonly-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Readonly property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Readonly control property determine if the control appear as readonly to the user or not. Set this variable to "true" to set the input control readonly, or set to "false" (by default) to allow the control to receive a new value entered by the user.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the input control readonly
+views.view1.input1.readonly = true;
+</textarea>
+
+   <h3 id="size-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input Size property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Size control property determines the size of the control. By default the Color input have the "sm" (small) size, and, you can use the available app constansts "app.size.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the input size to "md" (medium)
+views.view1.input1.size = app.size.md;
+
+// Set the input size to "lg" (large)
+views.view1.input1.size = app.size.lg;
+</textarea>
+
+   <h3 id="tabindex-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Color input TabIndex property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. Number variable.</span>
+     The TabIndex control property determines how the browser / platform must deal with the control when the user press the TAB key. The default value for this variable is "0" (zero), which means that the control should be focusable in sequential keyboard navigation, but its order is defined by the document's order.
+    </p>
+    <p>
+     You can set this variable to a value of "-1", which means that the element should not be reachable via sequential keyboard navigation, but could be focused with JavaScript or visually. It's mostly useful to create accessible widgets with JavaScript.
+    </p>
+    <p>
+     A positive value for this variable means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, tabindex="4" would be focused before tabindex="5", but after tabindex="3". If multiple elements share the same positive tabindex value, their order relative to each other follows their position in the document source.
+    </p>
+   </div>
+
+   <div class="alert alert-primary text-center mt-3">
+    You can use the <a href="dialog-tabindex-order.html" title="Go to this help topic">TabIndex order dialog</a> to set this variable.
+   </div>
+
+   <h2 class="mt-5">
+    Color input events
+   </h2>
+
+   <h3 id="input-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Input event
+   </h3>
+   <p class="mt-3">
+    The Input event handler is fired when the user changes the value of the input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="change-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Change event
+   </h3>
+   <p class="mt-3">
+    The Change event handler is fired when the user changes the value and then release the focus (changing to another, for example) of the input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="focus-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Focus event
+   </h3>
+   <p class="mt-3">
+    The Focus event handler is fired when the when the Color input control receive the user focus. This event is the partner of the Blur event that you can see below. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="blur-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Blur event
+   </h3>
+   <p class="mt-3">
+    The Blur event handler is fired when the when the Color input control loss the user focus. This event is the partner of the Focus event that you can see above. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="copy-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Copy event
+   </h3>
+   <p class="mt-3">
+    The Color input control Copy event is fired when the user copy the value of the control using the appropriate platform keyboard shortcut or contextual menu, etc. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="cut-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Cut event
+   </h3>
+   <p class="mt-3">
+    The Color input control Cut event is fired when the user cut the value of the control using the appropriate platform keyboard shortcut or contextual menu, etc. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="paste-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Paste event
+   </h3>
+   <p class="mt-3">
+    The Color input control Paste event is fired when the user paste a value into the control using the appropriate platform keyboard shortcut or contextual menu, etc. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="keyup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input KeyUp event
+   </h3>
+   <p class="mt-3">
+    The Color input control KeyUp event is fired when the user release up a key in the keyboard while the control has the focus. You can find information about what key has been pressed, for example, using the Event variable which is available also in this control event. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="keydown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input KeyDown event
+   </h3>
+   <p class="mt-3">
+    The Color input control KeyDown event is fired when the user press a key while the control has the focus. You can find information about what key has been pressed, for example, using the Event variable which is available also in this control event. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseenter-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input MouseEnter event
+   </h3>
+   <p class="mt-3">
+    The MouseEnter event handler is fired when the user enter the mouse into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseleave-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input MouseLeave event
+   </h3>
+   <p class="mt-3">
+    The MouseLeave event handler is fired when the user leave the mouse from the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the Color input control, which occur when the user click with the right mouse button into the Color input control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Color input events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Color input control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all control events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

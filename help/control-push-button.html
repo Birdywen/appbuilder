@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Push button</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Push button</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Push button description
+   </h2>
+   <p class="mt-3">
+    The Push button control mainly expect a click or tap from the user, so we can do whatever thing, like show a specific app view, upload some user input to the app server, etc. A Push button can appear enabled or disabled, can look in various "kind" or styles and finally provide several events ready to be used.
+   </p>
+
+   <h2 class="pt-4" id="style-options">
+    Push button CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     This control has a default style, and, some control JavaScript properties (see below), can also changes the control style, not to mention the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the control.
+    </p>
+    <p>
+     In addition to that style, you can also set custom CSS rules for the control by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>. If this is not enough, you can include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    </p>
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the control, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    Push button at designtime
+   </h2>
+   <p class="mt-3">
+    The Push button control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Push button at runtime
+   </h2>
+   <p class="mt-3">
+    The Push button control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#event-variable" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#title-variable" title="More information and details">Title property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hidden-variable" title="More information and details">Hidden property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#disabled-variable" title="More information and details">Disabled property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#text-variable" title="More information and details">Text property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#kind-variable" title="More information and details">Kind property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#outline-variable" title="More information and details">Outline property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#active-variable" title="More information and details">Active property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#lefticon-variable" title="More information and details">LeftIcon property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#righticon-variable" title="More information and details">RightIcon property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#size-variable" title="More information and details">Size property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#tabindex-variable" title="More information and details">TabIndex property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#leftbadge-variable" title="More information and details">LeftBadge property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#leftbadgekind-variable" title="More information and details">LeftBadgeKind property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#leftbadgepilled-variable" title="More information and details">LeftBadgePilled property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightbadge-variable" title="More information and details">RightBadge property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightbadgekind-variable" title="More information and details">RightBadgeKind property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightbadgepilled-variable" title="More information and details">RightBadgePilled property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Push button events
+   </h2>
+   <p class="mt-3">
+    The Push button control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#focus-event" title="More information and details">Focus event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#blur-event" title="More information and details">Blur event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseenter-event" title="More information and details">MouseEnter event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseleave-event" title="More information and details">MouseLeave event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Push button designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Push button Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Push button Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Push button Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Push button Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Push button Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Push button runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Push button control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "button1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="event-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Event property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Event control property stores the "event" variable received in all the control events. This variable can contain the target (HTML element of the control) that fire the event and more useful stuff.
+   </p>
+
+   <h3 id="title-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Title property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Title control property stores some small but descriptive text, mainly to be used to be show that text when the user place the mouse cursor into the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new title for the control
+views.view1.button1.title = 'My new title';
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Classes control property stores one or more additionals CSS classes (space separated) to be applied to the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the control
+views.view1.button1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="hidden-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Hidden property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hidden control property determines if the control appear visible to the user or not. Set to "true" to hide the control, or to "false" to show the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Hide button1
+views.view1.button1.hidden = true;
+
+// Show button1
+views.view1.button1.hidden = false;
+
+// Toggle button1
+views.view1.button1.hidden = !views.view1.button1.hidden;
+</textarea>
+
+   <h3 id="disabled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Disabled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Disabled control property determines if the control appear disabled to the user or not. Set to "true" to disable the control, or to "false" to enable the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Disable button1
+views.view1.button1.disabled = true;
+
+// Enable button1
+views.view1.button1.disabled = false;
+</textarea>
+
+   <h3 id="text-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Text property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Text control property stores the text that is shown in the control, like "Press me", "Click me", etc. This variable can contain some HTML if required.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new text for button1
+views.view1.button1.text = 'My new text is here!';
+
+// It's also possible to use a bit of HTML
+views.view1.button1.text = 'My new text <strong>is here!</strong>';
+</textarea>
+
+   <h3 id="kind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Kind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Kind control property determine the style, to say like that, of the Push button, shown it "green", "red", etc. You can use one of the available app constants "app.kind.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button kind to "success"
+views.view1.button1.kind = app.kind.success;
+
+// Set the button kind to "danger"
+views.view1.button1.kind = app.kind.danger;
+</textarea>
+
+   <h3 id="outline-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Outline property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Outline control property determines if the style of the button is applied in an outline manner or not. This property works together with the <a href="#kind-variable" title="More information and details">Kind property</a>, apply the kind style, in an outline manner. This property is a boolean "false" value (by default) to do not use the outline style: set this property to "true" in order to apply the outline style.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button outline style
+views.view1.button1.outline = true;
+
+// Set the normal button style
+views.view1.button1.outline = false;
+</textarea>
+
+   <h3 id="active-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Active property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Active control property determines if the button must appear in an activated state. This can be useful, for example, to use the buttons as a kind of toogle button, since we can active or deactive the button. This property is a boolean "false" value (by default) to do not use the active style: set this property to "true" in order to apply the active style.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button active style
+views.view1.button1.active = true;
+
+// Set the normal button style
+views.view1.button1.active = false;
+</textarea>
+
+   <h3 id="lefticon-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button LeftIcon property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The LeftIcon control property allows to establish an optional icon to be show at the left of the Push button text. Remember that you are free to use any of the available icons in the Font Awesome library, which is one of the available libraries in the DecSoft App Builder created apps.
+   </p>
+   <div class="alert alert-primary text-center">
+    An <a href="dialog-icon-picker.html" title="Go to this help topic">icon picker dialog</a> is available to set this variable and also ni the code editor.
+   </div>
+
+   <h3 id="righticon-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button RightIcon property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The RightIcon control property allows to establish an optional icon to be show at the right of the Push button text. Remember that you are free to use any of the available icons in the Font Awesome library, which is one of the available libraries in the DecSoft App Builder created apps.
+   </p>
+   <div class="alert alert-primary text-center">
+    An <a href="dialog-icon-picker.html" title="Go to this help topic">icon picker dialog</a> is available to set this variable and also ni the code editor.
+   </div>
+
+   <h3 id="size-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button Size property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Size control property determines the size of the Push button font. By default the Push button have the "sm" (small) size, and, you can use the available app constansts "app.size.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button size to "md" (medium)
+views.view1.button1.size = app.size.md;
+
+// Set the button size to "lg" (large)
+views.view1.button1.size = app.size.lg;
+</textarea>
+
+   <h3 id="tabindex-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button TabIndex property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. Number variable.</span>
+     The TabIndex control property determines how the browser / platform must deal with the control when the user press the TAB key. The default value for this variable is "0" (zero), which means that the control should be focusable in sequential keyboard navigation, but its order is defined by the document's order.
+    </p>
+    <p>
+     You can set this variable to a value of "-1", which means that the element should not be reachable via sequential keyboard navigation, but could be focused with JavaScript or visually. It's mostly useful to create accessible widgets with JavaScript.
+    </p>
+    <p>
+     A positive value for this variable means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, tabindex="4" would be focused before tabindex="5", but after tabindex="3". If multiple elements share the same positive tabindex value, their order relative to each other follows their position in the document source.
+    </p>
+   </div>
+
+   <div class="alert alert-primary text-center mt-3">
+    You can use the <a href="dialog-tabindex-order.html" title="Go to this help topic">TabIndex order dialog</a> to set this variable.
+   </div>
+
+   <h3 id="leftbadge-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button LeftBadge property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property stores an optional text or number to be show at the left of the control <a href="#text-variable" title="More information and details">Text property</a>.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button left badge to 4 (unread messages, for example)
+views.view1.button1.leftBadge = 4;
+</textarea>
+
+   <h3 id="leftbadgekind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button LeftBadgeKind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The LeftBadgeKind control property determine the style, to say like that, of the optional button left badge, shown it "green", "red", etc. You can use one of the available app constants "app.kind.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the left badge kind to "success"
+views.view1.button1.leftBadgeKind = app.kind.success;
+
+// Set the left badge kind to "danger"
+views.view1.button1.leftBadgeKind = app.kind.danger;
+</textarea>
+
+   <h3 id="leftbadgepilled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button LeftBadgePilled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The LeftBadgePilled property determines if the optional left badge must be show a bit more rounded and with a bit more left and right padding.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the left pilled badge
+views.view1.button1.leftBadgePilled = true;
+
+// Set the left "normal" badge (not pilled)
+views.view1.button1.leftBadgePilled = false;
+</textarea>
+
+   <h3 id="rightbadge-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button RightBadge property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property stores an optional text or number to be show at the right of the control <a href="#text-variable" title="More information and details">Text property</a>.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button right badge to 4 (unread messages, for example)
+views.view1.button1.rightBadge = 4;
+</textarea>
+
+   <h3 id="rightbadgekind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button RightBadgeKind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The RightBadgeKind control property determine the style, to say like that, of the optional button right badge, shown it "green", "red", etc. You can use one of the available app constants "app.kind.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the right badge kind to "success"
+views.view1.button1.rightBadgeKind = app.kind.success;
+
+// Set the right badge kind to "danger"
+views.view1.button1.rightBadgeKind = app.kind.danger;
+</textarea>
+
+   <h3 id="rightbadgepilled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Push button RightBadgePilled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The RightBadgePilled property determines if the optional right badge must be show a bit more rounded and with a bit more left and right padding.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the right pilled badge
+views.view1.button1.rightBadgePilled = true;
+
+// Set the right "normal" badge (not pilled)
+views.view1.button1.rightBadgePilled = false;
+</textarea>
+
+   <h2 class="mt-5">
+    Push button events
+   </h2>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="focus-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button Focus event
+   </h3>
+   <p class="mt-3">
+    The Focus event handler is fired when the when the Push button control receive the user focus. This event is the partner of the Blur event that you can see below. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="blur-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button Blur event
+   </h3>
+   <p class="mt-3">
+    The Blur event handler is fired when the when the Push button control loss the user focus. This event is the partner of the Focus event that you can see above. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseenter-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button MouseEnter event
+   </h3>
+   <p class="mt-3">
+    The MouseEnter event handler is fired when the user enter the mouse into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseleave-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button MouseLeave event
+   </h3>
+   <p class="mt-3">
+    The MouseLeave event handler is fired when the user leave the mouse from the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the Push button control, which occur when the user click with the right mouse button into the Push button control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Push button events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Push button control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all control events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

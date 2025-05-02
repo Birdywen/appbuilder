@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App view</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App view
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App view
+   </h2>
+
+   <p class="mt-3">
+    The DecSoft App Builder apps can have any number of app views. You can show a specific view by using the <a href="app-methods.html#showview-method" title="Go go this help topic">app.showView() method</a> or the <a href="app-methods.html#replaceview-method" title="Go go this help topic">app.replaceView() method</a>.
+   </p>
+   <p>
+    An app view is intended to be the container of one or more app controls, so you can use one view to say welcome to the user, another app view to show the app options, another one to show the app help, etc.
+   </p>
+   <p>
+    To add a new view into the app you can use the provided IDE main toolbar button, IDE main menu element and also the contextual menu (right click) of the <a href="ide-controls-lists.html" title="Go to this help topic">IDE views list</a>, as you can see in the below animated GIF image:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/ide-new-view.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container">
+
+   <h2 class="pt-5" id="style-options">
+    App view CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     In addition to the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the app view, you can also set custom CSS rules for the app view by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>, and, even include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the app view, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    App view properties
+   </h2>
+
+   <p class="mt-3">
+    All the app views provides to you the below properties, ready to be used:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#inanimation-variable" title="More information and details">InAnimation property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#outanimation-variable" title="More information and details">OutAnimation property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#transitionname-variable" title="More information and details">TransitionName property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#transitionmode-variable" title="More information and details">TransitionMode property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App view events
+   </h2>
+
+   <p class="mt-3">
+    All the app views provides to you the below events, ready to be used:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#show-event" title="More information and details">Show event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#hide-event" title="More information and details">Hide event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#created-event" title="More information and details">Created event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#swiperight-event" title="More information and details">SwipeRight event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#swipeleft-event" title="More information and details">SwipeLeft event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#keyup-event" title="More information and details">KeyUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#keydown-event" title="More information and details">KeyDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App view properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app view Name property stores the name of the view as you set it at designtime.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the view1 name
+alert(views.view1.name);
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App view Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app view Classes property stores one or more additionals CSS classes (space separated) to be applied to the app view HTML container.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the app view
+views.view1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="inanimation-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App view InAnimation property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. String variable.</span>
+     The InAnimation property of the app views can be set to one of the available "out of the box" animations, in order to apply certain animation when the app view is show to the user.
+    </p>
+    <p>
+     This property is empty by default, means no animation is performed. You can set this property at both designtime and runtime. In this last case you can set this property with one of the available "app.inAnimation.*" constants values.
+    </p>
+    <p>
+     In addition to the "out of the box" available animations, you can prepare your own custom transitions by using the <a href="#transitionname-variable" title="More information and details">TransitionName property</a> and the <a href="#transitionmode-variable" title="More information and details">TransitionMode property</a> view properties.
+    </p>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the animation "bounceIn" for the app view
+views.view1.inAnimation = app.inAnimation.bounceIn;
+
+// All the available constant values:
+
+app.inAnimation.bounceIn
+app.inAnimation.bounceInDown
+app.inAnimation.bounceInLeft
+app.inAnimation.bounceInRight
+app.inAnimation.bounceInUp
+app.inAnimation.fadeIn
+app.inAnimation.fadeInDown
+app.inAnimation.fadeInDownBig
+app.inAnimation.fadeInLeft
+app.inAnimation.fadeInLeftBig
+app.inAnimation.fadeInRight
+app.inAnimation.fadeInRightBig
+app.inAnimation.fadeInUp
+app.inAnimation.fadeInUpBig
+app.inAnimation.fadeInTopLeft
+app.inAnimation.fadeInTopRight
+app.inAnimation.fadeInBottomLeft
+app.inAnimation.fadeInBottomRight
+app.inAnimation.flipInX
+app.inAnimation.flipInY
+app.inAnimation.lightSpeedIn
+app.inAnimation.lightSpeedInRight
+app.inAnimation.lightSpeedInLeft
+app.inAnimation.rollIn
+app.inAnimation.rotateIn
+app.inAnimation.rotateInDownLeft
+app.inAnimation.rotateInDownRight
+app.inAnimation.rotateInUpLeft
+app.inAnimation.rotateInUpRight
+app.inAnimation.zoomIn
+app.inAnimation.zoomInDown
+app.inAnimation.zoomInLeft
+app.inAnimation.zoomInRight
+app.inAnimation.zoomInUp
+app.inAnimation.bounce
+app.inAnimation.flash
+app.inAnimation.pulse
+app.inAnimation.rubberBand
+app.inAnimation.shake
+app.inAnimation.swing
+app.inAnimation.tada
+app.inAnimation.wobble
+app.inAnimation.jello
+</textarea>
+
+   <h3 id="outanimation-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App view OutAnimation property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. String variable.</span>
+     The OutAnimation property of the app views can be set to one of the available "out of the box" animations, in order to apply certain animation when the app view is hide to show another one to the user.
+    </p>
+    <p>
+     This property is empty by default, means no animation is performed. You can set this property at both designtime and runtime. In this last case you can set this property with one of the available "app.outAnimation.*" constants values.
+    </p>
+    <p>
+     In addition to the "out of the box" available animations, you can prepare your own custom transitions by using the <a href="#transitionname-variable" title="More information and details">TransitionName property</a> and the <a href="#transitionmode-variable" title="More information and details">TransitionMode property</a> view properties.
+    </p>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the animation "bounceOut" for the app view
+views.view1.outAnimation = app.inAnimation.bounceOut;
+
+// All the available constant values:
+
+app.outAnimation.bounceOut
+app.outAnimation.bounceOutDown
+app.outAnimation.bounceOutLeft
+app.outAnimation.bounceOutRight
+app.outAnimation.bounceOutUp
+app.outAnimation.fadeOut
+app.outAnimation.fadeOutDown
+app.outAnimation.fadeOutDownBig
+app.outAnimation.fadeOutLeft
+app.outAnimation.fadeOutLeftBig
+app.outAnimation.fadeOutRight
+app.outAnimation.fadeOutRightBig
+app.outAnimation.fadeOutUp
+app.outAnimation.fadeOutUpBig
+app.outAnimation.fadeOutTopLeft
+app.outAnimation.fadeOutTopRight
+app.outAnimation.fadeOutBottomRight
+app.outAnimation.fadeOutBottomLeft
+app.outAnimation.flipOutX
+app.outAnimation.flipOutY
+app.outAnimation.lightSpeedOut
+app.outAnimation.lightSpeedOutRight
+app.outAnimation.lightSpeedOutLeft
+app.outAnimation.rollOut
+app.outAnimation.rotateOut
+app.outAnimation.rotateOutDownLeft
+app.outAnimation.rotateOutDownRight
+app.outAnimation.rotateOutUpLeft
+app.outAnimation.rotateOutUpRight
+app.outAnimation.slideOutUp
+app.outAnimation.slideOutDown
+app.outAnimation.slideOutLeft
+app.outAnimation.slideOutRight
+app.outAnimation.zoomOut
+app.outAnimation.zoomOutDown
+app.outAnimation.zoomOutLeft
+app.outAnimation.zoomOutRight
+app.outAnimation.zoomOutUp
+app.outAnimation.backOutDown
+app.outAnimation.backOutLeft
+app.outAnimation.backOutRight
+app.outAnimation.backOutUp
+app.outAnimation.bounce
+app.outAnimation.flash
+app.outAnimation.pulse
+app.outAnimation.rubberBand
+app.outAnimation.shake
+app.outAnimation.swing
+app.outAnimation.tada
+app.outAnimation.wobble
+app.outAnimation.jello
+app.outAnimation.hinge
+</textarea>
+
+   <h3 id="transitionname-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App view TransitionName property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    You can use this app view property to set the name of a custom CSS transition to be used, instead of the "out of the box" available animations that you can set by simply use the <a href="#inanimation-variable" title="More information and details">InAnimation property</a> and the <a href="#outanimation-variable" title="More information and details">OutAnimation property</a>.
+   </p>
+   <p>
+    What you must set in the TransitionName app view property is the name of the transition. You can place the CSS rules for thet transition in the app <a href="app-options.html#style-options" title="Go to this help topic">Custom style option</a> or in a CSS stylesheet file that you add from the <a href="app-files-manager.html" title="Go to this help topic">app Files manager</a>.
+   </p>
+   <p>
+    Basically, the transitions are possible by certain CSS classes that are automatically added to the app view in different transition states. There are six classes applied for enter/leave transitions:
+   </p>
+
+   <ul class="list-group mt-4">
+    <li class="list-group-item"><strong>tn-enter</strong>: Starting state for enter. Added before element is inserted, removed one frame after element is inserted.</li>
+    <li class="list-group-item"><strong>tn-enter-active</strong>: Active state for enter. Applied during the entire entering phase. Added before element is inserted, removed when transition/animation finishes. This class can be used to define the duration, delay and easing curve for the entering transition.
+    <li class="list-group-item"><strong>tn-enter-to</strong>: Ending state for enter. Added one frame after element is inserted (at the same time v-enter is removed), removed when transition/animation finishes.
+    <li class="list-group-item"><strong>tn-leave</strong>: Starting state for leave. Added immediately when a leaving transition is triggered, removed after one frame.
+    <li class="list-group-item"><strong>tn-leave-active</strong>: Active state for leave. Applied during the entire leaving phase. Added immediately when leave transition is triggered, removed when the transition/animation finishes. This class can be used to define the duration, delay and easing curve for the leaving transition.
+    <li class="list-group-item"><strong>tn-leave-to</strong>: Ending state for leave. Added one frame after a leaving transition is triggered (at the same time v-leave is removed), removed when the transition/animation finishes.
+   </ul>
+
+   <p class="mt-4">
+    Note that the "tn" prefix that you can see in the above CSS classes, must be the name of the transition, for example, a "fade" transition name must prepare the classes "fade-enter", "fade-enter-active", and so on.
+   </p>
+   <div class="alert alert-warning text-center mt-4">
+    You can learn more about the transitions in <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="More information and details">Mozilla documentation</a>
+   </div>
+   <p>
+    Below you can see the CSS rules for some samples transitions. What you must set in this app view property are "fade", "slideleft" or "slideright", in order to apply the proper transition:
+   </p>
+
+<textarea class="code-editor" data-mode="css">
+
+/* "sideleft" transition */
+
+.slideleft-leave-active,
+.slideleft-enter-active {
+  transition: 2s;
+}
+.slideleft-enter {
+  transform: translate(-100%, 0);
+}
+.slideleft-leave-to {
+  transform: translate(100%, 0);
+}
+
+/* "sideright" transition */
+
+.slideright-leave-active,
+.slideright-enter-active {
+  transition: 1s;
+}
+.slideright-enter {
+  transform: translate(100%, 0);
+}
+.slideright-leave-to {
+  transform: translate(-100%, 0);
+}
+</textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Transitions sample app included with the installation of DecSoft App Builder. Take a look to see the transitions in action!
+   </div>
+
+   <h3 id="transitionmode-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App view TransitionMode property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This app view property is an empty string by default, means the previous app view and the next app view transitions are applied at the same time. This can be enough, however, we can establish the order of the transitions by this app view property.
+   </p>
+   <p>
+    This app property can be set to the below values:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger"></td>
+       <td class="text-secondary">String</td>
+       <td>
+        Set this property to an empty string (by default) to get the previous app view and the next app view transitions applied at the same time.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">in-out</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Firstly perform the previous app view transition, and, when complete, perform the next app view transition.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">out-in</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Firstly perform the next app view transition, and, when complete, perform the previous app view transition.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 class="mt-5">
+    App view events
+   </h2>
+
+   <h3 id="show-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view Show event
+   </h3>
+   <p class="mt-3">
+    The app view Show event handler is fired everytime than the app view is show to the user. At this time all the controls HTML markup (DOM) are ready to be used if needed.
+   </p>
+
+   <h3 id="hide-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view Hide event
+   </h3>
+   <p class="mt-3">
+    The app view Hide event handler is fired everytime than the app view is hidden to the user, for example, when goto another app view.
+   </p>
+
+   <h3 id="created-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view Created event
+   </h3>
+   <p class="mt-3">
+    The app view Created event is fired when the app view internal component is created. <strong>You will be tempted to use this event instead of the app view <a href="#show-event" title="More information and details">Show event</a>, but don't do it!</strong> The app view Created event is intended only for advanced users who want, for example, to prepare some JavaScript object for a component (to be used inside an <a href="control-html.html" title="Go to this help topic">HTML control</a>, for example, placed in the app view) established in the app <a href="app-events.html#instanced-event" title="More information and details">Instanced event</a>. See the app <a href="app-events.html#instanced-event" title="More information and details">Instanced event</a> for more information about this.
+   </p>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view Click event
+   </h3>
+   <p class="mt-3">
+    The app view Click event handler is fired when the user click or tap into the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view DblClick event
+   </h3>
+   <p class="mt-3">
+    The app view DblClick (Double Click) event handler is fired when the user double click or double tap into the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swiperight-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeRight event
+   </h3>
+   <p class="mt-3">
+    The SwipeRight event handler is fired when the user made the swipe right gesture with the mouse (browsers) or with the finger (devices) in the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swipeleft-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeLeft event
+   </h3>
+   <p class="mt-3">
+    The SwipeLeft event handler is fired when the user made the swipe left gesture with the mouse (browsers) or with the finger (devices) in the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view MouseUp event
+   </h3>
+   <p class="mt-3">
+    The app view MouseUp event handler is fired when the user up the mouse into the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view MouseDown event
+   </h3>
+   <p class="mt-3">
+    The app view MouseDown event handler is fired when the user down the mouse into the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view MouseMove event
+   </h3>
+   <p class="mt-3">
+    The app view MouseMove event handler is fired when the user move the mouse into the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App view ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The app view ContextMenu event handler is fired when the browser must shown the context menu of the the app, which occur when the user click with the right mouse button into the app view. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="events-variables" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App events variables
+   </h2>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred App events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all app events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the app object. This is a shortcut to the "view" variable, and it's available since we are talking about specific app view events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

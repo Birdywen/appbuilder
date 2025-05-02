@@ -1,0 +1,3914 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Create modern apps - Apache Cordova integration</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      Apache Cordova integration
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Apache Cordova integration
+   </h2>
+
+   <p class="mt-3">
+    One of the used frameworks integrated with DecSoft App Builder is Apache Cordova. This framework is well integrated in DecSoft App Builder in various ways for your convenience. Continue reading this help topic to see how Apache Cordova is integrated in DecSoft App Builder.
+   </p>
+
+   <div class="mt-3 alert alert-primary text-center">
+    <i class="fa fa-info-circle"></i>
+    It's out of the scope of this help to explain how to install Apache Cordova, for example, to be ready to compile APKs in Microsoft Windows or IPA files in Apple Mac OS. Please, refer to the official <a href="https://cordova.apache.org/docs/en/latest/guide/support/index.html" title="Press here for more information and details" class="alert-link">Apache Cordova supported platforms documentation</a> for more information about how to install Apache Cordova in your system.
+   </div>
+
+   <div class="row">
+    <div class="col-lg-3">
+     <div class="mt-4">
+      <strong>General</strong>
+      <ul class="mt-2">
+       <li><a href="#configfile-integration" title="More information and details">Config file</a></li>
+       <li><a href="#platformicons-integration" title="More information and details">Platforms icons</a></li>
+       <li><a href="#splashscreens-integration" title="More information and details">Splash screens</a></li>
+       <li><a href="#batchfiles-integration" title="More information and details">Batch files</a></li>
+       <li><a href="#shellfiles-integration" title="More information and details">Shell files</a></li>
+       <li><a href="#jsonfiles-integration" title="More information and details">JSON files</a></li>
+       <li><a href="#plugins-integration" title="More information and details">Cordova plugins</a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-lg-2">
+     <div class="mt-4">
+      <strong>Plugins</strong>
+      <ul class="mt-2">
+       <li><a href="#file-plugin" title="More information and details">File</a></li>
+       <li><a href="#media-plugin" title="More information and details">Media</a></li>
+       <li><a href="#device-plugin" title="More information and details">Device</a></li>
+       <li><a href="#dialogs-plugin" title="More information and details">Dialogs</a></li>
+       <li><a href="#vibration-plugin" title="More information and details">Vibration</a></li>
+       <li><a href="#camera-plugin" title="More information and details">Camera</a></li>
+       <li><a href="#inappbrowser-plugin" title="More information and details">InAppBrowser</a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-lg-2">
+     <div class="mt-5">
+      <ul class="mt-5">
+       <li><a href="#screenorientation-plugin" title="More information and details">Screen orientation</a></li>
+       <li><a href="#batterystatus-plugin" title="More information and details">Battery status</a></li>
+       <li><a href="#geolocation-plugin" title="More information and details">Geolocation</a></li>
+       <li><a href="#networkinformation-plugin" title="More information and details">Network information</a></li>
+       <li><a href="#statusbar-plugin" title="More information and details">Statusbar</a></li>
+       <li><a href="#mediacapture-plugin" title="More information and details">Media capture</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+
+   <h2 class="pt-5" id="configfile-integration">
+    Apache Cordova - Config file
+   </h2>
+   <div class="mt-3">
+    <p>
+     DecSoft App Builder creates the right Apache Cordova configuration file for your app, based in <a href="app-options.html#cordovageneral-options" title="Go to this help topic">Apache Cordova related options</a> that you can set. One of these options are the <a href="app-options.html#cordovaconfiguration-options" title="Go to this help topic">Extra XML</a> one, which allows to add optional stuff to the Apache Cordova configuration file.
+    </p>
+   </div>
+
+   <h2 class="pt-5" id="platformicons-integration">
+    Apache Cordova - Platforms icons
+   </h2>
+   <div class="mt-3">
+    <p>
+     When you check the "Create a Cordova config file" from the <a href="app-options.html#cordovageneral-options" title="More information and details">Apache Cordova General app options</a>, the next time that the app is compiled, DecSoft App Builder creates several icons (based in the app icon that you can set in the <a href="app-options.html#interface-options" title="More information and details">app Interface options</a>) for all the supported platforms. These icons are well referred then in the Apache Cordova configuration file, in order to be used by the platforms in which our app was running.
+    </p>
+    <p>
+     You can additionally set <a href="app-options.html#adaptativeicons-variable" title="Go to this help topic">"adaptative icons" for the Android platform</a>. DecSoft App Builder take these icons (if provided) also to generate the appropriate adaptative icons.
+    </p>
+   </div>
+
+   <h2 class="pt-5" id="splashscreens-integration">
+    Apache Cordova - Splash screens
+   </h2>
+
+   <p class="mt-3">
+    When you check the "Create a Cordova config file" from the <a href="app-options.html#cordovageneral-options" title="More information and details">Apache Cordova General app options</a>, the next time that the app is compiled, DecSoft App Builder creates several splash screens (based in the app splash screen that you can set in the <a href="app-options.html#cordovasplashs-options" title="More information and details">app Apache Cordova Splashs options</a>) for all the supported platforms. These splash screens are well referred then in the Apache Cordova configuration file, in order to be used by the platforms in which our app was running.
+   </p>
+
+   <h2 class="pt-5" id="batchfiles-integration">
+    Apache Cordova - Batch files
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     When you check the "Create a Cordova config file" from the <a href="app-options.html#cordovageneral-options" title="More information and details">Apache Cordova General app options</a>, and then check one or more of the Batch & Shell platforms, the next time that the app is compiled, DecSoft App Builder creates the right batch files for Microsoft Windows.
+    </p>
+    <p>
+     DecSoft App Builder creates various batch files per platform. Take a look at the below tables, which refers the batch files to be executed in Microsoft Windows:
+    </p>
+   </div>
+
+   <h3 class="mt-4">
+    Batch files for the Android platform
+   </h3>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-3">
+     <thead class="thead-light">
+      <tr>
+       <th>Batch file</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">cordova_android_debug.bat</td>
+       <td>
+        Execute this file to get a debug APK of the app. This debug release can be then copied to a device in order to debug it.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_android_run.bat</td>
+       <td>
+        Connect an Android device to your computer and then execute this file in order to get a debug release APK of the app launched in your device to be debugged. This is probably the best way to try the apps in the Android platform. If no connected devices are found, the configured emulator is used instead.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_android_release.bat</td>
+       <td>
+        Execute this file to get a release APK of the app. This release can be then copied to a device or deployed in the Play Store or any other Android store.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_android_simulate.bat</td>
+       <td>
+        Execute this file to get a debug the app in the Apache Cordova simulator software.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h3 class="mt-4">
+    Batch files for the Microsoft Windows platform
+   </h3>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-3">
+     <thead class="thead-light">
+      <tr>
+       <th>Batch file</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">cordova_electron_debug.bat</td>
+       <td>
+        Execute this file to get a debug EXE file of the app in order to be debugged.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_electron_release.bat</td>
+       <td>
+        Execute this file to get a release EXE file of the app in order to be deployed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_electron_run.bat</td>
+       <td>
+        Execute this file to get a preview (no build) of the app in order to be debugged.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h3 class="mt-4">
+    Batch files for the Apple iOS platform in Microsoft Windows
+   </h3>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-3">
+     <thead class="thead-light">
+      <tr>
+       <th>Batch file</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">cordova_ios.bat</td>
+       <td>
+        Execute this file to get an XCode project files to be opened and compiled using an Apple Mac OS computer. Unfortunately it's not possible to create IPA files of the app from Microsoft Windows, so this file creates the right XCode project files only.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 class="pt-5" id="shellfiles-integration">
+    Apache Cordova - Shell files
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     When you check the "Create a Cordova config file" from the <a href="app-options.html#cordovageneral-options" title="More information and details">Apache Cordova General app options</a>, and then check one or more of the Batch & Shell platforms, the next time that the app is compiled, DecSoft App Builder creates the right shell files for Apple Mac OS.
+    </p>
+    <p>
+     DecSoft App Builder creates various shell files per platform. Take a look at the below tables, which refers the shell files to be executed in Apple Mac OS:
+    </p>
+   </div>
+
+   <h3 class="mt-4">
+    Shell files for the Apple iOS platform
+   </h3>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-3">
+     <thead class="thead-light">
+      <tr>
+       <th>Shell file</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">cordova_ios_debug.sh</td>
+       <td>
+        Execute this shell file from your Apple Mac OS computer to get an XCode project files ready to be opened, compiled and debugged in some device or emulator.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_ios_release.sh</td>
+       <td>
+        Execute this shell file from your Apple Mac OS computer to get an XCode project files ready to be opened, compiled and archived, to get the app IPA files to be deployed in the Apple Store or in another possible way.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h3 class="mt-4">
+    Shell files for the Apple Mac OS platform
+   </h3>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-3">
+     <thead class="thead-light">
+      <tr>
+       <th>Shell file</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">cordova_electron_debug.sh</td>
+       <td>
+        Execute this shell file from your Apple Mac OS computer to get a debug compilation of the app for the Apple Mac OS platform using Cordova Electron.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_electron_release.sh</td>
+       <td>
+        Execute this shell file from your Apple Mac OS computer to get a release compilation of the app for the Apple Mac OS platform using Cordova Electron.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cordova_electron_run.sh</td>
+       <td>
+        Execute this shell file from your Apple Mac OS computer to get a debug compilation of the app and then launch it using Cordova Electron.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 class="pt-5" id="jsonfiles-integration">
+    Apache Cordova - JSON files
+   </h2>
+
+   <p class="mt-3">
+    DecSoft App Builder generates for you several Apache Cordova related JSON files. For example, when you want to <a href="app-options.html#androidsigning-variable" title="Go to this help topic">sign your Android apps</a>, <a href="app-options.html#iossigning-variable" title="Go to this help topic">sign your Apple iOS apps</a> and sign your <a href="app-options.html#electronsigning-variable" title="Go to this help topic">Microsoft Windows (Electron) apps</a>, the right JSON files with the signing information are generated by DecSoft App Builder, so can be used when compile the app using Apache Cordova.
+   </p>
+
+   <h2 class="pt-5" id="plugins-integration">
+    Apache Cordova - plugins
+   </h2>
+
+   <div class="mt-3">
+    <p>
+     There are <a href="https://cordova.apache.org/plugins/" title="Go to the Apache Cordova plugins repository">hundreds of useful Apache Cordova plugins</a> ready to be used in your app when needed. Every Apache Cordova plugin exposes a JavaScript API in form of JavaScript objects and methods ready to be called. We can use these plugins to get information about the user device, to capture audio and video and many more things.
+    </p>
+    <p>
+     DecSoft App Builder integrates "out of the box" all the official Apache Cordova plugins. You can use these plugins just <a href="app-options.html#cordovageneral-options" title="More information and details">by checking them in the app options</a>. Doing that the selected plugins are included in the generated <a href="#batchfiles-integration" title="More information and details">Batch files</a> and <a href="#shellfiles-integration" title="More information and details">Shell files</a>, in order to be installed for your app.
+    </p>
+    <p>
+     By checking one of the available Apache Cordova plugins from the app options, the IDE code editor offers to you the available plugin variables and methods, ready to be used, as you can see in the below animated GIF image:
+    </p>
+   </div>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid mt-5">
+   <div class="text-center">
+    <img src="../shared/images/gifs/cordova-plugins-javascript.gif" class="img-fluid" alt="">
+   </div>
+  </div>
+
+  <div class="container">
+
+   <div class="alert alert-primary text-center mt-5">
+    There are sample apps for all the Apache Cordova plugins included "out of the box" in DecSoft App Builder. Take a look at them! All of samples names starts by "Cordova*", for example, "CordovaCamera", is the sample app for the Apache Cordova Camera plugin.
+   </div>
+
+   <h2 class="pt-5" id="cordovaplugins-integration">
+    Available Apache Cordova plugins
+   </h2>
+
+   <p class="mt-3">
+    Below you can see refer all the "out of the box" Apache Cordova plugins integrated in DecSoft App Builder, as well the JavaScript API that these plugins provides to you.
+   </p>
+
+   <h2 class="pt-5" id="file-plugin">
+    Apache Cordova File plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova File plugin offers to you the ability to access the user device files and manipulate it. DecSoft App Builder, based in this plugin, put available the below JavaScript variables and methods.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Variables
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#cordova.file" title="More information and details">cordova.file</a></li>
+    </ul>
+   </div>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.createDir" title="More information and details">app.cordova.file.createDir() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.dirExists" title="More information and details">app.cordova.file.dirExists() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.removeDir" title="More information and details">app.cordova.file.removeDir() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.createFile" title="More information and details">app.cordova.file.createFile() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.fileExists" title="More information and details">app.cordova.file.fileExists() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.removeFile" title="More information and details">app.cordova.file.removeFile() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.writeFile" title="More information and details">app.cordova.file.writeFile() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.writeTextFile" title="More information and details">app.cordova.file.writeTextFile() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.appendTextFile" title="More information and details">app.cordova.file.appendTextFile() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.readTextFile" title="More information and details">app.cordova.file.readTextFile() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.getFileBlobFromFileUrl" title="More information and details">app.cordova.file.getFileBlobFromFileUrl() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.file.wkWebViewConvertFilePath" title="More information and details">app.cordova.file.wkWebViewConvertFilePath() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="cordova.file">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>cordova.file</strong>
+   </div>
+   <p class="mt-3">
+    This is the File object provided by Apache Cordova, and, among other stuff, stores the root directories in which we can place directories and files from our apps. You must use one of this root directories along other methods in this plugin.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">applicationDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Read-only directory where the application is installed. (iOS, Android, BlackBerry 10, OSX, windows).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">applicationStorageDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Root directory of the application's sandbox; on iOS & windows this location is read-only (but specific subdirectories [like /Documents on iOS or /localState on windows] are read-write). All data contained within is private to the app. (iOS, Android, BlackBerry 10, OSX).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dataDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Persistent and private data storage within the application's sandbox using internal memory (on Android, if you need to use external memory, use .externalDataDirectory). On iOS, this directory is not synced with iCloud (use .syncedDataDirectory). (iOS, Android, BlackBerry 10, Windows).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cacheDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Directory for cached data files or any files that your app can re-create easily. The OS may delete these files when the device runs low on storage, nevertheless, apps should not rely on the OS to delete files in here. (iOS, Android, BlackBerry 10, OSX, Windows).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">externalApplicationStorageDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Application space on external storage. (Android).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">externalDataDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Where to put app-specific data files on external storage. (Android).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">externalCacheDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Application cache on external storage. (Android).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">externalRootDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        External storage (SD card) root. (Android, BlackBerry 10).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">tempDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Temp directory that the OS can clear at will. Do not rely on the OS to clear this directory; your app should always remove files as applicable. (iOS, OSX, Windows).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">syncedDataDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Holds app-specific files that should be synced (e.g. to iCloud). (iOS, Windows).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">documentsDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Files private to the app, but that are meaningful to other application (e.g. Office files). Note that for OSX this is the user's ~/Documents directory. (iOS, OSX).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">sharedDirectory</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Files globally available to all applications (BlackBerry 10).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Variables with the available directories to be used in the plugin methods
+
+cordova.file.applicationDirectory
+cordova.file.applicationStorageDirectory
+cordova.file.dataDirectory
+cordova.file.cacheDirectory
+cordova.file.externalApplicationStorageDirectory
+cordova.file.externalDataDirectory
+cordova.file.externalCacheDirectory
+cordova.file.externalRootDirectory
+cordova.file.tempDirectory
+cordova.file.syncedDataDirectory
+cordova.file.documentsDirectory
+cordova.file.sharedDirectory
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.createDir">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.createDir()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method create a new directory. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">rootDir</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The root directory in which you want to create a directory. The root directory can be one of the available <a href="#cordova.file" title="More information and details">"cordova.file.*" values</a>.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dirName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the directory that you want to create.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here a JavaScript function to be called when the directory has been successfully created.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while create the directory. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.createDir(
+  rootDir,
+  'My new directory',
+  function () {
+    alert('The folder has been succesfully created!');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.dirExists">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.dirExists()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to check if a directory exists or not. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path that you want to check.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You must use a success callback function here. This function receive a boolean argument which is "true" if the directory exists and "false" when not.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while check the directory. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.dirExists(
+  rootDir + 'My new directory',
+  function (result) {
+    if (result) {
+      alert('The folder exists!');
+    } else {
+      alert('The folder do not exists!');
+    }
+  },
+  function (error) {
+    alert('The folder may do not exists: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.removeDir">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.removeDir()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to remove the specified directory recursively. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path that you want to remove.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can place a callback function which is executed if the directory has been successfully removed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while remove the directory. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.removeDir(
+  rootDir + 'My new directory',
+  function () {
+    alert('The directory has been removed!');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.createFile">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.createFile()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method create a new file. Sometimes you need to create a file, for example, if you plain to use the <a href="#media-plugin" title="More information and details">Media</a> plugin. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path in which you want to create the file.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file name that you want to create, for example, "My new file.txt".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here a JavaScript function to be called when the file has been successfully created. This function callback receives the created file URL, ready to be used, for example, with the <a href="#media-plugin" title="More information and details">Media</a> plugin.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while create the file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.createFile(
+  rootDir + 'My new directory',
+  'My new file.txt',
+  function () {
+    alert('The file has been succesfully created!');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.fileExists">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.fileExists()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to check if the specified file exists.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">filePath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file path that you want to check.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You must use a success callback function here. This function receive a boolean argument which is "true" if the file exists and "false" when not.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while check the file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.fileExists(
+  rootDir + 'My new directory/My new file.txt',
+  function (result) {
+    if (result) {
+      alert('The file exists!');
+    } else {
+      alert('The file do not exists!');
+    }
+  },
+  function (error) {
+    alert('The file may do not exists: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.removeFile">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.removeFile()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to remove the specified file. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path in which the file resides.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file name to be removed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can place a callback function which is executed if the file has been successfully removed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while remove the file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.removeFile(
+  rootDir + 'My new directory',
+  'My new file.txt',
+  function () {
+    alert('The file has been removed!');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.writeFile">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.writeFile()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to write an arbitrary file type in the user's device. This method can be useful, for example, to write / save a downloaded file using the  <a title="Go to this help topic" href="control-http-client.html">Http control</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path in which the file must be writed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file name that you want to write, for example, "myFile.png".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileType</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The MIME file type that you want to use, for example, "image/png".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">contents</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The content that you want to write into the file.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called when the file has been successfully written.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while write the file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.writeFile(
+  rootDir,
+  'AppBuilder.png',
+  'image/png',
+  views.view1.downloadHttp.response,
+  function () {
+    alert('The file has been written at ' + rootDir + 'AppBuilder.png');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.writeTextFile">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.writeTextFile()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to easily write a text file in the user device. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path in which the file must be placed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file name that you want to write, for example, "myFile.txt" or "myFile.json".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">contents</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The text content that you want to write into the file. Can be just plain text but also a serialized JSON object, for example.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called when the file has been successfully written.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while write the file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.writeTextFile(
+  rootDir,
+  'My file.txt',
+  'Hello world!',
+  function () {
+    alert('The file has been written!');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.appendTextFile">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.appendTextFile()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to easily append text into a text file in the user device. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path in which the text file is placed or in which must be created if not exists.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file name that you want to append text, for example, "myFile.txt" or "myFile.json".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">contents</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The text content that you want to append into the file. Can just plain text but also a serialized JSON object.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called when the file has been successfully appended.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while append text into the file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.appendTextFile(
+  rootDir,
+  'My file.txt',
+  "\nHello world!",
+  function () {
+    alert('The file has been written!');
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.readTextFile">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.readTextFile()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to easily read the contents of an existing text file. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dirPath</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The directory path in which the file resides.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">fileName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file name that you want to read, for example, "myFile.txt" or "myFile.json".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You must set here a JavaScript function which is called once the file has readed. This function receive the file contents in their unique argument.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while read the text file. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+app.cordova.file.readTextFile(
+  rootDir,
+  'My file.txt',
+  function (contents) {
+    alert('Here is the file contents: ' + contents);
+  },
+  function (error) {
+    alert('An error occur: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.file.getFileBlobFromFileUrl">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.getFileBlobFromFileUrl()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to get a file blob (ready to be uploaded to the app server, for example) based in a file URI. The <a href="#camera-plugin" title="More information and details">Camera plugin</a>, for example, give us the file URI of a captured image.  We can use this file URI directly, to show the image in the app, and, also can convert that file URI into a file blob, in order to be uploaded to the app server.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">fileUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file URL to be returned as a blob.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You must set here a JavaScript function which is called once the file blob is ready. This function receive the file blob in their unique argument.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set here an optional JavaScript function to be called if some error occur while prepare the file blob. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+app.cordova.camera.config.quality = 50;
+app.cordova.camera.config.encodingType = app.cordova.camera.encodingType.JPEG;
+app.cordova.camera.config.destinationType = app.cordova.camera.destinationType.FILE_URI;
+app.cordova.camera.config.correctOrientation = true;
+
+app.cordova.camera.getPicture(
+  function (imageUri) {
+    views.view4.image1.url = imageUri;
+    app.cordova.file.getFileBlobFromFileUrl(
+      imageUri,
+      function (fileBlob) {
+        views.view4.http1.data.file1 = fileBlob;
+        views.view4.http1.execute();
+      },
+      function (error) {
+        alert('An error occurs while get the image blob: ' + error);
+      }
+    );
+  },
+  function (error) {
+    alert('An error occurs while get the picture: ' + error);
+  },
+  app.cordova.camera.config
+);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaFile sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <div class="pt-5" id="app.cordova.file.wkWebViewConvertFilePath">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.file.wkWebViewConvertFilePath()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method (only for iOS) in order to convert a file URL (file://) to an appropriate URL to be used in <a href="control-image.html" title="Go to this help topic">Image</a>, <a href="control-audio-player.html" title="Go to this help topic">Audio Player</a>, <a href="control-video-player.html" title="Go to this help topic">Video Player</a>, controls, etc. The method returns the converted URL ready to use.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">fileUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file URL to be converted.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Only for iOS
+var
+  ourUriReadyToUseInImage = app.cordova.file.wkWebViewConvertFilePath(ourFileUrl);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaFile sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="media-plugin">
+    Apache Cordova Media plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Media plugin allows to record an audio without the need of any external app, like the <a href="#mediacapture-plugin" title="More information and details">Media capture</a> use.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.media.startRecord" title="More information and details">app.cordova.media.startRecord() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.media.stopRecord" title="More information and details">app.cordova.media.stopRecord() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.media.startRecord">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.media.startRecord()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to start the recording of an audio. Note that this plugin method requires to create a file first, which you must do by using the <a href="#app.cordova.file.createFile" title="More information and details">app.cordova.file.createFile() method</a>. In order to use this plugin, you must also check the "File plugin" checkbox in the app's options. This plugin method returns a media object instance, that you must use later to stop the recording (see below).
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">fileUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        A previously created file URL in order to store the recorded audio.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        This function callback is executed if everything is fine, once you call to the <a href="#app.cordova.media.stopRecord" title="More information and details">app.cordova.media.stopRecord() method</a>.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        You can set an optional function callback to be executed if an error occur while the recording. This function receives an "error" variable with an error object.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  rootDir = app.cordova.device.platform() === 'iOS' ?
+             cordova.file.documentsDirectory :
+             cordova.file.externalRootDirectory;
+
+var
+  fileName = app.cordova.device.platform() === 'iOS' ?
+             'MyRecordedAudio.wav' :
+             'MyRecordedAudio.aac';
+
+app.cordova.file.createFile(
+  rootDir,
+  fileName,
+  function (fileUrl) {
+    window.store.MediaRecorder = app.cordova.media.startRecord(
+      fileUrl,
+      function () {
+        views.view1.audio1.setSource(fileUrl + '?t=' + new Date().getTime());
+        alert('The audio recorded file has been successfully saved at ' + fileUrl);
+      },
+      function (error) {
+        views.view1.button1.disabled = false;
+        views.view1.button2.disabled = true;
+        alert('An error occur while record the audio: ' + app.serialize(error));
+      }
+    );
+  },
+  function (error) {
+    alert('An error occur while create the file: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <p class="mt-5">
+    If you want to upload the recorded audio to your app server, you can do it by using the <a href="#app.cordova.file.getFileBlobFromFileUrl" title="More information and details">app.cordova.file.getFileBlobFromFileUrl() method</a>.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+app.cordova.file.getFileBlobFromFileUrl(
+  window.store.AudioFileUrl,
+  function (fileBlob) {
+    views.view1.uploadHttp.data = {};
+    views.view1.uploadHttp.data.fileBlob = fileBlob;
+    views.view1.uploadHttp.execute();
+  },
+  function (error) {
+    alert('An error occur while get the file blob: ' + app.serialize(error));
+  }
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.media.stopRecord">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.media.stopRecord()</strong>
+   </div>
+   <p class="mt-3">
+    Use this method to stop a previously started audio recording with the <a href="#app.cordova.media.startRecord" title="More information and details">app.cordova.media.startRecord() method</a>. This method requires the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">mediaInstance</td>
+       <td class="text-secondary">object</td>
+       <td>
+        You must specify here a media object instance, which has been previously returned by the <a href="#app.cordova.media.startRecord" title="More information and details">app.cordova.media.startRecord() method</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+app.cordova.media.stopRecord(window.store.MediaRecorder);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaMedia sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="device-plugin">
+    Apache Cordova Device plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Device plugin provides to you information about the device in which your app is running. This plugin put available the below JavaScript methods to retrieve the device information.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.model" title="More information and details">app.cordova.device.model() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.platform" title="More information and details">app.cordova.device.platform() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.uuid" title="More information and details">app.cordova.device.uuid() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.version" title="More information and details">app.cordova.device.version() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.manufacturer" title="More information and details">app.cordova.device.manufacturer() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.isVirtual" title="More information and details">app.cordova.device.isVirtual() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.device.serial" title="More information and details">app.cordova.device.serial() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.device.model">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.model()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the name of the device's model or product. The value is set by the device manufacturer and may be different across versions of the same product.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+// Android:    Nexus One       returns "Passion" (Nexus One code name)
+//             Motorola Droid  returns "voles"
+// BlackBerry: Torch 9800      returns "9800"
+// Browser:    Google Chrome   returns "Chrome"
+//             Safari          returns "Safari"
+// iOS:        for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1.
+// OSX:                        returns "x86_64"
+//
+var
+  deviceModel = app.cordova.device.model();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.device.platform">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.platform()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the device's operating system name.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Depending on the device, a few examples are:
+//   - "Android"
+//   - "BlackBerry 10"
+//   - "browser"
+//   - "iOS"
+//   - "WinCE"
+//   - "Tizen"
+//   - "Mac OS X"
+//
+var
+  devicePlatform = app.cordova.device.platform();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.device.uuid">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.uuid()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the device's Universally Unique Identifier (UUID).
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Android: Returns a random 64-bit integer (as a string, again!)
+//          The integer is generated on the device's first boot
+//
+// BlackBerry: Returns the PIN number of the device
+//             This is a nine-digit unique integer (as a string, though!)
+//
+// iPhone: (Paraphrased from the UIDevice Class documentation)
+//         Returns the [UIDevice identifierForVendor] UUID which is unique and the same for all apps installed by the same vendor. However the UUID can be different if the user deletes all apps from the vendor and then reinstalls it.
+// Windows Phone 7 : Returns a hash of device+current user,
+// if the user is not defined, a guid is generated and will persist until the app is uninstalled
+// Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number
+// unique to every GSM and UMTS mobile phone.
+//
+var
+  deviceUUID = app.cordova.device.uuid();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.device.version">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.version()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the device's operating system version.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Android:    Froyo OS would return "2.2"
+//             Eclair OS would return "2.1", "2.0.1", or "2.0"
+//             Version can also return update level "2.1-update1"
+//
+// BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
+//
+// Browser:    Returns version number for the browser
+//
+// iPhone:     iOS 3.2 returns "3.2"
+//
+// Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+// Windows 8: return the current OS version, ex on Windows 8.1 returns 6.3.9600.16384
+// Tizen: returns "TIZEN_20120425_2"
+// OSX:        El Capitan would return "10.11.2"
+//
+var
+  deviceVersion = app.cordova.device.version();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.device.manufacturer">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.manufacturer()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the device's manufacturer.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Android:    Motorola XT1032 would return "motorola"
+// BlackBerry: returns "BlackBerry"
+// iPhone:     returns "Apple"
+//
+var
+  deviceManufacturer = app.cordova.device.manufacturer();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.device.isVirtual">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.isVirtual()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the device is running on a simulator.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  deviceIsVirtual = app.cordova.device.isVirtual();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.device.serial">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.device.serial()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to retrieve the device hardware serial number.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  deviceSerial = app.cordova.device.serial();
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaDevice sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="dialogs-plugin">
+    Apache Cordova Dialogs plugin
+   </h2>
+
+   <p class="mt-3">
+    You can use the Apache Cordova plugins in order to show to the user customizable natives dialogs and also alert it with a device's "beep". Note that all the methods provided by this Apache Cordova plugin fallback in the native "alert", "confirm" and "prompt" JavaScript functions, so this plugin can be used also in non Apache Cordova platforms. For the "beep" method this plugin fallback to the <a href="app-methods.html#beep-method" title="Go to this help topic">app.beep()</a> app method. This is a very easy to use and useful plugin that offers to you the below methods ready to be used:
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.dialogs.alert" title="More information and details">app.cordova.dialogs.alert() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.dialogs.confirm" title="More information and details">app.cordova.dialogs.confirm() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.dialogs.prompt" title="More information and details">app.cordova.dialogs.prompt() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.dialogs.beep" title="More information and details">app.cordova.dialogs.beep() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.dialogs.alert">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.dialogs.alert()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to show to the user a customizable native alert dialog. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">message</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The message to the user to be shown in the alert dialog.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">title</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Set an optional title for the alert dialog. The default title is "Alert".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dismissCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Set an optional JavaScript function to be called when the user dismiss the alert dialog.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">buttonLabel</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Set an optional label for the alert dialog button. The default title is "OK".
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show an alert to the user and react when the user dismiss the dialog
+
+app.cordova.dialogs.alert(
+
+  'Hello from this native alert dialog!',
+
+  'Alert dialog',
+
+  function () {
+
+    alert('The alert dialog has been dismissed');
+  },
+
+  'Accept'
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.dialogs.confirm">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.dialogs.confirm()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to show to the user a customizable native confirmation dialog. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">message</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The message to the user to be shown in the confirmation dialog.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">title</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Set an optional title for the confirmation dialog. The default title is "Confirm".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">confirmCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Set a JavaScript function to be called when the user dismiss or press one of the available dialog buttons (see below). This function receives one argument with the index of the pressed button, or "0" (zero) if the user dismiss the dialog without press any button.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">buttonLabels</td>
+       <td class="text-secondary">Array of strings</td>
+       <td>
+        Set an optional labels for the dialog buttons. By default the buttons are "[OK, Cancel]".
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show a confirmation dialog to the user
+
+app.cordova.dialogs.confirm(
+
+  'Please, confirm that you agree with our license terms.',
+
+  'Confirm dialog',
+
+  function (buttonIndex) {
+
+    alert('You press the dialog button with index: ' + buttonIndex);
+  },
+
+  ['Yes; I agree', 'No; I did not agree']
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.dialogs.prompt">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.dialogs.prompt()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to show to the user a customizable native prompt dialog. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">message</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The message to the user to be shown in the prompt dialog.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">title</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Set an optional title for the prompt dialog. The default title is "Prompt".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">promptCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Set a JavaScript function in order to be called when the user press one of the available dialogs button or when dismiss the dialog without pressing any button. This function receives one object variable argument with two properties: "buttonIndex", with the pressed dialog button or "0" zero if the dialog has been dismissed without pressing any button; and the object property "input1", which stores the text entered by the user in the prompt dialog.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">buttonLabels</td>
+       <td class="text-secondary">Array of strings</td>
+       <td>
+        Set an optional labels for the dialog buttons. By default the buttons are "[OK, Cancel]".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">defaultText</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Set the default text to be shown in the prompt dialog input box when the dialog is show.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Use a prompt dialog to ask the user name
+
+app.cordova.dialogs.prompt(
+
+  'Please, write your name',
+
+  'Prompt dialog',
+
+  function (results) {
+
+    alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+  },
+
+  ['Ok', 'Cancel'],
+
+  'John Doe'
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.dialogs.beep">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.dialogs.beep()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to play a device "beep" the specified number of times. Note that some devices like Android can play the established notification tone instead of a classical beep. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">times</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Specify the number of times that you want to play the beep sound.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Play a couple of beeps
+app.cordova.dialogs.beep(2);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+
+    There is a CordovaDialogs sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="vibration-plugin">
+    Apache Cordova Vibration plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Vibration plugin allows to perform a vibration or a vibration pattern in the user device, as well to cancel a performing vibration. This plugin provides to you the below methods:
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.vibration.vibrate" title="More information and details">app.cordova.vibration.vibrate() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.vibration.vibratePattern" title="More information and details">app.cordova.vibration.vibratePattern() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.vibration.cancel" title="More information and details">app.cordova.vibration.cancel() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.vibration.vibrate">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.vibration.vibrate()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to perform a vibration in the user device during the specified milliseconds.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">milliseconds</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Specifies the number of milliseconds to vibrate the device.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Perform a vibration during 2 seconds
+app.cordova.vibration.vibrate(2000);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.vibration.vibratePattern">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.vibration.vibratePattern()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to perform a vibration in the user device using the specified pattern.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">pattern</td>
+       <td class="text-secondary">Array of numbers</td>
+       <td>
+        A sequence of numbers to be used as the pattern for the vibration (see an example below).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Vibrate for 1 second
+// Wait for 1 second
+// Vibrate for 3 seconds
+// Wait for 1 second
+// Vibrate for 5 seconds
+app.cordova.vibration.vibratePattern([1000, 1000, 3000, 1000, 5000]);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.vibration.cancel">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.vibration.cancel()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to cancel a performing vibration or vibration pattern.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Cancel the current device vibration
+app.cordova.vibration.cancel();
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaVibration sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="camera-plugin">
+    Apache Cordova Camera plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Camera plugin allows to get a picture from the user device, directly taken from the device camera or picked from the device photo album. We can get the taken image URI, in order to be show in the app. We can also get the Base64 string representation of the taken image, and, with the help of the <a href="#file-plugin" title="More information and details">Apache Cordova File plugin</a>, we can get a blob object from the taken image, ready to be uploaded to the app server, for example. This plugin provides to you the below variables and methods:
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Variables
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.camera.sourceType" title="More information and details">app.cordova.camera.sourceType variable</a></li>
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.camera.destinationType" title="More information and details">app.cordova.camera.destinationType variable</a></li>
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.camera.encodingType" title="More information and details">app.cordova.camera.encodingType variable</a></li>
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.camera.mediaType" title="More information and details">app.cordova.camera.mediaType variable</a></li>
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.camera.direction" title="More information and details">app.cordova.camera.direction variable</a></li>
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.camera.config" title="More information and details">app.cordova.camera.config variable</a></li>
+    </ul>
+   </div>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture() method</a></li>
+	 <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.camera.wkWebViewConvertFilePath" title="More information and details">app.cordova.camera.wkWebViewConvertFilePath() method</a></li>
+
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.camera.sourceType">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.camera.sourceType</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the possible source type value to be used in the configuration variable to be passed to the <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture()</a> method. This object variable provide the below properties / values to be used:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">PHOTOLIBRARY</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Choose image from the device's photo library (same as SAVEDPHOTOALBUM for Android).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">CAMERA</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Take picture from camera.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">SAVEDPHOTOALBUM</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Choose image only from the device's Camera Roll album (same as PHOTOLIBRARY for Android)   .
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  cameraConfig = {};
+
+cameraConfig.sourceType = app.cordova.camera.sourceType.CAMERA;
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.camera.destinationType">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.camera.destinationType</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the possible destination type value to be used in the configuration variable to be passed to the <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture()</a> method. This object variable provide the below properties / values to be used:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">DATA_URL</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Return base64 encoded string. DATAURL can be very memory intensive and cause app crashes or out of memory errors. Use FILEURI or NATIVE_URI if possible.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">FILE_URI</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Return file uri (content://media/external/images/media/2 for Android).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  cameraConfig = {};
+
+cameraConfig.destinationType = app.cordova.camera.destinationType.FILE_URI;
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.camera.encodingType">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.camera.encodingType</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the possible encoding type value to be used in the configuration variable to be passed to the <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture()</a> method. This object variable provide the below properties / values to be used:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">JPEG</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Return JPEG encoded image.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">PNG</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Return PNG encoded image.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  cameraConfig = {};
+
+cameraConfig.encodingType = app.cordova.camera.encodingType.PNG;
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.camera.mediaType">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.camera.mediaType</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the possible media type value to be used in the configuration variable to be passed to the <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture()</a> method. This object variable provide the below properties / values to be used:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">PICTURE</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Allow selection of still pictures only. Will return format specified via DestinationType.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">VIDEO</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Allow selection of video only, ONLY RETURNS URL.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">ALLMEDIA</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Allow selection from all media types.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  cameraConfig = {};
+
+cameraConfig.mediaTYpe = app.cordova.camera.mediaType.PICTURE;
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.camera.direction">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.camera.direction</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the possible direction value to be used in the configuration variable to be passed to the <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture()</a> method. This object variable provide the below properties / values to be used:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">BACK</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Use the back-facing camera.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">FRONT</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Use the front-facing camera.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  cameraConfig = {};
+
+cameraConfig.direction = app.cordova.camera.direction.FRONT;
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.camera.config">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.camera.config</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the default configuration object to be used when call to the <a href="#app.cordova.camera.getPicture" title="More information and details">app.cordova.camera.getPicture()</a> method. You can modify a bit this variable and then pass to the referred method, or creates a similar object variable, in order to be used in that method.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">quality</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Quality of the saved image, expressed as a range of 0-100, where 100 is typically full resolution with no loss from file compression. (Note that information about the camera's resolution is unavailable.).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">destinationType</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Choose the format of the return value. One of the "app.cordova.camera.destinationType.*" values.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">sourceType</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Set the source of the picture. One of the "app.cordova.camera.sourceType.*" values.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">allowEdit</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Allow simple editing of image before selection.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">encodingType</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Choose the returned image file's encoding.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">targetWidth</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Width in pixels to scale image. Must be used with targetHeight. Aspect ratio remains constant.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">targetHeight</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Height in pixels to scale image. Must be used with targetWidth. Aspect ratio remains constant.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">mediaType</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Set the type of media to select from. Only works when "sourceType" is "PHOTOLIBRARY" or "SAVEDPHOTOALBUM".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">correctOrientation</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Rotate the image to correct for the orientation of the device during capture.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">saveToPhotoAlbum</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Save the image to the photo album on the device after capture.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">cameraDirection</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Choose the camera to use (front- or back-facing).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Here is the default configuration object
+
+app.cordova.camera.config = {
+  quality: 50,
+  targetWidth: -1,
+  targetHeight: -1,
+  allowEdit: false,
+  saveToPhotoAlbum: false,
+  correctOrientation: false,
+  mediaType: app.cordova.camera.mediaType.PICTURE,
+  sourceType: app.cordova.camera.sourceType.CAMERA,
+  encodingType: app.cordova.camera.encodingType.JPEG,
+  cameraDirection: app.cordova.camera.direction.BACK,
+  destinationType: app.cordova.camera.destinationType.FILE_URI
+};
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.camera.getPicture">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.camera.getPicture()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to take a picture from the user device, taking it from the device's camera or the device's photo album. This plugin admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Set a JavaScript function to be called when the picture has been successfully taken. This function receives one argument with the returned picture. The returned type depend on the "destinationType" configuration variable and can be a file URI and also the Base64 representation of the taken picture.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Set a JavaScript function to be called if some error occur while the picture is taken. The function receives one argument with information about the error. Note that this function is also called if the user just cancel the selection of the picture.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">config</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        An object that set the configuration for the method. You can use here the <a href="#app.cordova.camera.config" title="More information and details">default configuration variable</a>, modify a bit that variable, or just pass a similar variable to the method.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Take a picture from the camera and show it in the app
+
+app.cordova.camera.getPicture(
+
+  function (imageUri) {
+    views.view2.image1.url = imageUri;
+  },
+
+  function (error) {
+    alert('An error occurs: ' + error);
+  },
+
+  app.cordova.camera.config
+);
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Take a picture from the camera in Base64 and show it
+
+app.cordova.camera.config.destinationType = app.cordova.camera.destinationType.DATA_URL;
+
+app.cordova.camera.getPicture(
+
+  function (base64) {
+    views.view3.image1.url = "data:image/jpg;base64, " + base64;
+  },
+
+  function (error) {
+    alert('An error occurs: ' + error);
+  },
+
+  app.cordova.camera.config
+);
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Take a picture from the camera and upload it to the app server
+
+app.cordova.camera.getPicture(
+
+  function (imageUri) {
+
+    views.view4.image1.url = imageUri;
+
+    app.cordova.file.getFileBlobFromFileUrl(
+
+      imageUri,
+
+      function (fileBlob) {
+        views.view4.http1.data.file1 = fileBlob;
+        views.view4.http1.execute();
+      },
+
+      function (error) {
+        alert('An error occurs while get the image blob: ' + error);
+      }
+    );
+  },
+
+  function (error) {
+    alert('An error occurs while get the picture: ' + error);
+  },
+
+  app.cordova.camera.config
+);
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Take a picture from the device photo album and show it
+
+app.cordova.camera.config.sourceType = app.cordova.camera.sourceType.SAVEDPHOTOALBUM;
+
+app.cordova.camera.getPicture(
+
+  function (imageUri) {
+    views.view5.image1.url = imageUri;
+  },
+
+  function (error) {
+    alert('An error occurs: ' + error);
+  },
+
+  app.cordova.camera.config
+);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaCamera sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <div class="pt-5" id="app.cordova.camera.wkWebViewConvertFilePath">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.camera.wkWebViewConvertFilePath()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method (only for iOS) in order to convert a file URL (file://) to an appropriate URL to be used in <a href="control-image.html" title="Go to this help topic">Image</a>, <a href="control-audio-player.html" title="Go to this help topic">Audio Player</a>, <a href="control-video-player.html" title="Go to this help topic">Video Player</a>, controls, etc. The method returns the converted URL ready to use.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">fileUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The file URL to be converted.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Only for iOS
+var
+  ourUriReadyToUseInImage = app.cordova.camera.wkWebViewConvertFilePath(ourFileUrl);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaCamera sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="inappbrowser-plugin">
+    Apache Cordova InAppBrowser plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova InAppBrowser plugin provides to you a way to show contents in an external but controlable browser window. Below you can see the JavaScript method who this plugin provides to you, as well as usage sample code.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.inAppBrowser.open" title="More information and details">app.cordova.inAppBrowser.open() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.inAppBrowser.open">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.inAppBrowser.open()</strong>
+   </div>
+   <p class="mt-3">
+    Use this plugin method to show contents on an external browser window. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">url</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The URL to load. Call encodeURI() on this if the URL contains Unicode characters.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">target</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The URL to load. Call encodeURI() on this if the URL contains Unicode characters. This argument can be one of these values:
+        <ul>
+         <li><strong>_blank</strong>: Opens in the "InAppBrowser" browser.</li>
+         <li><strong>_system</strong>: Opens in the system's web browser.</li>
+        </ul>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">options</td>
+       <td class="text-secondary">String</td>
+       <td>
+        <p>
+         Specify the options to be used. Default value is: "location=yes". This argument can be
+        </p>
+        <p>
+         The options string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive.
+        </p>
+        <h2>
+         All platforms support:
+        </h2>
+        <ul class="mt-3">
+         <li><strong>location</strong>: Set to yes or no to turn the InAppBrowser's location bar on or off.</li>
+        </ul>
+        <h2>
+         The Android platform supports these additional options:
+        </h2>
+        <ul class="mt-3">
+         <li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+         <li><strong>beforeload</strong>: set to enable the <code>beforeload</code> event to modify which pages are actually loaded in the browser. Accepted values are <code>get</code> to intercept only GET requests, <code>post</code> to intercept on POST requests or <code>yes</code> to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set <code>beforeload=post</code> it will raise an error).</li>
+         <li><strong>clearcache</strong>: set to <code>yes</code> to have the browser's cookie cache cleared before the new window is opened</li>
+         <li><strong>clearsessioncache</strong>: set to <code>yes</code> to have the session cookie cache cleared before the new window is opened</li>
+         <li><strong>closebuttoncaption</strong>: set to a string to use as the close button's caption instead of a X. Note that you need to localize this value yourself.</li>
+         <li><strong>closebuttoncolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the
+          close button color from default, regardless of being a text or default X. Only has effect if user has location set to <code>yes</code>.</li>
+         <li><strong>footer</strong>: set to <code>yes</code> to show a close button in the footer similar to the iOS <strong>Done</strong> button.
+          The close button will appear the same as for the header hence use <strong>closebuttoncaption</strong> and <strong>closebuttoncolor</strong> to set its properties.</li>
+         <li><strong>footercolor</strong>: set to a valid hex color string, for example <code>#00ff00</code> or <code>#CC00ff00</code> (<code>#aarrggbb</code>) , and it will change the footer color from default.
+          Only has effect if user has <strong>footer</strong> set to <code>yes</code>.</li>
+         <li><strong>hardwareback</strong>: set to <code>yes</code> to use the hardware back button to navigate backwards through the <code>InAppBrowser</code>'s history. If there is no previous page, the <code>InAppBrowser</code> will close.  The default value is <code>yes</code>, so you must set it to <code>no</code> if you want the back button to simply close the InAppBrowser.</li>
+         <li><strong>hidenavigationbuttons</strong>: set to <code>yes</code> to hide the navigation buttons on the location toolbar, only has effect if user has location set to <code>yes</code>. The default value is <code>no</code>.</li>
+         <li><strong>hideurlbar</strong>: set to <code>yes</code> to hide the url bar on the location toolbar, only has effect if user has location set to <code>yes</code>. The default value is <code>no</code>.</li>
+         <li><strong>navigationbuttoncolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the color of both navigation buttons from default. Only has effect if user has location set to <code>yes</code> and not hidenavigationbuttons set to <code>yes</code>.</li>
+         <li><strong>toolbarcolor</strong>: set to a valid hex color string, for example: <code>#00ff00</code>, and it will change the color the toolbar from default. Only has effect if user has location set to <code>yes</code>.</li>
+         <li><strong>lefttoright</strong>: Set to <code>yes</code> to swap positions of the navigation buttons and the close button. Specifically, navigation buttons go to the left and close button to the right.</li>
+         <li><strong>zoom</strong>: set to <code>yes</code> to show Android browser's zoom controls, set to <code>no</code> to hide them.  Default value is <code>yes</code>.</li>
+         <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code>yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code>no</code>).</li>
+         <li><strong>shouldPauseOnSuspend</strong>: Set to <code>yes</code> to make InAppBrowser WebView to pause/resume with the app to stop background audio (this may be required to avoid some Google Play issues).</li>
+         <li><strong>useWideViewPort</strong>: Sets whether the WebView should enable support for the "viewport" HTML meta tag or should use a wide viewport. When the value of the setting is <code>no</code>, the layout width is always set to the width of the WebView control in device-independent (CSS) pixels. When the value is <code>yes</code> and the page contains the viewport meta tag, the value of the width specified in the tag is used. If the page does not contain the tag or does not provide a width, then a wide viewport will be used. (defaults to <code>yes</code>).</li>
+        </ul>
+        <h2>
+         The iOS platform supports these additional options:
+        </h2>
+        <ul class="mt-3">
+         <li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+         <li><strong>beforeload</strong>: set to enable the <code>beforeload</code> event to modify which pages are actually loaded in the browser. Accepted values are <code>get</code> to intercept only GET requests, <code>post</code> to intercept on POST requests or <code>yes</code> to intercept both GET &amp; POST requests. Note that POST requests are not currently supported and will be ignored (if you set <code>beforeload=post</code> it will raise an error).</li>
+         <li><strong>clearcache</strong>: set to <code>yes</code> to have the browser's cookie cache cleared before the new window is opened</li>
+         <li><strong>clearsessioncache</strong>: set to <code>yes</code> to have the session cookie cache cleared before the new window is opened. For WKWebView, requires iOS 11+ on target device.</li>
+         <li><strong>cleardata</strong>: set to <code>yes</code> to have the browser's entire local storage cleared (cookies, HTML5 local storage, IndexedDB, etc.) before the new window is opened</li>
+         <li><strong>closebuttoncolor</strong>: set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default <strong>Done</strong> button's color. Only applicable if toolbar is not disabled.</li>
+         <li><strong>closebuttoncaption</strong>: set to a string to use as the <strong>Done</strong> button's caption. Note that you need to localize this value yourself.</li>
+         <li><strong>disallowoverscroll</strong>: Set to <code>yes</code> or <code>no</code> (default is <code>no</code>). Turns on/off the UIWebViewBounce property.</li>
+         <li><strong>hidenavigationbuttons</strong>:  set to <code>yes</code> or <code>no</code> to turn the toolbar navigation buttons on or off (defaults to <code>no</code>). Only applicable if toolbar is not disabled.</li>
+         <li><strong>navigationbuttoncolor</strong>:  set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default color. Only applicable if navigation buttons are visible.</li>
+         <li><strong>toolbar</strong>:  set to <code>yes</code> or <code>no</code> to turn the toolbar on or off for the InAppBrowser (defaults to <code>yes</code>)</li>
+         <li><strong>toolbarcolor</strong>: set as a valid hex color string, for example: <code>#00ff00</code>, to change from the default color of the toolbar. Only applicable if toolbar is not disabled.</li>
+         <li><strong>toolbartranslucent</strong>:  set to <code>yes</code> or <code>no</code> to make the toolbar translucent(semi-transparent)  (defaults to <code>yes</code>). Only applicable if toolbar is not disabled.</li>
+         <li><strong>lefttoright</strong>: Set to <code>yes</code> to swap positions of the navigation buttons and the close button. Specifically, close button goes to the right and navigation buttons to the left.</li>
+         <li><strong>enableViewportScale</strong>:  Set to <code>yes</code> or <code>no</code> to prevent viewport scaling through a meta tag (defaults to <code>no</code>). Only applicable to UIWebView (<code>usewkwebview=no</code>) and WKWebView (<code>usewkwebview=yes</code>) on iOS 10+.</li>
+         <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code>yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code>no</code>). Applicable to UIWebView (<code>usewkwebview=no</code>) and WKWebView (<code>usewkwebview=yes</code>).</li>
+         <li><strong>allowInlineMediaPlayback</strong>: Set to <code>yes</code> or <code>no</code> to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's <code>video</code> element must also include the <code>webkit-playsinline</code> attribute (defaults to <code>no</code>). Applicable to UIWebView (<code>usewkwebview=no</code>) and WKWebView (<code>usewkwebview=yes</code>).</li>
+         <li><strong>keyboardDisplayRequiresUserAction</strong>: Set to <code>yes</code> or <code>no</code> to open the keyboard when form elements receive focus via JavaScript's <code>focus()</code> call (defaults to <code>yes</code>). Only applicable to UIWebView (<code>usewkwebview=no</code>).</li>
+         <li><strong>suppressesIncrementalRendering</strong>: Set to <code>yes</code> or <code>no</code> to wait until all new view content is received before being rendered (defaults to <code>no</code>). Only applicable to UIWebView (<code>usewkwebview=no</code>).</li>
+         <li><strong>presentationstyle</strong>:  Set to <code>pagesheet</code>, <code>formsheet</code> or <code>fullscreen</code> to set the <a href="https://developer.apple.com/documentation/uikit/uiviewcontroller">presentation style</a> (defaults to <code>fullscreen</code>).</li>
+         <li><strong>transitionstyle</strong>: Set to <code>fliphorizontal</code>, <code>crossdissolve</code> or <code>coververtical</code> to set the <a href="https://developer.apple.com/documentation/uikit/uiviewcontroller">transition style</a> (defaults to <code>coververtical</code>).</li>
+         <li><strong>toolbarposition</strong>: Set to <code>top</code> or <code>bottom</code> (default is <code>bottom</code>). Causes the toolbar to be at the top or bottom of the window.</li>
+         <li><strong>hidespinner</strong>: Set to <code>yes</code> or <code>no</code> to change the visibility of the loading indicator (defaults to <code>no</code>).</li>
+        </ul>
+        <h2>
+         The Windows platform supports these additional options:
+        </h2>
+        <ul class="mt-3">
+         <li><strong>hidden</strong>: set to <code>yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code>no</code> (default) to have the browser open and load normally.</li>
+         <li><strong>hardwareback</strong>: works the same way as on Android platform.</li>
+         <li><strong>fullscreen</strong>: set to <code>yes</code> to create the browser control without a border around it. Please note that if <strong>location=no</strong> is also specified, there will be no control presented to user to close IAB window.</li>
+        </ul>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Open the DecSoft website in an external browser
+// and be ready for the browser window events
+
+var
+  winRef = app.cordova.inAppBrowser.open(
+   'https://www.decsoftutils.com/', '_blank', 'location=yes');
+
+views.view1.textarea1.value = '';
+
+winRef.addEventListener('loadstart', function () {
+  views.view1.textarea1.value += '\n' + 'Page load start';
+});
+
+winRef.addEventListener('loadstop', function () {
+  views.view1.textarea1.value += '\n' + 'Page load stop';
+});
+
+winRef.addEventListener('loaderror', function (error) {
+  views.view1.textarea1.value += '\n' + 'Page load error: ' + error.message;
+});
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaInAppBrowser sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="screenorientation-plugin">
+    Apache Cordova Screen Orientation plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Screen Orientation plugin provides to you a way to change and lock the device screen orientation at runtime. You can establish the default screen orientation to be used at designtime, from the <a href="app-options.html#cordovaconfiguration-options" title="Go to this help topic">Apache Cordova Configuration options</a>. This plugin put also available the <a href="app-events.html#orientationchange-event" title="Go to this help topic">app OrientationChange event</a>.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Variables
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.screenOrientation.orientation" title="More information and details">app.cordova.screenOrientation.orientation variable</a></li>
+    </ul>
+   </div>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.screenOrientation.lock" title="More information and details">app.cordova.screenOrientation.lock() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.screenOrientation.unlock" title="More information and details">app.cordova.screenOrientation.unlock() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.screenOrientation.type" title="More information and details">app.cordova.screenOrientation.type() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.screenOrientation.orientation">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.screenOrientation.orientation</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores all the possible values to be used with the <a href="#app.cordova.screenOrientation.lock" title="More information and details">app.cordova.screenOrientation.lock()</a> method. This object variable provide the below properties / values to be used:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">portraitPrimary</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The orientation is in the primary portrait mode.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">portraitSecondary</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The orientation is in the secondary portrait mode.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">landscapePrimary</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The orientation is in the primary landscape mode.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">landscapeSecondary</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The orientation is in the secondary landscape mode.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">portrait</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The orientation is either portrait-primary or portrait-secondary (sensor).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">landscape</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The orientation is either landscape-primary or landscape-secondary (sensor).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">any</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The screen orientation is unlocked - all orientations are supported.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// The orientation variable which contains all possible orientations
+
+app.cordova.screenOrientation.orientation.portraitPrimary
+app.cordova.screenOrientation.orientation.portraitSecondary
+app.cordova.screenOrientation.orientation.landscapePrimary
+app.cordova.screenOrientation.orientation.landscapeSecondary
+app.cordova.screenOrientation.orientation.portrait
+app.cordova.screenOrientation.orientation.landscape
+app.cordova.screenOrientation.orientation.any
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.screenOrientation.lock">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.screenOrientation.lock()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to lock the screen orientation to one of the "app.cordova.screenOrientation.orientation.*" values. This method admits the below argumens:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">orientation</td>
+       <td class="text-secondary">String</td>
+       <td>
+        One of the "app.cordova.screenOrientation.orientation.*" values.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Lock the screen orientation to portrait
+
+app.cordova.screenOrientation.lock(
+  app.cordova.screenOrientation.orientation.portrait
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.screenOrientation.unlock">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.screenOrientation.unlock()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to unlock the screen orientation.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Unlock the screen orientation
+app.cordova.screenOrientation.unlock();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.screenOrientation.type">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.screenOrientation.type()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to know the current established screen orientation. This method returns one of the "app.cordova.screenOrientation.orientation.*" values.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Get the current screen orientation
+var
+  orientation = app.cordova.screenOrientation.type();
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaScreenOrientation sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="batterystatus-plugin">
+    Apache Cordova Battery Status plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Battery Status plugin provides information about the device battery level, as well to know if the device is plugged or not. This plugin provides the below app events:
+   </p>
+   <div class="mt-4">
+    <strong>App events that relies on this plugin</strong>
+    <ul class="mt-3">
+     <li><i class="fas fa-caret-right text-danger"></i> <a href="app-events.html#batterystatus-event" title="More information and details">BatteryStatus event</a></li>
+     <li><i class="fas fa-caret-right text-danger"></i> <a href="app-events.html#batterylow-event" title="More information and details">BatteryLow event</a></li>
+     <li><i class="fas fa-caret-right text-danger"></i> <a href="app-events.html#batterystatus-event" title="More information and details">BatteryCritical event</a></li>
+    </ul>
+   </div>
+
+   <p class="mt-3">
+    The Apache Cordova Battery Status plugin provides also the below variables:
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Variables
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.battery.level" title="More information and details">app.cordova.battery.level variable</a></li>
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.battery.isPlugged" title="More information and details">app.cordova.battery.isPlugged variable</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.battery.level">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.battery.level</strong>
+   </div>
+   <p class="mt-3">
+    This variable is available in the related battery app events and stores a number which represents the percentage of the device's battery level, that can be from 0 to 100.
+   </p>
+
+   <div class="pt-5" id="app.cordova.battery.isPlugged">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.battery.isPlugged</strong>
+   </div>
+   <p class="mt-3">
+    This variable is available in the related battery app events and stores a boolean value which means that the device is plugged in ("true") or not ("false").
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaBatteryStatus sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="geolocation-plugin">
+    Apache Cordova Geolocation plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Geolocation plugin provides information about the device geolocation. This plugin provides the below variables and methods:
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Variables
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.geolocation.config" title="More information and details">app.cordova.geolocation.config variable</a></li>
+    </ul>
+   </div>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.geolocation.getCurrentPosition" title="More information and details">app.cordova.geolocation.getCurrentPosition() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.geolocation.clearWatch" title="More information and details">app.cordova.geolocation.clearWatch() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.geolocation.config">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.geolocation.config</strong>
+   </div>
+   <p class="mt-3">
+    This is an object variable that stores the default configuration that can be used with the <a href="#app.cordova.geolocation.getCurrentPosition" title="More information and details">app.cordova.geolocation.getCurrentPosition() method</a> and the <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a>. You can modify this variable or creates a similar one in order to be passed to these methods. This variable have the below properties:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">maximumAge</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Accept a cached position whose age is no greater than the specified time in milliseconds.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">timeout</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The maximum length of time (milliseconds) that is allowed to pass from the call to the <a href="#app.cordova.geolocation.getCurrentPosition" title="More information and details">app.cordova.geolocation.getCurrentPosition() method</a> or the <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a> until the corresponding "successCallback" executes. If the "successCallback" callback is not invoked within this time, the "errorCallback" callback is passed a "TIMEOUT" error code. (Note that when used in conjunction with <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a>, the "errorCallback" callback could be called on an interval every timeout milliseconds!).
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">enableHighAccuracy</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a Position using network-based methods. Setting this property to true tells the framework to use more accurate methods, such as satellite positioning.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Default values for the geolocation config variable
+
+app.cordova.geolocation.config = {
+  timeout: 5000,
+  maximumAge: 3000,
+  enableHighAccuracy: true
+};
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.geolocation.getCurrentPosition">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.geolocation.getCurrentPosition()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to get the current geolocation information of the device. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set a JavaScript function to be called when the plugin retrieves the device geolocation information. This function receives one "position" object variable argument with the below properties:
+        </p>
+        <ul class="mt-3">
+         <li><strong>position.coords.latitude</strong>: Latitude in decimal degrees. <em>(Number)</em></li>
+         <li><strong>position.coords.longitude</strong>: Longitude in decimal degrees. <em>(Number)</em></li>
+         <li><strong>position.coords.altitude</strong>: Height of the position in meters above the ellipsoid. <em>(Number)</em></li>
+         <li><strong>position.coords.accuracy</strong>: Accuracy level of the latitude and longitude coordinates in meters. <em>(Number)</em></li>
+         <li><strong>position.coords.altitudeAccuracy</strong>: Accuracy level of the altitude coordinate in meters. <em>(Number)</em></li>
+         <li><strong>position.coords.heading</strong>: Direction of travel, specified in degrees counting clockwise relative to the true north. <em>(Number)</em></li>
+         <li><strong>position.coords.speed</strong>: Current ground speed of the device, specified in meters per second. <em>(Number)</em></li>
+         <li><strong>position.timestamp</strong>: Creation timestamp for coords. <em>(DOMTimeStamp)</em></li>
+        </ul>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set a JavaScript function to be called if an error occur and . This function receives one "error" object variable argument with information about the error:
+        </p>
+        <ul class="mt-3">
+         <li><strong>error.code</strong>: One of the predefined error codes listed below.. <em>(Number)</em></li>
+         <li><strong>error.message</strong>:  error object describing the details of the error encountered. <em>(String)</em></li>
+        </ul>
+        <ul class="mt-3">
+         <li><strong>error.code === 1</strong>: Permission denied. Returned when users do not allow the app to retrieve position information. This is dependent on the platform.</li>
+         <li><strong>error.code === 2</strong>: Position unavailable. Returned when the device is unable to retrieve a position. In general, this means the device is not connected to a network or can't get a satellite fix.</li>
+         <li><strong>error.code === 3</strong>: Timeout. Returned when the device is unable to retrieve a position within the time specified by the <code>timeout</code> included in the <a href="#app.cordova.geolocation.config" title="More information and details">app.cordova.geolocation.config variable</a>. When used with the <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a>, this error could be repeatedly passed to the <code>erorCallback</code> callback every <code>timeout</code> milliseconds.</li>
+        </ul>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">config</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         The optional configuration / options object for the method. You can use the default values or change the default of the <a href="#app.cordova.geolocation.config" title="Press here to go to this help topic">app.cordova.geolocation.config</a> object variable.
+        </p>
+	   </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the current device geolocation information
+
+app.cordova.geolocation.getCurrentPosition(
+
+  function (position) {
+
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+  },
+
+  function (error) {
+
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+  },
+
+  app.cordova.geolocation.config
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.geolocation.watchPosition">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.geolocation.watchPosition()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method watch the device geolocation information until you call to the <a href="#app.cordova.geolocation.clearWatch" title="More information and details">app.cordova.geolocation.clearWatch() method</a>. This method support the same arguments than the <a href="#app.cordova.geolocation.getCurrentPosition" title="More information and details">app.cordova.geolocation.getCurrentPosition() method</a> described above. This method returns a number variable that you can pass later to the <a href="#app.cordova.geolocation.clearWatch" title="More information and details">app.cordova.geolocation.clearWatch() method</a>.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Start to watch the device geolocation information
+
+app.store.positionWatcher = app.cordova.geolocation.watchPosition(
+
+  function (position) {
+
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+  },
+
+  function (error) {
+
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+  },
+
+  app.cordova.geolocation.config
+);
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.geolocation.clearWatch">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.geolocation.clearWatch()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to stop to watch for the device geolocation information started with the <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">watchID</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        An identifier variable as is returned by the <a href="#app.cordova.geolocation.watchPosition" title="More information and details">app.cordova.geolocation.watchPosition() method</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Stop the previously started geolocation watcher
+
+app.cordova.geolocation.clearWatch(app.store.positionWatcher);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaGeolocation sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="networkinformation-plugin">
+    Apache Cordova Network Information plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova NetWork Information plugin provides information about the current network connection type of the device. Additionally, by using this plugin in your app the <a href="app-events.html#online-event" title="Go to this help topic">Online event</a> and the <a href="app-events.html#offline-event" title="Go to this help topic">Offline event</a> are properly attached and can be fired accordingly when the device loss or recover the network connection.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Variables
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-success"></i> <a href="#app.cordova.network.connectionTypes" title="More information and details">app.cordova.network.connectionTypes variable</a></li>
+    </ul>
+   </div>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.network.getConnectionType" title="More information and details">app.cordova.network.getConnectionType() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.network.connectionTypes">
+    <i class="fas fa-caret-right text-success"></i>
+    <strong>app.cordova.network.connectionTypes</strong>
+   </div>
+   <p class="mt-3">
+    This plugin variable is an object which contains all the possible network connection values that can be returned by the <a href="#app.cordova.network.getConnectionType" title="More information and details">app.cordova.network.getConnectionType() method</a>.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Possible values returned by app.cordova.network.getConnectionType()
+
+app.cordova.network.connectionTypes.UNKNOWN
+app.cordova.network.connectionTypes.ETHERNET
+app.cordova.network.connectionTypes.WIFI
+app.cordova.network.connectionTypes.CELL_2G
+app.cordova.network.connectionTypes.CELL_3G
+app.cordova.network.connectionTypes.CELL_4G
+app.cordova.network.connectionTypes.CELL
+app.cordova.network.connectionTypes.NONE
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.network.getConnectionType">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.network.getConnectionType()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to retrieve the current network type of the device. This method returns one of the values provided by the <a href="#app.cordova.network.connectionTypes" title="More information and details">app.cordova.network.connectionTypes variable</a>.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Retrieve and show the device network connection type
+
+var
+  connectionType = '';
+
+switch (app.cordova.network.getConnectionType()) {
+
+  case app.cordova.network.connectionTypes.UNKNOWN: connectionType = 'UNKNOWN'; break;
+  case app.cordova.network.connectionTypes.ETHERNET: connectionType = 'ETHERNET'; break;
+  case app.cordova.network.connectionTypes.WIFI: connectionType = 'WIFI'; break;
+  case app.cordova.network.connectionTypes.CELL_2G: connectionType = 'CELL_2G'; break;
+  case app.cordova.network.connectionTypes.CELL_3G: connectionType = 'CELL_3G'; break;
+  case app.cordova.network.connectionTypes.CELL_4G: connectionType = 'CELL_4G'; break;
+  case app.cordova.network.connectionTypes.CELL: connectionType = 'CELL'; break;
+  case app.cordova.network.connectionTypes.NONE: connectionType = 'NONE'; break;
+}
+
+alert('The connection type is: ' + connectionType);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaNetworkInformation sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="statusbar-plugin">
+    Apache Cordova Statusbar plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Statusbar plugin provides to you several ways to customize the device's statusbar. You can set various statusbar related options at designtime from the <a href="app-options.html#cordovaconfiguration-options" title="Go to this help topic">Apache Cordova - Configuration options</a>. Use the methods of this plugin to change the device's statusbar at runtime.
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.hide" title="More information and details">app.cordova.statusbar.hide() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.show" title="More information and details">app.cordova.statusbar.show() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.isVisible" title="More information and details">app.cordova.statusbar.isVisible() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.styleDefault" title="More information and details">app.cordova.statusbar.styleDefault() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.styleLightContent" title="More information and details">app.cordova.statusbar.styleLightContent() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.backgroundColorByName" title="More information and details">app.cordova.statusbar.backgroundColorByName() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.backgroundColorByHexString" title="More information and details">app.cordova.statusbar.backgroundColorByHexString() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.statusbar.overlaysWebView" title="More information and details">app.cordova.statusbar.overlaysWebView() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.statusbar.hide">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.hide()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to hide the device's statusbar at runtime. This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Hide the statusbar
+app.cordova.statusbar.hide();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.show">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.show()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to show the device's statusbar at runtime. This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the statusbar
+app.cordova.statusbar.show();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.isVisible">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.isVisible()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to check if the device's statusbar is visible or not. This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Check if the statusbar is visible
+
+if (app.cordova.statusbar.isVisible()) {
+
+  alert('Yes, is visible now');
+
+} else {
+
+  alert('No, is NOT visible now');
+}
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.styleDefault">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.styleDefault()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to use the default statusbar style (dark text, for light backgrounds). This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the default statusbar style
+app.cordova.statusbar.styleDefault();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.styleLightContent">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.styleLightContent()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to use the light content statusbar style (light text, for dark backgrounds). This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the light content statusbar style
+app.cordova.statusbar.styleLightContent();
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.backgroundColorByName">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.backgroundColorByName()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to set the statusbar background color to one of the supported color names. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">colorName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        This argument can be one of these color names: black, darkGray, lightGray, white, gray, red, green, blue, cyan, yellow, magenta, orange, purple or brown.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the statusbar background color to red
+app.cordova.statusbar.backgroundColorByName('red');
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.backgroundColorByHexString">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.backgroundColorByHexString()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to set the statusbar background color by using an HTML hex string color. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">colorHexStr</td>
+       <td class="text-secondary">String</td>
+       <td>
+        An HTML color to be used, for example, "#C0C0C0". Also admits short colors like: "#333".
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the statusbar background color to #333
+app.cordova.statusbar.backgroundColorByName('#333');
+   </textarea>
+
+   <div class="pt-5" id="app.cordova.statusbar.overlaysWebView">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.statusbar.overlaysWebView()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to make the statusbar overlay or not overlay the WebView. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">overlays</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Set to "true" to make the statusbar overlay on top of your app. Ensure that you adjust your styling accordingly so that your app's title bar or content is not covered. Set to "false" to make the statusbar solid and not overlay your app. You can then set the style and background color to suit using the other functions.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the statusbar overlays the WebView
+app.cordova.statusbar.overlaysWebView(true);
+
+// Set the statusbar NOT overlays the WebView
+app.cordova.statusbar.overlaysWebView(false);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaStatusbar sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <h2 class="pt-5" id="mediacapture-plugin">
+    Apache Cordova Media Capture plugin
+   </h2>
+
+   <p class="mt-3">
+    The Apache Cordova Media Capture plugin provides to you the right methods to capture images, audio and video from the user device. Take a look below at the provided plugin methods:
+   </p>
+
+   <div class="mt-4">
+    <strong>
+     Methods
+    </strong>
+    <ul class="mt-2">
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.mediaCapture.captureAudio" title="More information and details">app.cordova.mediaCapture.captureAudio() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.mediaCapture.captureVideo" title="More information and details">app.cordova.mediaCapture.captureVideo() method</a></li>
+     <li><i class="fas fa-caret-right text-warning"></i> <a href="#app.cordova.mediaCapture.captureImage" title="More information and details">app.cordova.mediaCapture.captureImage() method</a></li>
+    </ul>
+   </div>
+
+   <div class="pt-5" id="app.cordova.mediaCapture.captureAudio">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.mediaCapture.captureAudio()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to start the audio recorder application and return information about captured audio clip file.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set this argument to a JavaScript function to be called when the clip audio has been taken. The function receives one object variable as an argument with information about the selected files, in this case always an array with a sole item, with information of the taken audio. Take a look at the properties availables in the the item of this function's argument:
+        </p>
+<ul>
+<li><strong>name</strong>: The name of the file, without path information. (DOMString)</li>
+<li><strong>fullPath</strong>: The full path of the file, including the name. (DOMString)</li>
+<li><strong>type</strong>: The file's mime type (DOMString)</li>
+<li><strong>lastModifiedDate</strong>: The date and time when the file was last modified. (Date)</li>
+<li><strong>size</strong>: The size of the file, in bytes. (Number)</li>
+</ul>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set this argument to a JavaScript function to be called if an error occurs while capture the audio. The function receives one object variable as an argument with the error information. Below you can see the possible errors:
+        </p>
+        <ul>
+         <li><strong>error.code === 0</strong>: The camera or microphone failed to capture image or sound.</li>
+         <li><strong>error.code === 1</strong>: The camera or audio capture application is currently serving another capture request.</li>
+         <li><strong>error.code === 2</strong>: Invalid use of the API.</li>
+         <li><strong>error.code === 3</strong>: The user exits the camera or audio capture application before capturing anything.</li>
+         <li><strong>error.code === 4</strong>: The user denied a permission required to perform the given capture request.</li>
+         <li><strong>error.code === 20</strong>: The requested capture operation is not supported.</li>
+        </ul>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Capture an audio and start their reproduction in an Audio Player control
+
+app.cordova.mediaCapture.captureAudio(
+
+  function (mediaFiles) {
+
+    views.view1.audio1.setSource(mediaFiles[0].fullPath, mediaFiles[0].type);
+  },
+
+  function (error) {
+
+    alert('An error occur. Error code: ' + error.code);
+  }
+);
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// capture an audio and upload it to the app server
+
+app.cordova.mediaCapture.captureAudio(
+
+  function (mediaFiles) {
+
+    app.cordova.file.getFileBlobFromFileUrl(mediaFiles[0].localURL,
+
+      function (fileBlob) {
+        views.view1.http1.data = {};
+        views.view1.http1.data.file1 = fileBlob;
+        views.view1.http1.execute();
+      },
+
+      function (error) {
+
+        alert('Error while get file blob: ' + error);
+      });
+  },
+
+  function (error) {
+
+    alert('Error while capture. Error code: ' + error.code);
+  }
+);
+</textarea>
+
+   <div class="pt-5" id="app.cordova.mediaCapture.captureVideo">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.mediaCapture.captureVideo()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to start the video recorder application and return information about captured video clip file.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set this argument to a JavaScript function to be called when the clip video has been taken. The function receives one object variable as an argument with information about the selected files, in this case always an array with a sole item, with information of the taken video. Take a look at the properties availables in the the item of this function's argument:
+        </p>
+<ul>
+<li><strong>name</strong>: The name of the file, without path information. (DOMString)</li>
+<li><strong>fullPath</strong>: The full path of the file, including the name. (DOMString)</li>
+<li><strong>type</strong>: The file's mime type (DOMString)</li>
+<li><strong>lastModifiedDate</strong>: The date and time when the file was last modified. (Date)</li>
+<li><strong>size</strong>: The size of the file, in bytes. (Number)</li>
+</ul>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set this argument to a JavaScript function to be called if an error occurs while capture the video. The function receives one object variable as an argument with the error information. Below you can see the possible errors:
+        </p>
+        <ul>
+         <li><strong>error.code === 0</strong>: The camera or microphone failed to capture image or sound.</li>
+         <li><strong>error.code === 1</strong>: The camera or audio capture application is currently serving another capture request.</li>
+         <li><strong>error.code === 2</strong>: Invalid use of the API.</li>
+         <li><strong>error.code === 3</strong>: The user exits the camera or audio capture application before capturing anything.</li>
+         <li><strong>error.code === 4</strong>: The user denied a permission required to perform the given capture request.</li>
+         <li><strong>error.code === 20</strong>: The requested capture operation is not supported.</li>
+        </ul>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Capture a video and start their reproduction in an Video Player control
+
+app.cordova.mediaCapture.captureVideo(
+
+  function (mediaFiles) {
+
+    views.view1.video1.setSource(mediaFiles[0].fullPath, mediaFiles[0].type);
+  },
+
+  function (error) {
+
+    alert('An error occur. Error code: ' + error.code);
+  }
+);
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Capture a video and upload it to the app server
+
+app.cordova.mediaCapture.captureVideo(
+
+  function (mediaFiles) {
+
+    app.cordova.file.getFileBlobFromFileUrl(mediaFiles[0].localURL,
+
+      function (fileBlob) {
+        views.view1.http1.data = {};
+        views.view1.http1.data.file1 = fileBlob;
+        views.view1.http1.execute();
+      },
+
+      function (error) {
+
+        alert('Error while get file blob: ' + error);
+      });
+  },
+
+  function (error) {
+    alert('Error while capture. Error code: ' + error.code);
+  }
+);
+</textarea>
+
+   <div class="pt-5" id="app.cordova.mediaCapture.captureImage">
+    <i class="fas fa-caret-right text-warning"></i>
+    <strong>app.cordova.mediaCapture.captureImage()</strong>
+   </div>
+   <p class="mt-3">
+    You can use this plugin method to capture an image and retrieves information about captured image file. Note that you can also use the <a href="#camera-plugin" title="More information and details">Apache Cordova Camera plugin</a> to capture a picture from the user device.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">successCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set this argument to a JavaScript function to be called when the image has been captured. The function receives one object variable as an argument with information about the selected files, in this case always an array with a sole item, with information of the captured image. Take a look at the properties availables in the the item of this function's argument:
+        </p>
+<ul>
+<li><strong>name</strong>: The name of the file, without path information. (DOMString)</li>
+<li><strong>fullPath</strong>: The full path of the file, including the name. (DOMString)</li>
+<li><strong>type</strong>: The file's mime type (DOMString)</li>
+<li><strong>lastModifiedDate</strong>: The date and time when the file was last modified. (Date)</li>
+<li><strong>size</strong>: The size of the file, in bytes. (Number)</li>
+</ul>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">errorCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        <p>
+         Set this argument to a JavaScript function to be called if an error occurs while capture the image. The function receives one object variable as an argument with the error information. Below you can see the possible errors:
+        </p>
+        <ul>
+         <li><strong>error.code === 0</strong>: The camera or microphone failed to capture image or sound.</li>
+         <li><strong>error.code === 1</strong>: The camera or audio capture application is currently serving another capture request.</li>
+         <li><strong>error.code === 2</strong>: Invalid use of the API.</li>
+         <li><strong>error.code === 3</strong>: The user exits the camera or audio capture application before capturing anything.</li>
+         <li><strong>error.code === 4</strong>: The user denied a permission required to perform the given capture request.</li>
+         <li><strong>error.code === 20</strong>: The requested capture operation is not supported.</li>
+        </ul>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Capture an image and show it in an Image control
+
+app.cordova.mediaCapture.captureImage(
+
+  function (imageFiles) {
+
+    views.view1.image1.url = imageFiles[0].fullPath;
+  },
+
+  function (error) {
+
+    alert('An error occur. Error code: ' + error.code);
+  }
+);
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Capture an image and upload it to the app server
+
+app.cordova.mediaCapture.captureImage(
+
+  function (mediaFiles) {
+
+    app.cordova.file.getFileBlobFromFileUrl(mediaFiles[0].localURL,
+
+      function (fileBlob) {
+
+        views.view1.http1.data = {};
+        views.view1.http1.data.file1 = fileBlob;
+        views.view1.http1.execute();
+      },
+
+      function (error) {
+
+        alert('Error while get file blob: ' + error);
+      });
+  },
+
+  function (error) {
+    alert('Error while capture. Error code: ' + error.code);
+  }
+);
+</textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a CordovaMediaCapture sample app included with the installation of DecSoft App Builder. Take a look to see this plugin in action!
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

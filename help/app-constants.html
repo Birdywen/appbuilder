@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App constants</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App constants
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App constants
+   </h2>
+
+   <p class="mt-3">
+    An "app" object JavaScript variable is available in all app events, <a href="app-view.html" title="Go to this help topic">app views</a> events, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> events and all the controls events. The "app" variable provide several <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>, as well the below referred app constants, ready to be used.
+   </p>
+
+   <div class="mt-4">
+    <strong>Information</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#size-constant" title="More information and details">Size constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#kind-constant" title="More information and details">Kind constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#align-constant" title="More information and details">Align constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#themecolor-constant" title="More information and details">ThemeColor constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#imagefit-constant" title="More information and details">ImageFit constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dropdowndir-constant" title="More information and details">DropdownDir constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dropdownitem-constant" title="More information and details">DropdownItem constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dropdownautoclose-constant" title="More information and details">DropdownAutoClose constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#navbarpos-constant" title="More information and details">NavbarPos constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#navbarstyle-constant" title="More information and details">NavbarStyle constant</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#httpmethod-constant" title="More information and details">HttpMethod constant</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App constants
+   </h2>
+
+   <h2 id="size-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Size constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-push-button.html#size-variable" title="Go to this help topic">Size property</a> of the <a href="control-push-button.html" title="Go to this help topic">Push button control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set the size "md" (medium) of a push button control
+views.view1.button1.size = app.size.md;
+
+// All available values are:
+
+// Small
+app.size.sm
+
+// Medium
+app.size.md
+
+// Large
+app.size.lg
+
+// Extra large
+app.size.xl
+</textarea>
+
+   <h2 id="align-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Align constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some properties, like the app <a href="app-properties.html#sidebarheaderalign-property" title="Go to this help topic">Sidebar.HeaderAlign property</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set the align "left" to the app sidebar header
+app.sidebar.headerAlign = app.align.left;
+
+// All available values are:
+
+// Left
+app.align.left
+
+// Center
+app.align.center
+
+// Right
+app.align.right
+</textarea>
+
+   <h2 id="themecolor-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ThemeColor constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used for the app theme color.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set the app theme color to dark
+app.setAppThemeColor(app.themeColor.dark);
+
+// All available values are:
+
+// light
+app.themeColor.light
+
+// light
+app.themeColor.dark
+</textarea>
+
+   <h2 id="kind-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Kind constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-push-button.html#kind-variable" title="Go to this help topic">Kind property</a> of the <a href="control-push-button.html" title="Go to this help topic">Push button control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set the direction "up" to the dropdown
+views.view1.button1.kind = app.kind.danger;
+
+// All available values are:
+
+// Primary
+app.kind.primary
+
+// Secondary
+app.kind.secondary
+
+// Success
+app.kind.success
+
+// Danger
+app.kind.danger
+
+// Warning
+app.kind.warning
+
+// Info
+app.kind.info
+
+// Light
+app.kind.light
+
+// Dark
+app.kind.dark
+
+// Link
+app.kind.link
+</textarea>
+
+   <h2 id="imagefit-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ImageFit constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-image.html#imagefit-variable" title="Go to this help topic">ImageFit property</a> of the <a href="control-image.html" title="Go to this help topic">Image control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set the image fit "cover" to the image
+views.view1.image1.imageFit = app.imageFit.cover;
+
+// All available values are:
+
+// Fill
+app.imageFit.fill
+
+// None
+app.imageFit.none
+
+// Cover
+app.imageFit.cover
+
+// Contain
+app.imageFit.contain
+
+// Scale down
+app.imageFit.scale
+</textarea>
+
+   <h2 id="dropdowndir-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App DropdownDir constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-dropdown.html#direction-variable" title="Go to this help topic">Direction property</a> of the <a href="control-dropdown.html" title="Go to this help topic">Dropdown control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set the direction "up" to the dropdown
+views.view1.dropdown1.direction = app.dropdownDir.up;
+
+// All available values are:
+
+// Direction up
+app.dropdownDir.up
+
+// Direction down
+app.dropdownDir.down
+
+// Direction left
+app.dropdownDir.left
+
+// Direction right
+app.dropdownDir.right
+</textarea>
+
+   <h2 id="dropdownitem-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App DropdownItem constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-dropdown.html#item-variable" title="Go to this help topic">Item.class property</a> of the <a href="control-dropdown.html" title="Go to this help topic">Dropdown control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// All available values are:
+
+// Item class
+app.dropdownItem.item
+
+// Header class
+app.dropdownItem.header
+
+// Divider class
+app.dropdownItem.divider
+</textarea>
+
+   <h2 id="dropdownautoclose-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App DropdownAutoClose constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in the <a href="control-dropdown.html#autoclose-variable" title="Go to this help topic">AutoClose property</a> of the <a href="control-dropdown.html" title="Go to this help topic">Dropdown control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// All available values are:
+
+// Default value
+app.dropdownAutoClose.true
+
+app.dropdownAutoClose.inside
+
+app.dropdownAutoClose.outside
+
+app.dropdownAutoClose.false
+</textarea>
+
+   <h2 id="navbarpos-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App NavbarPos constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-navbar.html#position-variable" title="Go to this help topic">Position property</a> of the <a href="control-navbar.html" title="Go to this help topic">Navbar control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set navbar fixed to the top
+views.view1.navbar1.position = app.navbarPos.fixedTop;
+
+// All available values are:
+
+// Navbar fixed top
+app.navbarPos.fixedTop
+
+// Navbar fixed bottom
+app.navbarPos.fixedBottom
+
+// Navbar sticky top
+app.navbarPos.stickyTop
+</textarea>
+
+   <h2 id="navbarstyle-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App NavbarStyle constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in some controls properties, like the <a href="control-navbar.html#navbarstyle-variable" title="Go to this help topic">NavbarStyle property</a> of the <a href="control-navbar.html" title="Go to this help topic">Navbar control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// Set navbar style to dark
+views.view1.navbar1.navbarStyle = app.navbarStyle.dark;
+
+// All available values are:
+
+// Navbar light
+app.navbarStyle.light
+
+// Navbar dark
+app.navbarStyle.dark
+</textarea>
+
+   <h2 id="httpmethod-constant" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HttpMethod constant
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object constant.</span> This constant stores all the possible values to be used in the <a href="control-http-client.html#method-variable" title="Go to this help topic">Method property</a> of the <a href="control-http-client.html" title="Go to this help topic">Http Client control</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+// All available values are:
+
+// HTTP GET method
+app.httpMethod.get
+
+// HTTP POST method
+app.httpMethod.post
+
+// HTTP PUT method
+app.httpMethod.put
+
+// HTTP HEAD method
+app.httpMethod.head
+
+// HTTP DELETE method
+app.httpMethod.delete
+</textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    Remember that in addition to the above app constants, the "app" JavaScript object variable provide to you several <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

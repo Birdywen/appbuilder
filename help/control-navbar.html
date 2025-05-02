@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Navbar</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Navbar</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Navbar description
+   </h2>
+   <p class="mt-3">
+    The Navbar control allows to show a navigation bar into the <a href="app-view.html" title="Go to this help topic">app views</a> or <a href="app-frame.html" title="Go to this help topic">app frames</a>. The navigation bar can have any number of items and subitems. It's responsive and customizable with the properties that you can see below.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Navbar sample app included with the installation of DecSoft App Builder. Take a look to see this control in action!
+   </div>
+
+   <h2 class="pt-4" id="style-options">
+    Navbar CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     This control has a default style, and, some control JavaScript properties (see below), can also changes the control style, not to mention the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the control.
+    </p>
+    <p>
+     In addition to that style, you can also set custom CSS rules for the control by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>. If this is not enough, you can include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    </p>
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the control, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    Navbar at designtime
+   </h2>
+   <p class="mt-3">
+    The Navbar control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Navbar at runtime
+   </h2>
+   <p class="mt-3">
+    The Navbar control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#items-variable" title="More information and details">Items property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#item-variable" title="More information and details">Item property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#itemindex-variable" title="More information and details">ItemIndex property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#itemsubindex-variable" title="More information and details">ItemSubindex property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#size-variable" title="More information and details">Size property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#color-variable" title="More information and details">Color property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#background-variable" title="More information and details">Background property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#position-variable" title="More information and details">Position property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#navbarstyle-variable" title="More information and details">NavbarStyle property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#brandtext-variable" title="More information and details">BrandText property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#brandimageurl-variable" title="More information and details">BrandImageUrl property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#event-variable" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#title-variable" title="More information and details">Title property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hidden-variable" title="More information and details">Hidden property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Navbar events
+   </h2>
+   <p class="mt-3">
+    The Navbar control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#itemclick-event" title="More information and details">ItemClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#brandclick-event" title="More information and details">BrandClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#toggleclick-event" title="More information and details">ToggleClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseenter-event" title="More information and details">MouseEnter event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseleave-event" title="More information and details">MouseLeave event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Navbar designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Navbar Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Navbar Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Navbar Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Navbar Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Navbar Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Navbar runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Navbar control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "navbar1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="items-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Items property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Array of objects variable.</span>
+    The Items control property stores all the items and subitems of the Navbar control. This variable is an array of objects, since every Navbar item must be an object. You can set this property at runtime, but, also at designtime, by using the <a href="dialog-navbar-items.html" title="Go to this help topic">Navbar Items dialog</a> These objects / items can have the below properties:
+   </p>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Mandatory. It's the item's text, like you want to show in the Navbar.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">class</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optional. One or more separated CSS classes to be applied to the item.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">icon</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optional. One of the available Fontawesome icon classes, eg. "fas fa-info-circle".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">items</td>
+       <td class="text-secondary">Array of objects</td>
+       <td>
+        Optional. One or more subitems to be show below the item.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <p class="mt-3">
+    As you can see in the above table, every Navbar "item" can optionally contain one or more "subitems". These subitems can have the below properties:
+   </p>
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Mandatory. It's the subitem's text, like you want to show in the Navbar.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">class</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optional. One or more separated CSS classes to be applied to the subitem.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">icon</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optional. One of the available Fontawesome icon classes, eg. "fas fa-info-circle".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">disabled</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Optional. You can set this variable to "true" in order to disable the subitem. Disabled elements cannot be clicked by the user.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">actived</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Optional. You can set this variable to "true" in order to made the subitem appear activated (with a different background color).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <div class="alert alert-primary text-center mt-3">
+    Note something important: above you can see the mandatory and optional Navbar items properties, however, you can add your own properties to this items too. So, in the <a href="#itemclick-event" title="More information and details">ItemClick event</a>, you can access to the pressed item properties, including your own ones.
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Add a navbar item
+views.view1.navbar1.items = [
+  {text: "My Item"}
+];
+
+// Add subitems to our added item
+views.view1.navbar1.items[0].items = [
+  {text: "Subitem 1", icon: "fas fa-info-circle"},
+  {text: "Subitem 3", icon: "fas fa-info-circle", actived: true},
+  {text: "Subitem 2", icon: "fas fa-info-circle", disabled: true}
+];
+</textarea>
+
+   <h3 id="item-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Item property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span>
+    This variable is "null" by default, but, it's filled with the pressed Navbar Item in the <a href="#itemclick-event" title="More information and details">ItemClick event</a>. Take a look at the <a href="#items-variable" title="More information and details">Items property</a>, in which you can see the mandatory and optionals properties for every item in the Navbar control.
+   </p>
+
+   <h3 id="itemindex-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar ItemIndex property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    This variable is "-1" by default, but, it's filled with the pressed Navbar Item index in the <a href="#itemclick-event" title="More information and details">ItemClick event</a>. This item index is the index (starting by zero) of the pressed item, in the Navbar <a href="#items-variable" title="More information and details">Items property</a>.
+   </p>
+
+   <h3 id="itemsubindex-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar ItemSubindex property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    This variable is "-1" by default, but, it's filled with the pressed Navbar Subitem index in the <a href="#itemclick-event" title="More information and details">ItemClick event</a>. This subitem index is the index (starting by zero) of the pressed subitem.
+   </p>
+
+   <h3 id="size-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Size property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    "lg" (large) by default. This property determines the responsive breakpoint size of the Navbar control, and, you can set it by using one of the available app <a href="#size-constant" title="More information and details">Size constant</a> values.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the Navbar to large size
+views.view1.navbar1.size = app.size.large;
+</textarea>
+
+   <h3 id="color-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Color property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This variable is a empty string by default, means the <a href="#background-variable" title="More information and details">Background property</a> is used instead of any other color. If you wanted, can set this variable to an HTML color string ("red", "#FFFF00"), in order to apply that color to the Navbar control, ignoring the <a href="#background-variable" title="More information and details">Background property</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the Navbar color
+views.view1.navbar1.color = 'red';
+</textarea>
+
+   <h3 id="background-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Background property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property determines the background color of the Navbar control, and, you can set it by using one of the available app <a href="#kind-constant" title="More information and details">Kind constant</a> values. This property can be overwrite if you set the <a href="#color-variable" title="More information and details">Color property</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the Navbar background to "primary"
+views.view1.navbar1.background = app.kind.primary;
+</textarea>
+
+   <h3 id="position-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Position property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property determines the position of the Navbar control, and, you can set it by using one of the available app <a href="#navbarpos-constant" title="More information and details">NavbarPos constant</a> values.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the Navbar fixed to top (by default)
+views.view1.navbar1.position = app.navbarPos.fixedTop;
+
+// Set the Navbar fixed to bottom
+views.view1.navbar1.position = app.navbarPos.fixedBottom;
+
+// Set the Navbar sticky top
+views.view1.navbar1.position = app.navbarPos.stickyTop;
+</textarea>
+
+   <h3 id="navbarstyle-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar NavbarStyle property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property determines the style of the Navbar control, and, you can set it by using one of the available app <a href="#navbarstyle-constant" title="More information and details">NavbarStyle constant</a> values.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the Navbar style to dark
+views.view1.navbar1.navbarStyle = app.navbarStyle.dark;
+
+// Set the Navbar style to light
+views.view1.navbar1.navbarStyle = app.navbarStyle.light;
+</textarea>
+
+   <h3 id="brandtext-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar BrandText property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The BrandText property stores the optional "brand text" to be show at the left of the Navbar control.
+   </p>
+
+   <h3 id="brandimageurl-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar BrandImageUrl property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The BrandImageUrl property stores the "brand image" URL, which is show at the left of <a href="#brandtext-variable" title="More information and details">BrandText property</a>. Note this image must have a predetermined size of 30x30 pixels.
+   </p>
+
+   <h3 id="event-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Event property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Event control property stores the "event" variable received in all the control events. This variable can contain the target (HTML element of the control) that fire the event and more useful stuff.
+   </p>
+
+   <h3 id="title-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Title property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Title control property stores some small but descriptive text, mainly to be used to be show that text when the user place the mouse cursor into the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new title for the control
+views.view1.navbar1.title = 'My new title';
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Classes control property stores one or more additionals CSS classes (space separated) to be applied to the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the control
+views.view1.navbar1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="hidden-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Navbar Hidden property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hidden control property determines if the control appear visible to the user or not. Set to "true" to hide the control, or to "false" to show the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Hide navbar1
+views.view1.navbar1.hidden = true;
+
+// Show navbar1
+views.view1.navbar1.hidden = false;
+
+// Toggle navbar1
+views.view1.navbar1.hidden = !views.view1.navbar1.hidden;
+</textarea>
+
+   <h2 class="mt-5">
+    Navbar events
+   </h2>
+
+   <h3 id="itemclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar ItemClick event
+   </h3>
+   <p class="mt-3">
+    The ItemClick event handler is fired when the user click in one of the Navbar items. The pressed item is stored in the Navbar <a href="#item-variable" title="More information and details">Item property</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="brandclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar BrandClick event
+   </h3>
+   <p class="mt-3">
+    The BrandClick event handler is fired when the user click in the Navbar brand text or brand image. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="toggleclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar ToggleClick event
+   </h3>
+   <p class="mt-3">
+    The ToggleClick event handler is fired when the user click in the Navbar brand Toggle button, which is used to show and hide the Navbar items. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseenter-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar MouseEnter event
+   </h3>
+   <p class="mt-3">
+    The MouseEnter event handler is fired when the user enter the mouse into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseleave-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar MouseLeave event
+   </h3>
+   <p class="mt-3">
+    The MouseLeave event handler is fired when the user leave the mouse from the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the Navbar control, which occur when the user click with the right mouse button into the Navbar control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Navbar events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Navbar control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all control events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App user functions</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App user functions
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App user functions
+   </h2>
+   <p class="mt-3">
+    In addition to the <a href="app-properties.html" title="Go to this help topic">app properties</a> and the <a href="app-methods.html" title="Go to this help topic">app methods</a>, as well the controls properties and methods, and, the integrated <a href="apache-cordova.html#plugins-integration" title="Go to this help topic">Apache Cordova plugins</a> properties and methods, you can also add your own app functions. The existing app user functions are also integrated in the <a href="ide-quick-code-list.html" title="Go to this help topic">IDE Quick code list</a>.
+   </p>
+   <p>
+    The app user functions can be a good way, for example, to share some pieces of code along the app, since you can call to that app user functions from any <a href="app-view.html" title="Go to this help topic">app view</a>, <a href="app-dialog.html" title="Go to this help topic">app dialog</a>, etc. The DecSoft App Builder IDE provides you an app user functions manager, and, you can define any number of app user functions.
+   </p>
+   <p>
+    Take a look at the below animated GIF image, in which you can see how to create a new app user function and then use it.
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/app-user-functions.gif" class="img-fluid" alt="">
+   </div>
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container">
+
+   <h2 class="mt-5">
+    Where the functions are placed
+   </h2>
+   <p class="mt-3">
+    The user functions that you add to the app are placed in the "app" scoped, as any other method of the app, so, if you add a "sayHello" user function, you can call to that function with the below code:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Call to the sayHello user function
+
+app.sayHello('Peter');
+</textarea>
+
+   <h2 class="mt-5">
+    Function variables
+   </h2>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the user functions:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

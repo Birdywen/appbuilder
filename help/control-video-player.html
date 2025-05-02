@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Video player</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Video player</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Video player
+   </h2>
+
+   <p class="mt-3">
+    The Video player control allows to reproduce video media files into your developed apps. This control offer several properties and methods in order to set the behaviour and made some related control task.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a VideoPlayer sample app included with the installation of DecSoft App Builder. Take a look to see this control in action!
+   </div>
+
+   <h2 class="pt-4" id="style-options">
+    Video player CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     This control has a default style, and, some control JavaScript properties (see below), can also changes the control style, not to mention the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the control.
+    </p>
+    <p>
+     In addition to that style, you can also set custom CSS rules for the control by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>. If this is not enough, you can include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    </p>
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the control, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    Video player designtime properties
+   </h2>
+
+   <p class="mt-3">
+    The Video player control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Video player runtime properties
+   </h2>
+
+   <p class="mt-3">
+    The Video player control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#event-variable" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#autoplay-variable" title="More information and details">Autoplay property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#controls-variable" title="More information and details">Controls property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#imagefit-variable" title="More information and details">ImageFit property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#loop-variable" title="More information and details">Loop property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#muted-variable" title="More information and details">Muted property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#sources-variable" title="More information and details">Sources property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#source-variable" title="More information and details">Source property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#volume-variable" title="More information and details">Volume property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#videoDuration-variable" title="More information and details">VideoDuration property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#currenttime-variable" title="More information and details">CurrentTime property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#isPaused-variable" title="More information and details">IsPaused property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#lastError-variable" title="More information and details">LastError property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#title-variable" title="More information and details">Title property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#poster-variable" title="More information and details">Poster property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#playsinline-variable" title="More information and details">Playsinline property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hidden-variable" title="More information and details">Hidden property</a></li>
+   </ul>
+
+   <h2 class="pt-5" id="control-methods">
+    Video player methods
+   </h2>
+   <p class="mt-3">
+    The Video player control put at your disposition the below methods. You can use these methods in runtime in order to perform various control related tasks.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#playVideo-method" title="More information and details">playVideo() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#pauseVideo-method" title="More information and details">pauseVideo() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#stop-method" title="More information and details">stop() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#seek-method" title="More information and details">seek() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#setvolume-method" title="More information and details">setVolume() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#setsource-method" title="More information and details">setSource() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#appendsource-method" title="More information and details">appendSource() method</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Video player events
+   </h2>
+
+   <p class="mt-3">
+    The Video player control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#canplay-event" title="More information and details">CanPlay event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#canplaythrough-event" title="More information and details">CanPlayThrough event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#play-event" title="More information and details">Play event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#pause-event" title="More information and details">Pause event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#durationchange-event" title="More information and details">DurationChange event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#timeupdate-event" title="More information and details">TimeUpdate event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#ended-event" title="More information and details">Ended event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#seeking-event" title="More information and details">Seeking event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#seeked-event" title="More information and details">Seeked event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#volumechange-event" title="More information and details">VolumeChange event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#error-event" title="More information and details">Error event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseenter-event" title="More information and details">MouseEnter event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseleave-event" title="More information and details">MouseLeave event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Video player designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Video player Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Video player Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Video player Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Video player Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Video player Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Video player runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Video player control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "yourControlName" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="event-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Event property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Event control property stores the "event" variable received in all the control events. This variable can contain the target (HTML element of the control) that fire the event and more useful stuff.
+   </p>
+
+   <h3 id="autoplay-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player AutoPlay property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The AutoPlay control property can be set to "true" (it's "false" by default) at designtime in order to start the reproduction of the video when the app view is show. Note, however, that some platforms can refuse to play a video without the user intervention. Some platforms allows autoplayed videos only if muted. You can mute the video using the <a href="#muted-variable" title="More information and details">Muted property</a>.
+   </p>
+
+   <h3 id="controls-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Controls property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Controls control property determines if the default player controls (play, stop buttons, seek bar, etc.) must be shown or not. This property is "true" by default but you can set to "false" in order to hide the default player controls. Remember that it's possible to control the player reproduction using the available <a href="#control-methods" title="More information and details">control methods</a>.
+   </p>
+
+   <h3 id="imagefit-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video ImageFit property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The ImageFit determines how the video is show even if the app "Scale" option is set to "true". You can use one of the available "app.imageFit.*" constants to set this property, which is "cover" by default.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Change the imageFit property at runtime
+
+views.view1.video1.imageFit = app.imageFit.fill;
+
+views.view1.video1.imageFit = app.imageFit.none;
+
+views.view1.video1.imageFit = app.imageFit.cover; // By default
+
+views.view1.video1.imageFit = app.imageFit.contain;
+
+views.view1.video1.imageFit = app.imageFit.scale;
+</textarea>
+
+   <h3 id="loop-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Loop property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Loop control property determines if the media player must start to reproduce the media file again and again after their complete reproduction. This property is "false" by default but you can set to "true" in order to loop the player reproduction.
+   </p>
+
+   <h3 id="muted-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Muted property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Muted control property determine if the reproduction sound must be muted. This variable is "false" by default but you can set to "true" to mute the sound. This property can be useful to use with the <a href="#autoplay-variable" title="More information and details">AutoPlay property</a> for platforms and browsers that allows autoplayed video, but only if they are muted.
+   </p>
+
+   <h3 id="sources-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Sources property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. Array of objects variable.</span>
+     The Sources control property allows to specify more than one differents video media source files to be used. The browser or platform can then pick one of then in order to be reproduced.
+    </p>
+    <p>
+     You can set the Sources property at designtime using the <a href="dialog-media-sources.html" title="More information and details">Media sources dialog</a>, or, can set it un runtime using the <a href="#appendsource-method" title="More information and details">appendSource() method</a>.
+    </p>
+    <p>
+     Note that, after the Sources property has been filled we cannot change the Video player source (to be reproduced) using this property: when we need this we must manually set the <a href="#source-variable" title="More information and details">Source property</a> or by using the <a href="#setsource-method" title="More information and details">setSource() method</a>.
+    </p>
+   </div>
+<textarea class="code-editor" data-mode="javascript">
+
+// We can fill the Sources property using the appendSource method
+views.view1.video1.appendSource('app/files/videos/my-video.mp4', 'video/mp4');
+views.view1.video1.appendSource('app/files/videos/my-video.ogg', 'video/ogg');
+
+// Or we can maually fill the Sources property, both ways are equivalent
+
+views.view1.video1.sources = [
+  {"url": "app/files/videos/my-video.mp4", "type": "video/mp4"},
+  {"url": "app/files/videos/my-video.ogg", "type": "video/ogg"}
+];
+</textarea>
+
+   <h3 id="source-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Source property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span>
+    The Source control property allows to set the current media file source to be reproduced in the Video player. We can set this property manually or by using the <a href="#setsource-method" title="More information and details">setSource() method</a>.
+   </p>
+   <p>
+    A source object is composed with the below properties:
+   </p>
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">url</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The media file URL to be set as the source of the Video player.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">type</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The media file type / codec to be used. This property is optional, and, if not provided, the browser or platform try to automatically detect the media type and codec to be use.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the source of the Video player
+views.view1.video1.setSource('app/files/videos/my-video.mp4');
+
+// Set the source of the Video player indicating the media type
+views.view1.video1.setSource('app/files/videos/my-video.mp4', 'video/mp4');
+
+// Similar than above but directly using the control property
+
+views.view1.video1.source = {"url": "app/files/videos/my-video.mp4"};
+
+views.view1.video1.source = {"url": "app/files/videos/my-video.mp4", "type": "video/mp4"};
+</textarea>
+
+   <h3 id="volume-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Volume property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    The Volume control property stores the current Video player sound volume, which can be a value between 0 and 1. You can check this property to know the current volume level. To set the Video player sound volume, however, you must use the <a href="#setvolume-method" title="More information and details">setVolume() method</a>.
+   </p>
+
+   <h3 id="videoDuration-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player VideoDuration property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    The VideoDuration control property stores the length of the media file in seconds. This property is available after the <a href="#durationchange-event" title="More information and details">DurationChange event</a> has been fired.
+   </p>
+
+   <h3 id="currenttime-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player CurrentTime property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    The CurrentTime control property stores the current reproduction position in seconds. This property is available after the <a href="#timeupdate-event" title="More information and details">TimeUpdate event</a> has been fired.
+   </p>
+
+   <h3 id="isPaused-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player IsPaused property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The IsPaused control property determine if the Video player reproduction has been paused or not. This property has a "true" value if the reproduction is paused, or "false" if not.
+   </p>
+
+   <h3 id="lastError-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player LastError property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span>
+    The LastError control property stores information about the last error while fetching the media data. This property is available in the <a href="#error-event" title="More information and details">Error event</a> and it's an object with the below properties. Note, however, that it's possible that the Error property was "null" in some cases.
+   </p>
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">code</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The error code.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">message</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The error message.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h3 id="title-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Title property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Title control property stores some small but descriptive text, mainly to be used to be show that text when the user place the mouse cursor into the control.
+   </p>
+
+   <h3 id="poster-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Poster property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Poster control property stores an image path or URL to be shown in the video control before start to play.
+   </p>
+
+   <h3 id="playsinline-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Playsinline property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    Determines if the video must be player inline or not. The default value is false. Can be good to be true at iOS, for example, since in other way the video can be reproduced at full screen.
+   </p>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Classes control property stores one or more additionals CSS classes (space separated) to be applied to the control.
+   </p>
+
+   <h3 id="hidden-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player Hidden property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hidden control property determines if the control appear visible to the user or not. Set to "true" to hide the control, or to "false" to show the control (by default).
+   </p>
+
+   <h2 class="mt-5">
+    Video player runtime methods
+   </h2>
+
+   <h3 id="playVideo-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player playVideo() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to start to play the video media file. This method do not require any argument.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Start to play the video
+views.view1.video1.playVideo();
+</textarea>
+
+   <h3 id="pauseVideo-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player pauseVideo() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to pause a previously started reproduction of the video media file. This method do not require any argument.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Pause the video
+views.view1.video1.pauseVideo();
+</textarea>
+
+   <h3 id="stop-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player stop() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to stop a previously started reproduction of the video media file. This method do not require any argument.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Stop the video
+views.view1.video1.stop();
+</textarea>
+
+   <h3 id="seek-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player seek() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to go to certain specific position in the video reproduction. This method requires the below argument:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">seconds</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The specific seconds to seek the video.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+<textarea class="code-editor" data-mode="javascript">
+
+// Seek the video to 1.50 seconds
+views.view1.video1.seek(1.50);
+</textarea>
+
+   <h3 id="setvolume-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player setVolume() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to set the audio volume of the video reproduction. This method requires the below argument:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">volume</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        A number between 0 and 1 that represent the volume level to be set.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+<textarea class="code-editor" data-mode="javascript">
+
+// Seek the volume
+views.view1.video1.setVolume(0.5);
+</textarea>
+
+   <h3 id="setsource-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player setSource() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to set the source of the Video player at runtime. Remember that, once the <a href="#sources-variable" title="More information and details">Sources property</a> is established the at designtime or in runtime, we need to use the <a href="#source-variable" title="More information and details">Source property</a> in order to change the source of the Video player: you can use this method to establish the Source property. This method requires the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">mediaUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The media file URL to be set as the source of the Video player.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">mediaType</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The media file type / codec to be used. This argument is optional, and, if not provided, the browser or platform try to automatically detect the media type and codec to be use.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the source of the Video player
+views.view1.video1.setSource('app/files/videos/my-video.mp4');
+
+// Set the source of the Video player indicating the media type
+views.view1.video1.setSource('app/files/videos/my-video.mp4', 'video/mp4');
+</textarea>
+
+   <h3 id="appendsource-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Video player appendSource() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Video player control method to append a new media source into the <a href="#sources-variable" title="More information and details">Sources property</a> at runtime. Remember that you can set the Sources property at designtime. You can use this method to fill the Sources property at runtime, however, once the Sources has been established, you must use the <a href="#setsource-method" title="More information and details">setSource() method</a> to change the Video player source.
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">mediaUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The media file URL to be set as the source of the Video player.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">mediaType</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The media file type / codec to be used. This argument is optional, and, if not provided, the browser or platform try to automatically detect the media type and codec to be use.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+<textarea class="code-editor" data-mode="javascript">
+
+// Append new sources for the Video player
+views.view1.video1.appendSource('app/files/videos/my-video.mp4', 'video/mp4');
+views.view1.video1.appendSource('app/files/videos/my-video.ogg', 'video/ogg');
+</textarea>
+
+   <h2 class="mt-5">
+    Video player events
+   </h2>
+
+   <h3 id="canplay-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player CanPlay event
+   </h3>
+   <p class="mt-3">
+    The CanPlay event handler is fired when the browser or platform can resume playback of the media data, but estimates that if playback were to be started now, the media resource could not be rendered at the current playback rate up to its end without having to stop for further buffering of content. See the <a href="#canplaythrough-event" title="More information and details">CanPlayThrough event</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="canplaythrough-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player CanPlayThrough event
+   </h3>
+   <p class="mt-3">
+    The CanPlayThrough event handler is fired when the browser or platform estimates that if playback were to be started now, the media resource could be rendered at the current playback rate all the way to its end without having to stop for further buffering. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="play-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Play event
+   </h3>
+   <p class="mt-3">
+    The Play event handler is fired when the Video player is no longer paused. It's fired after the <a href="#play-method" title="More information and details">play() method</a> has returned, or when the <a href="#autoplay-variable" title="More information and details">AutoPlay property</a> has caused playback to begin. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="pause-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Pause event
+   </h3>
+   <p class="mt-3">
+    The Pause event handler is fired when the Video player has been paused. It's fired after the <a href="#pause-method" title="More information and details">pause() method</a> has returned. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="durationchange-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player DurationChange event
+   </h3>
+   <p class="mt-3">
+    The DurationChange event hander is fired when the <a href="#duration-variable" title="More information and details">Duration property</a> has just been updated. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="timeupdate-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player TimeUpdate event
+   </h3>
+   <p class="mt-3">
+    The TimeUpdate event hander is fired when the current playback position changed as part of normal playback or in an especially interesting way, for example discontinuously. See the <a href="#currenttime-variable" title="More information and details">CurrentTime property</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="ended-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Ended event
+   </h3>
+   <p class="mt-3">
+    The Ended event hander is fired when the playback has stopped because the end of the media source was reached. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="seeking-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Seeking event
+   </h3>
+   <p class="mt-3">
+    The Seeking event hander is fired when the browser or platform has started seeking to a new position. See the <a href="#seek-method" title="More information and details">seek() method</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="seeked-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Seeked event
+   </h3>
+   <p class="mt-3">
+    The Seeked event hander is fired after the current playback position was changed. See the <a href="#seek-method" title="More information and details">seek() method</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="volumechange-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player VolumeChange event
+   </h3>
+   <p class="mt-3">
+    The VolumeChange event hander is fired after the <a href="#volume-variable" title="More information and details">Volume property</a> or the <a href="#mute-variable" title="More information and details">Muted property</a> was changed. See the <a href="#setvolume-method" title="More information and details">setVolume() method</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="error-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Error event
+   </h3>
+   <p class="mt-3">
+    The Error event hander is fired when an error occurs while fetching the media data. See the <a href="#error-variable" title="More information and details">Error property</a>. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseenter-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player MouseEnter event
+   </h3>
+   <p class="mt-3">
+    The MouseEnter event handler is fired when the user enter the mouse into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseleave-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player MouseLeave event
+   </h3>
+   <p class="mt-3">
+    The MouseLeave event handler is fired when the user leave the mouse from the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the Video player control, which occur when the user click with the right mouse button into the Video player control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Video player events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Video player control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all control events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

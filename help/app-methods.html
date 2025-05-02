@@ -1,0 +1,3289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App methods</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App methods
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App methods
+   </h2>
+
+   <p class="mt-3">
+    An "app" object JavaScript variable is available in all app events, <a href="app-view.html" title="Go to this help topic">app views</a> events, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> events and all the controls events. The "app" variable provide several <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-constants.html" title="Go to this help topic">app constants</a>, as well the below referred app methods, ready to be used.
+   </p>
+
+   <div class="row">
+
+    <div class="col-md-4">
+
+     <div class="mt-3">
+      <strong>Variables</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setreactivevar-method" title="More information and details">setReactiveVar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getreactivevar-method" title="More information and details">getReactiveVar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#unsetreactivevar-method" title="More information and details">unsetReactiveVar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setnonreactivevar-method" title="More information and details">setNonReactiveVar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getnonreactivevar-method" title="More information and details">getNonReactiveVar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#unsetnonreactivevar-method" title="More information and details">unsetNonReactiveVar()</a></li>
+     </ul>
+
+     <div>
+      <strong>App views</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#showview-method" title="More information and details">showView()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#replaceview-method" title="More information and details">replaceView()</a></li>
+     </ul>
+
+     <div>
+      <strong>App dialogs</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#showdialog-method" title="More information and details">showDialog()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#hidedialog-method" title="More information and details">hideDialog()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#hidedialogs-method" title="More information and details">hideDialogs()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#isdialogvisible-method" title="More information and details">isDialogVisible()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getvisibledialogs-method" title="More information and details">getVisibleDialogs()</a></li>
+     </ul>
+
+     <div>
+      <strong>App sidebar</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#showsidebar-method" title="More information and details">showSidebar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#hidesidebar-method" title="More information and details">hideSidebar()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarisvisible-method" title="More information and details">sidebarIsVisible()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarsetdirection-method" title="More information and details">sidebarSetDirection()</a></li>
+     </ul>
+
+     <div>
+      <strong>App alerts</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#showalert-method" title="More information and details">showAlert()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#hidealert-method" title="More information and details">hideAlert()</a></li>
+     </ul>
+
+     <div>
+      <strong>App toasts</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#showtoast-method" title="More information and details">showToast()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#hidetoast-method" title="More information and details">hideToast()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#hidetoasts-method" title="More information and details">hideToasts()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#gettoast-method" title="More information and details">getToast()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#gettoasts-method" title="More information and details">getToasts()</a></li>
+     </ul>
+
+     <div>
+      <strong>App local storage</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setoption-method" title="More information and details">setOption()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getoption-method" title="More information and details">getOption()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#removeoption-method" title="More information and details">removeOption()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#clearoptions-method" title="More information and details">clearOptions()</a></li>
+     </ul>
+
+    </div>
+
+    <div class="col-md-4">
+
+     <div class="mt-3">
+      <strong>App resources</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#resource-method" title="More information and details">resource()</a></li>
+     </ul>
+
+     <div>
+      <strong>App languages</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#translateview-method" title="More information and details">translateView()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getlanguages-method" title="More information and details">getLanguages()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getlanguagesnames-method" title="More information and details">getLanguagesNames()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getlanguagescodes-method" title="More information and details">getLanguagesCodes()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getlanguagecodefromname-method" title="More information and details">getLanguageCodeFromName()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getlanguagenamefromcode-method" title="More information and details">getLanguageNameFromCode()</a></li>
+     </ul>
+
+     <div>
+      <strong>App controls</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#focuscontrol-method" title="More information and details">focusControl()</a></li>
+     </ul>
+
+     <div>
+      <strong>App themes</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setapptheme-method" title="More information and details">setAppTheme()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getappthemecolor-method" title="More information and details">getAppThemeColor()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setappthemecolor-method" title="More information and details">setAppThemeColor()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setappfixedstyle-method" title="More information and details">setAppFixedStyle()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setappscaledstyle-method" title="More information and details">setAppScaledStyle()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setapptextdirection-method" title="More information and details">setAppTextDirection()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#getappcolorscheme-method" title="More information and details">getAppColorScheme()</a></li>
+     </ul>
+
+     <div>
+      <strong>Devices</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setviewreadyfordevicekeyboard-method" title="More information and details">setViewReadyForDeviceKeyboard()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setdialogreadyfordevicekeyboard-method" title="More information and details">setDialogReadyForDeviceKeyboard()</a></li>
+     </ul>
+
+    </div>
+
+    <div class="col-md-4">
+
+     <div class="mt-3">
+      <strong>Strings methods</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#lowercase-method" title="More information and details">lowerCase()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#uppercase-method" title="More information and details">upperCase()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#strlen-method" title="More information and details">strLen()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#trimstr-method" title="More information and details">trimStr()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#strsearch-method" title="More information and details">strSearch()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#splitstr-method" title="More information and details">splitStr()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#substr-method" title="More information and details">subStr()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#strreplace-method" title="More information and details">strReplace()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#strreplaceall-method" title="More information and details">strReplaceAll()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#strtobase64-method" title="More information and details">strToBase64()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#base64tostr-method" title="More information and details">base64ToStr()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#serialize-method" title="More information and details">serialize()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#unserialize-method" title="More information and details">unserialize()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#randomstr-method" title="More information and details">randomStr()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#formatstr-method" title="More information and details">formatStr()</a></li>
+     </ul>
+
+     <div>
+      <strong>Numbers methods</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#randomnum-method" title="More information and details">randomNum()</a></li>
+     </ul>
+
+     <div>
+      <strong>Sounds methods</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#beep-method" title="More information and details">beep()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#playsound-method" title="More information and details">playSound()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#stopsound-method" title="More information and details">stopSound()</a></li>
+     </ul>
+
+     <div>
+      <strong>Window methods</strong>
+     </div>
+     <ul class="mt-3">
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#alert-method" title="More information and details">alert()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#consoleinfo-method" title="More information and details">console.info()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#consoleerror-method" title="More information and details">console.error()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#consoledebug-method" title="More information and details">console.debug()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#settimeout-method" title="More information and details">setTimeout()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#setinterval-method" title="More information and details">setInterval()</a></li>
+      <li><i class="fas fa-caret-right text-danger"></i> <a href="#clearinterval-method" title="More information and details">clearInterval()</a></li>
+     </ul>
+
+    </div>
+
+   </div>
+
+   <h2 class="mt-5">
+    App methods
+   </h2>
+
+   <h2 id="setreactivevar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetReactiveVar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SetReactiveVar method to establish app global reactive variables, ready to be used in all the <a href="app-view.html" title="Go to this help topic">app views</a>, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and app frames. You can show the content of these global reactive variables in the user interface (some app view, app dialog or app frame) and they are updated accordingly if was changing in any of the <a href="app-view.html" title="Go to this help topic">app views</a>, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> or app frames.
+    </p>
+    <p>
+     For example, suppose you declare a "userName" global reactive variable and then show it in certain <a href="control-html.html" title="Go to this help topic">HTML control</a>. Then, you can change the value of this variable in any app view, app dialog or app frame, and, the variable is show as expected, that is, well updated.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    The app SetReactiveVar method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The app global reactive variable name to be set.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">value</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        Any value to be set, can be a string, a number, array, object, etc.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Creates a "userName" app global reactive variable
+app.setReactiveVar('userName', 'John Doe');
+
+// Creates a "execCounter" app global reactive variable
+app.setReactiveVar('execCounter', 1);
+
+// Creates a "firstRun" app global reactive variable
+app.setReactiveVar('firstRun', true);
+
+// Creates a "firstData" app global reactive variable
+app.setReactiveVar('firstData', {"name": "John", "lastName": "Doe"});
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4">
+    To access to the created app global reactive variables you can use the <a href="#getreactivevar-method" title="More information and details">app.getReactiveVar() app method</a> or directly the <a href="app-properties.html#store-property" title="More information and details">Store property</a>, like "app.store.varName". Note that by using the method you can establish a default value to be returned if the variable did not exists.
+   </div>
+
+   <textarea class="code-editor" data-mode="htmlmixed">
+
+<!-- This code is inside the HTML property of an HTML control -->
+
+Your user name is: {{app.store.userName}}
+
+<br>
+
+Your user name is: {{app.getReactiveVar('userName')}}
+   </textarea>
+
+   <div class="alert alert-warning text-center mt-4">
+    Consider if you need a global reactive variable. In order to made a variable reactive some resources are expended. If you don't show the variable contents in the user interface, probably you no need a global reactive variable, but just a global variable, to be available in all the app views, app dialogs and app frames, but in shown in the app interface. You can use the <a href="#setnonreactivevar-method" title="More information and details">app.getNonReactiveVar() app method</a> to set app global non reactive variables.
+   </div>
+
+   <h2 id="getreactivevar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetReactiveVar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app GetReactiveVar method to get the value of a previously established app global reactive variables.
+    </p>
+   </div>
+   
+   <div class="alert alert-primary text-center mt-4">
+    To access to the created app global reactive variables you can use this method or directly the <a href="app-properties.html#store-property" title="More information and details">Store property</a>, like "app.store.varName".
+   </div>   
+
+   <p class="mt-3">
+    The app GetReactiveVar method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The app global reactive variable name to be get.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">defaultValue</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        Any value to be get if the specified variable did not exists, can be a string, a number, array, object, etc.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="htmlmixed">
+
+<!-- This code is inside the HTML property of an HTML control -->
+
+Your user name is: {{app.store.userName}}
+
+<br>
+
+Your user name is: {{app.getReactiveVar('userName', 'John Doe')}}
+   </textarea>
+   
+   <h2 id="unsetreactivevar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App UnsetReactiveVar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app UnsetReactiveVar method to delete a previously established app global reactive variables.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    The app UnsetReactiveVar method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The app global reactive variable name to be deleted.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set a variable
+app.setReactiveVar('userName', 'John Doe');
+
+// Show John Doe
+alert(app.getReactiveVar('userName'));
+
+// Unset the variable
+app.unsetReactiveVar('userName');
+
+// Show "undefined"
+alert(app.getReactiveVar('userName'));
+   </textarea>   
+
+   <h2 id="setnonreactivevar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetNonReactiveVar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SetNonReactiveVar method to establish app global non reactive variables, ready to be used in all the <a href="app-view.html" title="Go to this help topic">app views</a>, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and app frames.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    The app SetNonReactiveVar method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The app global non reactive variable name to be set.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">value</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        Any value to be set, can be a string, a number, array, object, etc.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Creates a "userName" app global non reactive variable
+app.setNonReactiveVar('userName', 'John Doe');
+
+// Creates a "execCounter" app global non reactive variable
+app.setNonReactiveVar('execCounter', 1);
+
+// Creates a "firstRun" app global non reactive variable
+app.setNonReactiveVar('firstRun', true);
+
+// Creates a "firstData" app global non reactive variable
+app.setNonReactiveVar('firstData', {"name": "John", "lastName": "Doe"});
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4">
+    To access to the created app global non reactive variables you can use the <a href="#getreactivevar-method" title="More information and details">app.getNonReactiveVar() app method</a> or directly the "window.store" variable, like "window.store.varName". Note that by using the method you can establish a default value to be returned if the variable did not exists.
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show Jhon Doe
+alert(app.getNonReactiveVar('userName'));
+
+// Show Jhon Doe too
+alert(window.store.userName);
+   </textarea>
+
+   <h2 id="getnonreactivevar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetNonReactiveVar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app GetNonReactiveVar method to get the value of a previously established app global non reactive variables.
+    </p>
+   </div>
+   
+   <div class="alert alert-primary text-center mt-4">
+    To access to the created app global non reactive variables you can use this method or directly the "window.store" variable, like "window.store.varName".
+   </div>   
+
+   <p class="mt-3">
+    The app GetNonReactiveVar method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The app global non reactive variable name to be get.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">defaultValue</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        Any value to be get if the specified variable did not exists, can be a string, a number, array, object, etc.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show Jhon Doe
+alert(app.getNonReactiveVar('userName'));
+
+// Show Jhon Doe too
+alert(window.store.userName);
+   </textarea>
+
+   <h2 id="unsetnonreactivevar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App UnsetNonReactiveVar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app UnsetNonReactiveVar method to delete a previously established app global non reactive variables.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    The app UnsetNonReactiveVar method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The app global non reactive variable name to be deleted.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set a variable
+app.setNonReactiveVar('userName', 'John Doe');
+
+// Show John Doe
+alert(app.getNonReactiveVar('userName'));
+
+// Unset the variable
+app.getNonReactiveVar('userName');
+
+// Show "undefined"
+alert(app.getNonReactiveVar('userName'));
+   </textarea>   
+
+   <h2 id="showview-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ShowView method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app ShowView method to show to the user any of the available <a href="app-view.html" title="Go to this help topic">app views</a>. This method show the specified app view and leave a record in the browser history, so the user can use the "back button" in order to navigate to the previous app view in the history. If you want to show an app view without leave a record in the browser history you can use the <a href="#replaceview-method" title="More information and details">replaceView() method</a>.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">viewName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the app view to be show.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the app view2
+app.showView('view2');
+   </textarea>
+
+   <p class="mt-3">
+    It's also possible to pass variables to the view just by adding it after the view name in the below way:
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the app view2
+app.showView('view2?a=hello&b=world');
+   </textarea>
+
+   <p class="mt-3">
+    Then you can take a look at the <a href="app-properties.html#query-property" title="More information and details">app.query</a> property, which in the above case stores an object with two properties: "a" and "b", with the "hello" and "world" values respectively.
+   </p>
+
+   <h2 id="replaceview-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ReplaceView method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app ReplaceView method to show to the user any of the available <a href="app-view.html" title="Go to this help topic">app views</a>. This method show the specified but don't leave a record in the browser history, so the user cannot use the "back button" in order to navigate to the previous app view in the history. If you want to show an app view leaving a record in the browser history you can use the <a href="#showview-method" title="More information and details">showView() method</a>. This method admits the below arguments:
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">viewName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the app view to be show.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the app view2 without leave a record in browser history
+app.replaceView('view2');
+   </textarea>
+
+   <p class="mt-3">
+    It's also possible to pass variables to the view just by adding it after the view name in the below way:
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the app view2
+app.showView('view2?a=hello&b=world');
+   </textarea>
+
+   <p class="mt-3">
+    Then you can take a look at the <a href="app-properties.html#query-property" title="More information and details">app.query</a> property, which in the above case stores an object with two properties: "a" and "b", with the "hello" and "world" values respectively.
+   </p>
+
+   <h2 id="showdialog-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ShowDialog method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app ShowDialog method to show to the user a specific <a href="app-dialog.html" title="Go to this help topic">app dialog</a>. You must indicate to this method the dialog name which you want to show, and, optionally, you can indicate a callback which will be executed when the dialog is shown, and, another optional callback which will be executed when the dialog is hidden. Note that the dialog itself have the <a href="app-dialog.html#show-event" title="Press here for more information and details">Show event</a> and the <a href="app-dialog.html#hide-event" title="Press here for more information and details">Hide event</a>: the optional callbacks that you can use with this method are independent of these dialog's methods.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dialogName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the app dialog to be show.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">shownCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        An optional function to be executed when the dialog are shown.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">hiddenCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        An optional function to be executed when the dialog are hidden.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the app dialog1
+app.showDialog('dialog1');
+
+// Show the app dialog1 and be informed when the dialog are shown
+app.showDialog(
+  'dialog1',
+  function () {
+    alert('The dialog is shown!');
+  }
+);
+
+// Show the app dialog1 and be informed when the dialog are shown and hidden
+app.showDialog(
+  'dialog1',
+  function () {
+    alert('The dialog is shown!');
+  },
+  function () {
+    alert('The dialog is hidden!');
+  }
+);
+
+// Show the app dialog1 and be informed when the dialog are hidden
+app.showDialog(
+  'dialog1',
+  null,
+  function () {
+    alert('The dialog is hidden!');
+  }
+);
+   </textarea>
+
+   <h2 id="hidedialog-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HideDialog method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app HideDialog method to hide a showing <a href="app-dialog.html" title="Go to this help topic">app dialog</a>.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dialogName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the app dialog to be show.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Hide the app dialog1
+app.hideDialog('dialog1');
+   </textarea>
+
+   <h2 id="hidedialogs-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HideDialogs method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app HideDialogs method to hide all the possible showing <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. This method don't require any arguments.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Hide all showing
+app.hideDialogs();
+   </textarea>
+   
+   <h2 id="isdialogvisible-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App IsDialogVisible method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app IsDialogVisible method to find if an app dialog is visible (shown) or not. The method returns a Boolean true value if the dialog is visible or a Boolean false value if not.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">dialogName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the app dialog to be check.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Is dialog1 visible?
+if (app.IsDialogVisible('dialog1')) {
+  alert('dialog1 is visible');
+} else {
+  alert('dialog1 is NOT visible');
+}
+   </textarea> 
+
+   <h2 id="getvisibledialogs-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App getVisibleDialogs method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app getVisibleDialogs method to retrieve the names of the visible dialogs. This method do not require any arguments and returns an Array with the names of the visible dialogs.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Count the visible dialogs
+let totalVisibleDialogs = app.getVisibleDialogs().length;
+
+// Get the visible dialogs
+let visibleDialogs = app.getVisibleDialogs();
+
+// Can show [] (no visible dialogs) or ['dialog1'] or ['dialog1', 'dialog2',...]
+alert(visibleDialogs);
+
+   </textarea>
+
+   <h2 id="showsidebar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ShowSidebar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app ShowSidebar method to show the optional app sidebar. To put the sidebar ready to use you only need to set the app sidebar items and subitems at designtime by using the <a href="dialog-sidebar-items.html" title="Go to this help topic">sidebar items dialog</a>. This dialog is available from the <a href="app-options.html#sidebar-options" title="Go to this help topic">app sidebar options</a> and also from the app <a href="ide-controls-inspector.html" title="Go to this help topic">designer controls inspector</a>. You can also access to the app sidebar items and subitems at runtime by using the app <a href="app-properties.html#sidebaritems-property" title="Go to this help topic">app.sidebar.items property</a>.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the app sidebar
+app.showSidebar();
+   </textarea>
+
+   <h2 id="hidesidebar-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HideSidebar method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app HideSidebar method to hide the optional app sidebar. You can know if the app sidebar is visible by using the app <a href="#sidebarisvisible-method" title="More information and details">sidebarIsVisible() method</a>.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Hide the app sidebar
+if (app.sidebarIsVisible()) {
+  app.hideSidebar();
+}
+   </textarea>
+
+   <h2 id="sidebarisvisible-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SidebarIsVisible method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SidebarIsVisible method to check if the app sidebar is visible or not. This methods returns "true" if the sidebar is visible, or "false" if not.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Hide the app sidebar if visible
+if (app.sidebarIsVisible()) {
+  app.hideSidebar();
+}
+   </textarea>
+
+   <h2 id="sidebarsetdirection-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SidebarSetDirection method
+   </h2>
+   <div class="mt-3">
+    <p>
+     Use this method to change the direction of the app sidebar at runtime. This method returns the established direction of the app sidebar, which can be "left" or "right".
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Toogle the app sidebar direction
+if (app.sidebar.direction === 'left') {
+  app.sidebarSetDirection('right');
+} else {
+  app.sidebarSetDirection('left');
+}
+   </textarea>
+
+   <h2 id="showalert-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ShowAlert method
+   </h2>
+   <div class="mt-3">
+    <p>
+     Use the app ShowAlert method in order to show an alert to the user in a modal way, instead of the browser's alert that you can show to the user by using the <a href="#alert-method" title="More information and details">window.alert()</a> method.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">body</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The alert's body. Can contain some HTML tags like "p" and "strong".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">title</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optionally set the alert's title.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">kind</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optionally set the alert's header kind. To set this variable you can use one of the available "app.kind.*" constant values. If you provide an alert's title, then the kind is applied to the alert's title. You can also provide an empty title, so the kind (if any) is applied to the alert's body.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">buttons</td>
+       <td class="text-secondary">Array</td>
+       <td>
+        Optionally set an Arrray of objects variable with the buttons that you want to appear in the alert. Every object / button can have three properties: "text", "kind" and "size". You can use the "app.kind.*" values for the "kind" and the "app.size.*" for the "size".
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">closeCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Optionally set a function callback to be executed when the user press an alert's button. The function callback receive an "index" argument, which inform to you about the button which is pressed by the user, starting by "zero" (first button).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Simple alert
+app.showAlert('Hello, I am an alert!');
+
+// Simple alert with HTML
+app.showAlert('<i class="far fa-bell"></i> Hello, <strong>I am</strong> an alert!');
+
+// Alert with header
+app.showAlert('Hello, I am an alert!', 'Information');
+
+// Alert with header kind
+app.showAlert('Hello, I am an alert!', 'Information', app.kind.primary);
+
+// Alert with button
+app.showAlert(
+ 'Hello, I am an alert!',
+ 'Information',
+ app.kind.primary,
+ [{text: 'Accept', kind: app.kind.primary, size: app.size.md}]
+);
+
+// Alert with close callback
+app.showAlert(
+  'Hello, I am an alert!',
+  'Information',
+  app.kind.primary,
+  [{text: 'Accept', kind: app.kind.primary}],
+  function () {
+    app.showAlert('You close the alert!');
+  }
+);
+
+// Alert with buttons
+app.showAlert(
+  'Hello, I am an alert!',
+  'Information',
+  app.kind.primary,
+  [
+    {text: 'Accept', kind: app.kind.primary, size: app.size.sm},
+    {text: 'Cancel', kind: app.kind.danger, size: app.size.sm}
+  ],
+  function (index) {
+    app.showAlert('You close the alert pressing the button with index: ' + index);
+  }
+);
+
+// Large body alert
+app.showAlert(
+  '<p>Hello, I am an alert!</p><p>Hello, I am an alert!</p><p>Hello, I am an alert!</p><p>Hello, I am an alert!</p><p>Hello, I am an alert!</p><p>Hello, I am an alert!</p>',
+  'Information',
+  app.kind.primary,
+  [
+    {text: 'Accept', kind: app.kind.primary, size: app.size.sm},
+    {text: 'Cancel', kind: app.kind.danger, size: app.size.sm}
+  ],
+  function (index) {
+    app.showAlert('You close the alert pressing the button with index: ' + index);
+  }
+);
+
+// Very large body alert
+var
+  alertBody = '\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+    <p>Hello, I am an alert!</p>\
+  ';
+
+app.showAlert(
+  alertBody,
+  'Information',
+  app.kind.primary,
+  [
+    {text: 'Accept', kind: app.kind.primary, size: app.size.sm},
+    {text: 'Cancel', kind: app.kind.danger, size: app.size.sm}
+  ],
+  function (index) {
+    app.showAlert('You close the alert pressing the button with index: ' + index);
+  }
+);
+
+// Autohide alert
+window.clearInterval(window.autoHideAlertTimeout);
+
+app.showAlert('Hello, I am an alert!');
+
+window.autoHideAlertTimeout = window.setTimeout(function () {
+
+  app.hideAlert();
+
+}, 3000);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is an Alert sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="hidealert-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HideAlert method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app HideAlert method in order to hide a previously shown app alert. This method do not require any argument, since only one alert can be visible in the app at the same moment. If there is no visible alerts, this method don't cause any error if is called.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Autohide alert
+window.clearInterval(window.autoHideAlertTimeout);
+
+app.showAlert('Hello, I am an alert!');
+
+window.autoHideAlertTimeout = window.setTimeout(function () {
+
+  app.hideAlert();
+
+}, 3000);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is an Alert sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="showtoast-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ShowToast method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app ShowToast method to show one or more notifications to the user. Note that more than one notification toast can be show at the same time, since they are properly stocked vertically. This method returns a unique identifier string that can be used with the app <a href="#gettoast-method" title="More information and details">getToast() method</a> and the <a href="#hidetoast-method" title="More information and details">hideToast() method</a> to manipulate and hide the toast respectively.
+    </p>
+    <p>
+     As you can see in the below arguments table, this method accept a couple of callbacks that receives one argument with a "toast" object variable. Also the app <a href="#gettoast-method" title="More information and details">getToast() method</a> returns a "toast" object variable. Please, see this last method to know the properties of this "toast" object variable.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The text to be show in the toast body. This can contain a bit of HTML tags if you needed. This is the only mandatory argument for the method. All others are optionals. This methods returns a string identifier that can be used with the app <a href="#hidetoast-method" title="More information and details">hideToast() method</a> or the app <a href="#gettoast-method" title="More information and details">getToast() method</a>.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">hideMsecs</td>
+       <td class="text-secondary">Number|Boolean</td>
+       <td>
+        Optionally set to a number of milliseconds in order to automatically hide the toast after that time. By default, a toast notification must be dismissed by the user clicking the close button. You can use this argument to establish a number of milliseconds to auto hide the toast notification. You can also set this argument to "false", if you want to use another method arguments but don't want to auto hide the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">kind</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optionally establish here the toast kind or "colors". To set this variable you can use one of the available "app.kind.*" constant values.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">title</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optionally set a title for the toast. The title is shown at the left of the toast header.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">subtitle</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Optionally set a subtitle for the toast. The subtitle is shown at the right of the toast header with an smaller font size.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">clickCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Optionally set here a function to be called when the user click in the toast body. The function receives one argument with a "toast" object variable. This "toast" object stores all the toast properties, in addition to the payload that you can set too (see below the payload optional argument). You can use here the app <a href="#hidetoast-method" title="More information and details">hideToast() method</a> to hide the toast, if you wanted.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dismissCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        Optionally set here a function to be called when the user click in the toast close button. The function receives one argument with a "toast" object. This "toast" object stores all the toast properties, in addition to the payload that you can set too (see below the payload optional argument). You no need to hide the toast, since it's automatically hide after this function call.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">payload</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Optionally set here an object to be added to the toast. As you read above the "clickCallback" and the "dismissCallback" functions receives one argument with a "toast" object variable, this "toast" variable stores all the toast properties, and, also a "payload" property, which contains the payload object that you pass here in this argument. This can be useful to do some specific things when an specific toast (with some specific payload) is clicked or dismissed.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show a simple toast
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+);
+
+// Show a simple toast and auto hide it after 4 seconds
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000
+);
+
+// Show a "danger" toast and auto hide it after 4 seconds
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000,
+  app.kind.danger
+);
+
+// Show a "danger" toast with title and auto hide it after 4 seconds
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000,
+  app.kind.danger,
+  'Lorem ipsum'
+);
+
+// Show a "danger" toast with title and subtitle and auto hide it after 4 seconds
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000,
+  app.kind.danger,
+  'Lorem ipsum',
+  '1 minute ago'
+);
+
+// Show a "danger" toast with title and subtitle and auto hide it after 4 seconds
+// and be ready if the user click in the toast body
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000,
+  app.kind.danger,
+  'Lorem ipsum',
+  '1 minute ago',
+  function (toast) {
+    alert('You clicked the toast with ID: ' + toast.id);
+  }
+);
+
+// Show a "danger" toast with title and subtitle and auto hide it after 4 seconds
+// and be ready if the user click in the toast body or the toast close button
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000,
+  app.kind.danger,
+  'Lorem ipsum',
+  '1 minute ago',
+  function (toast) {
+    alert('You clicked the toast with ID: ' + toast.id);
+  },
+  function (toast) {
+    alert('You dismissed the toast with ID: ' + toast.id);
+  }
+);
+
+// Show a "danger" toast with title and subtitle and auto hide it after 4 seconds
+// and be ready if the user click in the toast body or the toast close button and
+// pass a payload for the toast and use it
+
+app.showToast(
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  4000,
+  app.kind.danger,
+  'Lorem ipsum',
+  '1 minute ago',
+  function (toast) {
+    // Show "The payload user is: John"
+    alert('The payload user is: ' + toast.payload.user);
+  },
+  function (toast) {
+    alert('You dismissed the toast with ID: ' + toast.id);
+  },
+  {user: "John"}
+);
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is a Toasts sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="hidetoast-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HideToast method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app HideToast method to hide a specific toast notification previously show by using the app <a href="#showtoast-method" title="More information and details">showToast() method</a>.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">toastId</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Mandatory. You must specify here the ID of a toast notification returned by the app <a href="#showtoast-method" title="More information and details">showToast() method</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is a Toasts sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="hidetoasts-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App HideToasts method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app HideToasts method to hide all the existing toast notifications previously show by using the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. If you want to know if some toast is actually showing, you can use the app <a href="#gettoast-method" title="More information and details">getToast() method</a>, which returns an array with the available toasts, so, you can use the array "length" property: if is greater than zero means that some toast is currently showing. This method don't require arguments, and, don't fail if no toasts are showing.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Hide all the currently showing toasts
+if (app.getToasts().length > 0) {
+  app.hideToasts();
+}
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is a Toasts sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="gettoast-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetToast method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app GetToast method to get a specific toast notification previously show by using the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. Get a toast notification can be useful, for example, because it's possible to change the toast properties and automatically reflect these changes in the toast notification, so it's possible to change the toast notification text, for example, after the toast has been show.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">toastId</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Mandatory. You must specify here the ID of a toast notification returned by the app <a href="#showtoast-method" title="More information and details">showToast() method</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <p class="mt-3">
+    This method returns a "toast" object variable with the below properties:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">id</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Read only. The toast ID as returned by the app <a href="#showtoast-method" title="More information and details">showToast() method</a> the the toast was show. Changing this property can cause unexpected results.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The toast text as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">kind</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The toast kind as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">title</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The toast title as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">subtitle</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The toast subtitle as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">subtitle</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The toast subtitle as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">payload</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        The toast payload as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">clickCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        The toast click callback function as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dismissCallback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        The toast dismiss callback function as you set when call to the app <a href="#showtoast-method" title="More information and details">showToast() method</a>. You can change this property if needed and that changes are automatically reflected in the toast notification.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show a toast notification and keep their ID to be used later
+
+var
+  toastId = app.showToast(
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    false,
+    app.kind.success
+  );
+
+setTimeout(function () {
+
+  // After 3 seconds, change some toast notification properties
+
+  var
+    toast = app.getToast(toastId);
+
+  toast.title = 'Hello!';
+  toast.kind = app.kind.danger;
+  toast.subtitle = '3 seconds ago';
+
+}, 3000);
+
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is a Toasts sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="gettoasts-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetToasts method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app GetToasts method to get all the currently showing toast notifications. This method don't require any argument and returns an array of objects variable. Every object is a "toast" one, and has the properties that you can see referred in the app <a href="#gettoast-method" title="More information and details">getToast() method</a>.
+    </p>
+   </div>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is a Toasts sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="setoption-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetOption method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to store the specified key and value in the app local storage. The app local storage can be a good place to save app options, for example, and, it's available in all the browsers and platforms. This method admits the below arguments:
+    </p>
+   </div>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">key</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The key name to be stored in the app local storage. You can later use this key to retrieve the saved value by using the app <a href="#getoption-method" title="More information and details">getOption() method</a>.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">value</td>
+       <td class="text-secondary">mixed</td>
+       <td>
+        The value that you want to store in below the specified key in the app local storage.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 id="getoption-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetOption method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieved a previously saved value from the app local storage by using the <a href="#setoption-method" title="More information and details">setOption() method</a>. This method admits the below arguments:
+    </p>
+   </div>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">key</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The key name used previously by the app <a href="#setoption-method" title="More information and details">setOption() method</a>.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">defaultValue</td>
+       <td class="text-secondary">mixed</td>
+       <td>
+        This method returns a previously saved value from the app local storage, however, if the key is not found, the method returns this specified default value. If not default value is provided the method returns "undefined".
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 id="removeoption-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App RemoveOption method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to remove the specified key from the app local storage. The key / value must be previously saved by using the <a href="#setoption-method" title="More information and details">setOption() method</a>. This method admits the below argument:
+    </p>
+   </div>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">key</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The key name used previously by the app <a href="#setoption-method" title="More information and details">setOption() method</a> and to be removed from the app local storage.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h2 id="clearoptions-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ClearOptions method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to remove all the keys previously stored in the app local storage. The keys / values can be previously saved by using the <a href="#setoption-method" title="More information and details">setOption() method</a>. This method has no arguments.
+    </p>
+   </div>
+
+   <h2 id="resource-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Resource method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieve a specific app resource. You can <a href="app-resources.html" title="Go to this help topic">learn more about app resources here</a>. This method is language aware, in other words, take in consideration the value of the <a href="app-properties.html#language-property" title="More information and details">app.language</a> property.
+    </p>
+    <p>
+     This method retrieve the app resource in the right app language, and, fallback to the original app resource if the specified resource is not translated to the current app language. If the specifed resource is not found this method returns "undefined".
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">name</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the app resource to be retrieved.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show the "welcomeMessage" resource
+alert(app.resource('welcomeMessage'));
+   </textarea>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// We can also use resources inside an HTML control, for example:
+
+<div>
+ {{app.resource('someText')}}
+</div>
+
+<div v-html="app.resource('someHtml')">
+</div>
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Languages sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="translateview-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App TranslateView method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to translate the current app view or the current app dialog into the language specified in the <a href="app-properties.html#language-property" title="More information and details">"app.language" property</a>. To get this method properly working you must prepare one or more app languages using the <a href="app-languages.html" title="Go to this help topic">app languages manager</a>.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Translate the current app view
+app.translateView();
+
+// Specify the language to be used first
+app.language = 'es';
+app.translateView();
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Languages sample app included with the installation of DecSoft App Builder. Take a look to see this app method in action!
+   </div>
+
+   <h2 id="getlanguages-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetLanguages method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieve information at runtime of the available app languages, that you can define by using the <a href="app-languages.html" title="Go to this help topic">app languages manager</a> at designtime. This method returns a JavaScript Array of objects variable with the codes and the names of the available app languages.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show, for example: [{"code": "en", "name": "English"}, {"code": "es", "name": "Español"}]
+alert(app.serialize(app.getLanguages()));
+   </textarea>
+
+   <h2 id="getlanguagesnames-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetLanguagesNames method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieve the languages names at runtime of the available app languages, that you can define by using the <a href="app-languages.html" title="Go to this help topic">app languages manager</a> at designtime. This method returns a JavaScript array variable with the names of the available languages.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Fill a Select control with the available app languages names
+views.view1.select1.items = app.getLanguagesNames();
+   </textarea>
+
+   <h2 id="getlanguagescodes-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetLanguagesCodes method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieve the languages codes at runtime of the available app languages, that you can define by using the <a href="app-languages.html" title="Go to this help topic">app languages manager</a> at designtime. This method returns a JavaScript array variable with the codes of the available languages.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Fill a Select control with the available app languages codes
+views.view1.select1.items = app.getLanguagesCodes();
+   </textarea>
+
+   <h2 id="getlanguagecodefromname-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetLanguageCodeFromName method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieve a language code from the specified language name, of one of the available app languages, that you can define by using the <a href="app-languages.html" title="Go to this help topic">app languages manager</a> at designtime. This method returns a JavaScript string variable with the language code, or an empty string if no found.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">code</td>
+       <td class="text-secondary">String</td>
+       <td>
+        A language name, so we can retrieve his code.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Get the language code from a Select control filled with languages names
+var
+  language = app.getLanguageCodeFromName(
+   views.view1.select1.items[views.view1.select1.itemIndex]);
+
+// Show "es", for example
+alert(language);
+   </textarea>
+
+   <h2 id="getlanguagenamefromcode-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetLanguageNameFromCode method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use this app method to retrieve a language name from the specified language code, of one of the available app languages, that you can define by using the <a href="app-languages.html" title="Go to this help topic">app languages manager</a> at designtime. This method returns a JavaScript string variable with the language name, or an empty string if no found.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">code</td>
+       <td class="text-secondary">String</td>
+       <td>
+        A language code, so we can retrieve his name.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Get the language name from a Select control filled with languages codes
+var
+  language = app.getLanguageNameFromCode(
+   views.view1.select1.items[views.view1.select1.itemIndex]);
+
+// Show "Español", for example
+alert(language);
+   </textarea>
+
+   <h2 id="focuscontrol-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App FocusControl method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app FocusControl to give the focus to the specified control.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">controlName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of the control to give the user focus.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Focus the input1 control
+app.focusControl('input1');
+   </textarea>
+
+   <h2 id="setapptheme-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetAppTheme method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SetAppTheme method to set the app theme to the specified one. You can include more than one theme from the <a href="app-options.html#theme-variable" title="Go to this help topic">app options</a>, then these themes become available and ready to be set in runtime with this app method.
+    </p>
+    <p>
+     You can use the app <a href="app-properties.html#theme-property" title="Go to this help topic">Theme property</a> and the app <a href="app-properties.html#themes-property">Themes property</a> to know the current app theme and the available app themes, respectively. This method return "false" if you try to set a theme which is not included in the app. In other case this method return the name of the established theme, and, also establish the "app.theme" variable to that established theme.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">themeName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The name of one available app theme to be set.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the sketchy app theme
+app.setAppTheme('sketchy');
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4">
+    When you call to the SetAppTheme the right version (LTR -left to right- or RTL -right to left-) of the theme is automatically set, according to the <a href="app-properties.html#textdirection-property" title="Go to this help topic" class="alert-link">app text direction property</a>.
+   </div>
+
+   <h2 id="getappthemecolor-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetAppThemeColor method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app GetAppThemeColor method to get the app theme color currently established. You can specify an app theme color at designtime from the <a href="app-options.html#themecolor-variable" title="Go to this help topic">app options</a> and then at runtime you can get that app theme color using this method. You can set the app theme color at runtime using the <a href="#setappthemecolor-method" title="More information and details">setAppThemeColor()</a> app method.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Get the current app theme color
+var themeColor = app.getAppThemeColor();
+
+// The theme color can be "light" or "dark"
+alert(themeColor);
+   </textarea>
+
+
+   <h2 id="setappthemecolor-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetAppThemeColor method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SetAppThemeColor method to set the app theme color to the specified one. You can specify an app theme color at designtime from the <a href="app-options.html#themecolor-variable" title="Go to this help topic">app options</a> and then at runtime you can change that app theme color using this method.  You can get the app theme color at runtime using the <a href="#getappthemecolor-method" title="More information and details">getAppThemeColor()</a> app method.
+    </p>
+   </div>
+
+   <p class="mt-3">
+    This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">colorMode</td>
+       <td class="text-secondary">String</td>
+       <td>
+        This value can be one of these values: "light" or "dark".
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the app theme color "dark"
+app.setAppThemeColor('dark');
+   </textarea>
+
+
+   <h2 id="setappfixedstyle-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetAppFixedStyle method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the SetAppFixedStyle method to change to the app style to fixed at runtime. Find more information in the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>. The app <a href="app-properties.html#style-property" title="Go to this help topic">style property</a> stores the current style of the app, which can be "fixed" or "scaled".
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the app fixed style
+app.setAppFixedStyle();
+   </textarea>
+
+   <h2 id="setappscaledstyle-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetAppScaledStyle method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the SetAppScaledStyle method to change to the app style to scaled at runtime. Find more information in the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>. The app <a href="app-properties.html#style-property" title="Go to this help topic">style property</a> stores the current style of the app, which can be "fixed" or "scaled".
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the app scaled style
+app.setAppScaledStyle();
+   </textarea>
+
+   <h2 id="setapptextdirection-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetAppTextDirection method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the SetAppTextDirection method to change the app HTML text direction. This method also cause that the app <a href="app-properties.html#textdirection-property" title="Go to this help topic">TextDirection property</a> was accordingly updated. This method admits the below arguments:
+    </p>
+   </div>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">textDirection</td>
+       <td class="text-secondary">String</td>
+       <td>
+        This argument can be "ltr" (left to right) or "rtl" (right to left).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Set the app text direction left to right
+app.setAppTextDirection('ltr');
+
+// Set the app text direction right to left
+app.setAppTextDirection('rtl');
+   </textarea>
+
+   <div class="alert alert-primary text-center mt-4">
+    When you call to the SetAppTextDirection method the current theme of the app is automatically changed to the direction that you set.
+   </div>
+
+   <h2 id="getappcolorscheme-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App GetAppColorScheme method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the GetAppColorScheme method to find the current system app color scheme, which can be "light" or "dark". You can use this app method inside the <a href="app-events.html#colorschemechange-event" title="More information and details">app ColorSchemeChange event</a>, for example, so you can change the app's theme depending on the app color scheme configured in the system.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+if (app.getAppColorScheme() === 'light') {
+  alert('The color scheme is light!');
+} else {
+  alert('The color scheme is dark!');
+}
+   </textarea>
+
+   <h2 id="setviewreadyfordevicekeyboard-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetViewReadyForDeviceKeyboard method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SetViewReadyForDeviceKeyboard method to prepare your app view to be ready with the devices keyboards. This must be used only if your app view or app dialog, contains some input controls, so the user can press it in order to input some information using the device keyboard. This app method is intended to be use when the app is deployed in platforms like Android and Apple iOS. In other case (if the app is running in a browser) the method can be called, but do nothing. This method don't require any arguments.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// This code can be place in the app view Show event
+app.setViewReadyForDeviceKeyboard();
+   </textarea>
+
+   <h2 id="setdialogreadyfordevicekeyboard-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SetDialogReadyForDeviceKeyboard method
+   </h2>
+   <div class="mt-3">
+    <p>
+     You can use the app SetDialogReadyForDeviceKeyboard method to prepare your app dialog to be ready with the devices keyboards. This must be used only if your app view or app dialog, contains some input controls, so the user can press it in order to input some information using the device keyboard. This app method is intended to be use when the app is deployed in platforms like Android and Apple iOS. In other case (if the app is running in a browser) the method can be called, but do nothing. This method don't require any arguments.
+    </p>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// This code can be place in the app dialog Show event
+app.setDialogReadyForDeviceKeyboard();
+   </textarea>
+
+   <h2 id="lowercase-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App lowerCase method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a lower case string. Returns the lower cased string. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Specify the string to be converted in lower case.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  userName = 'John Doe';
+
+// Show "john doe"
+alert(app.lowerCase(userName));
+   </textarea>
+
+   <h2 id="uppercase-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App upperCase method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a upper case string. Returns the upper cased string. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Specify the string to be converted in upper case.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  userName = 'John Doe';
+
+// Show "JOHN DOE"
+alert(app.upperCase(userName));
+   </textarea>
+
+   <h2 id="strlen-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App StrLen method
+   </h2>
+   <p class="mt-3">
+    Use this method to get the length of the provided string. Returns the number of characters (length) of the provided string. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Specify the string to retrieve the length.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  userName = 'John Doe';
+
+// Show "8"
+alert(app.strLen(userName));
+   </textarea>
+
+   <h2 id="trimstr-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App TrimStr method
+   </h2>
+   <p class="mt-3">
+    Use this method to trim an string (remove the spaces at the left and at the right). Returns the trimmed string. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Specify the string to be trimmed.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  userName = '     John Doe     ';
+
+// Show "John Doe"
+alert(app.trimStr(userName));
+   </textarea>
+
+   <h2 id="strsearch-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App StrSearch method
+   </h2>
+   <p class="mt-3">
+    Use this method to searches a string for a specified value, and returns the position of the match or -1 if not found. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The source string to be searches.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">query</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The query string to be search.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = 'Enjoy DecSoft App Builder!',
+  pos = app.strSearch(str, 'DecSoft');
+
+// Show: 6
+alert(pos);
+   </textarea>
+
+   <h2 id="splitstr-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SplitStr method
+   </h2>
+   <p class="mt-3">
+    Use this method to split a string into an array of substrings, and returns the new array. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The text to be splitted into an array.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">separator</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The separator string to be used for split the text string.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">limit</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        Set an optional number to return a limit the elements in the result array.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = "How are you doing today?",
+  ressult = app.splitStr.split(str, ' ');
+
+// Show: How,are,you,doing,today?
+alert(result);
+   </textarea>
+
+   <h2 id="substr-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SubStr method
+   </h2>
+   <p class="mt-3">
+    Use this method to extracts the characters from a string, between two specified indices, and returns the new sub string. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The source string to be used.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">start</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The number to start to pick the resulted substring.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">count</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The number of characters to be extracted form the start number.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = 'Hello world!',
+  result = app.subStr(str, 0, 5);
+
+// Show "Hello"
+alert(result);
+   </textarea>
+
+   <h2 id="strreplace-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App StrReplace method
+   </h2>
+   <p class="mt-3">
+    Use this method to replace the first match of the specified string, by the other specified value. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The source string to be used.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">from</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The string to be searches and replaced with the "to" argument.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">to</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The string used to replace the one specified in the "from" argument.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = 'Hello world!',
+  result = app.strReplace(str, 'o', 'e');
+
+// Show "Helle world!"
+alert(result);
+   </textarea>
+
+   <h2 id="strreplaceall-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App StrReplaceAll method
+   </h2>
+   <p class="mt-3">
+    Use this method to replace all the matches of the specified string, by the other specified value. Returns the replaced string. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The source string to be used.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">from</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The string to be searches and replaced with the "to" argument.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">to</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The string used to replace the one specified in the "from" argument.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = 'Hello world!',
+  result = app.strReplaceAll(str, 'o', 'e');
+
+// Show "Helle werld!!"
+alert(result);
+   </textarea>
+
+   <h2 id="strtobase64-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App StrToBase64 method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a Base64 string representation of the provided string. This method is the counterpart of the <a href="#base64tostr-method" title="More information and details">app.base64ToStr() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The source string to be encoded in Base64.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = 'Hello world!',
+  result = app.strToBase64(str);
+
+// Show "SGVsbG8gd29ybGQh"
+alert(result);
+   </textarea>
+
+   <h2 id="base64tostr-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Base64ToStr method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a clear text from the provided Base64 encoded string. This method is the counterpart of the <a href="#strtobase64-method" title="More information and details">app.strToBase64() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The Base64 string to be decoded.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  str = 'SGVsbG8gd29ybGQh',
+  result = app.base64ToStr(str);
+
+// Show "Hello world!"
+alert(result);
+   </textarea>
+
+   <h2 id="serialize-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Serialize method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a string representation of an Array or Object variable. This method is the counterpart of the <a href="#unserialize-method" title="More information and details">app.unserialize() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">value</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        The Array or Object variable to be serialized.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  user = {"name": "John", "lastName": "Doe" },
+  serializedUser = app.serialize(user);
+
+// Show {"name": "John", "lastName": "Doe" }
+alert(serializedUser);
+   </textarea>
+
+   <h2 id="unserialize-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Unserialize method
+   </h2>
+   <p class="mt-3">
+    Use this method to get an Array or Object variable from a previously serialized string. This method is the counterpart of the <a href="#serialized-method" title="More information and details">app.serialize() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">value</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        The Array or Object variable to be serialized.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  serializedStr = '{"name": "John", "lastName": "Doe" }',
+  user = app.unserialize(serializedStr);
+
+// Show "John"
+alert(user.name);
+   </textarea>
+
+   <h2 id="randomstr-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App RandomStr method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a random string of the specified length. The random string is taken from these characters map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", so can contain one or more of these characters. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">length</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The number of characters to be returned. If you don't provide this argument the method returns a random string of 10 characters length.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show a 10 characters length random string
+alert(app.randomStr());
+
+   </textarea>
+
+   <h2 id="formatstr-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App FormatStr method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a formatted string based in the provided string and the other arguments passed to the method. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">str</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The string to be formatted, which must include any number of tokens in the form: {0}, {1}, {2}, etc. That tokens will be replaced with the other arguments passed to the method.
+       </td>
+      </tr>
+      <tr>
+        <td class="text-danger">arguments</td>
+        <td class="text-secondary">String</td>
+        <td>
+         Other arguments passed to the method. The first argument (second of the method) will be used to replace the {0} token, the second argument replace the {1} token and so on.
+        </td>
+       </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show "Hello world!"
+alert(app.formatStr('Hello {0}', 'world!'));
+
+// Show "My name is John and my last name is Doe"
+alert(app.formatStr('My name is {0} and my last name is {1}', 'John', 'Doe'));
+
+   </textarea>
+
+   <h2 id="randomnum-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App RandomNum method
+   </h2>
+   <p class="mt-3">
+    Use this method to get a random number from 0 (zero) to the specified max number. This methods admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">maxNum</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The max number to be get. This argument is optional, and, if you did not provide it, the method returns a random number from 0 to 100.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show a random number from 0 to 100
+alert(app.randomNum());
+
+   </textarea>
+
+   <h2 id="beep-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Beep method
+   </h2>
+   <p class="mt-3">
+    Use this method to play a beep sound in the user device. Look also at the <a href="apache-cordova.html#dialogs-plugin" title="Go to this help topic">Apache Cordova Dialogs plugin</a>, specifically to their <a href="apache-cordova.html#app.cordova.dialogs.beep" title="Go to this help topic">app.cordova.dialogs.beep() method</a>. This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Play a beep!
+app.beep();
+   </textarea>
+
+   <h2 id="playsound-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App PlaySound method
+   </h2>
+   <p class="mt-3">
+    Use this method to simply play a sound. Additionaly this method returns an Audio JavaScript object, which offers lot of methods, properties and events, if you need to use it. You can also take a look at the <a href="control-audio-player.html" title="Go to this help topic">Audio player control</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">mp3Url</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The URL for the MP3 file to be played.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">oggUrl</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The URL of an alternative OGG file to be used if the platform don't support MP3 (recommended).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Play a sound and get the Audio JavaScript object instance (for possible further use).
+var audioJSObject = app.playSound(
+  'app/audios/beep/beep.mp3',
+  'app/audios/beep/beep.ogg'
+);
+   </textarea>
+
+   <h2 id="stopsound-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App StopSound method
+   </h2>
+   <p class="mt-3">
+    Use this method to stop a sound reproduction started by the <a href="#playsound-method" title="More information and details">app.playSound() method</a>. For more you can take a look at the <a href="control-audio-player.html" title="Go to this help topic">Audio player control</a>. This method don't require any arguments.
+   </p>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Stop the playing sound
+app.stopSound();
+   </textarea>
+
+
+
+   <h2 id="alert-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window Alert method
+   </h2>
+   <p class="mt-3">
+    Use this method in order to show a native alert dialog with the specified message. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">message</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The message to be show in the alert dialog.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Show an alert message
+window.alert('Hello world!');
+   </textarea>
+
+
+   <h2 id="consoleinfo-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window Console info method
+   </h2>
+   <p class="mt-3">
+    Use this method to output an information message in the browser or the debugger console. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">variable</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        The variable or the message (string) that you want to output in the browser or debugger console.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Output an information message in the browser or debugger console
+window.console.info('Hello world!');
+
+// You can output more than one variable / separated as arguments
+window.console.info('Hello world!', myVar, myOtherVar);
+   </textarea>
+
+
+   <h2 id="consoleerror-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window Console error method
+   </h2>
+   <p class="mt-3">
+    Use this method to output an error message in the browser or the debugger console. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">variable</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        The variable or the message (string) that you want to output in the browser or debugger console.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Output an error message in the browser or debugger console
+window.console.error('Hello world!');
+
+// You can output more than one variable / separated as arguments
+window.console.error('Hello world!', myVar, myOtherVar);
+   </textarea>
+
+
+   <h2 id="consoledebug-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window Console debug method
+   </h2>
+   <p class="mt-3">
+    Use this method to output a debug message in the browser or the debugger console. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">variable</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        The variable or the message (string) that you want to output in the browser or debugger console.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Output a debug message in the browser or debugger console
+window.console.debug('Hello world!');
+
+// You can output more than one variable / separated as arguments
+window.console.debug('Hello world!', myVar, myOtherVar);
+   </textarea>
+
+   <h2 id="settimeout-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window SetTimeout method
+   </h2>
+   <p class="mt-3">
+    Use this method to execute certain code after the specified ammount of milliseconds. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">callback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        The function to be executed after the specified milliseconds.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">timeout</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The milliseconds for the timeout.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+window.setTimeout(function () {
+
+  // This alert is shown after 5 seconds
+  window.alert('Hello from setTimeout!');
+
+}, 5000);
+   </textarea>
+
+
+   <h2 id="setinterval-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window SetInterval method
+   </h2>
+   <p class="mt-3">
+    Use this method to execute certain code every the specified milliseconds interval. This method returns an interval reference that you can use with the <a href="#clearinterval-method" title="More information and details">clearInterval() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">callback</td>
+       <td class="text-secondary">Function</td>
+       <td>
+        The function to be executed at every interval of the specified milliseconds.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">interval</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The milliseconds for the interval.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+var
+  myInterval = window.setInterval(function () {
+
+    // This alert is shown every 5 seconds
+    window.alert('Hello from setInterval!');
+
+  }, 5000);
+   </textarea>
+
+
+   <h2 id="clearinterval-method" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Window ClearInterval method
+   </h2>
+   <p class="mt-3">
+    Use this method to stop the execution of the interval previosly returned by the <a href="#setinterval-method" title="More information and details">setInterval() method</a>. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive mt-4">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">intervalRef</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The interval reference that we get before when calling the <a href="#setinterval-method" title="More information and details">setInterval() method</a>. This method returns an interval reference that you can use with the .
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <textarea class="code-editor" data-mode="javascript">
+
+// Clear / stop the previously established interval
+window.clearInterval(myInterval);
+   </textarea>
+
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

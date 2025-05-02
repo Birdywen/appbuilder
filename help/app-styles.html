@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App styles</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App styles
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App styles
+   </h2>
+
+   <p class="mt-3">
+    DecSoft App Builder helps you to create apps that can run in several browsers, platforms and screen sizes. How we design the app it's important in order to get an app that can look well and can be use in these several browsers, platforms and screen sizes.
+   </p>
+
+   <p>
+    When you creates a new app in DecSoft App Builder, by default, their designer size is 320x480 pixels. This is the size for all the <a href="app-view.html" title="Go to this help topic">app views</a> and <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. Also by default, the app uses the "scaled" style, means the app is scaled wen running in larger screens.
+   </p>
+
+   <p>
+    The app can be deployed using the "fixed" and the "scaled" style and it's also possible to change between these styles in runtime by using the app <a href="app-methods.html#setappfixedstyle-method" title="Go to this help topic">setAppFixedStyle() method</a> and the app <a href="app-methods.html#setappscaledstyle-method" title="Go to this help topic">setAppScaledStyle() method</a>.
+   </p>
+
+   <h2 class="mt-4">
+    Fixed style
+   </h2>
+
+   <p class="mt-3">
+    When the app is deployed or the fixed style was set in runtime, their designing size is maintained also in runtime. That is, supose you design an app with a resolution of 800x600 pixels and use the fixed style, then this is the size of the app in runtime, no matter the final user screen size, in other words, the app expect at least an available resolution of 800x600 pixels.
+   </p>
+
+   <h2 class="mt-4">
+    Scaled style
+   </h2>
+
+   <p class="mt-3">
+    In addition to the app fixed style, the apps can also be deployed or change in runtime to the app scaled style. In fact, this is the app style used by default when you create a new app. When the app is deployed or the app scaled style is set in runtime, the app automatically scales their size, from their designed size, to the screen size.
+   </p>
+
+   <p>
+    Take a look at the below GIF image. You can see the VideoPlayer sample app, which is designed with a 320x480 pixels resolution. The app style is "scaled", and therefore, when we run the app and the screen size changes, the app adapt their size to the new screen size.
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid mt-5">
+   <div class="text-center">
+    <img src="../shared/images/gifs/app-scaled-style.gif" class="img-fluid" alt="">
+   </div>
+  </div>
+
+  <div class="container">
+
+   <h2 class="mt-5">
+    About the "scaled" style
+   </h2>
+
+   <p class="mt-3">
+    There is something important about the app "scaled" style: it's intended to scale <strong>from the designed size to the screen size, but not at the contrary</strong>.
+   </p>
+   <p>
+    The app "scaled" style works as expected scaling the app size from the designer size to larger screen sizes. For this reason the default designer size is 380x480 pixels. It's apparently a smaller size, but guarantee that our app can work in smaller devices screens and also in devices with larger screens.
+   </p>
+   <p>
+    One way to control how the app "scaled" style works is to use the app <a href="app-options.html#maxwidth-variable" title="Go to this help topic">MaxWidth option</a> and <a href="app-options.html#maxheight-variable" title="Go to this help topic">MaxHeight option</a>, which allows to limit the "scaled" style. By default these properties has a "-1" value, means there is no limit in the app "scale", but we can establish these properties to some positive values, in order to limit the app "scaled" style.
+   </p>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

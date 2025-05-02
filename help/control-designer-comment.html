@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Comment</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Comment</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Comment description
+   </h2>
+   <p class="mt-3">
+    The Comment is a designer only control that allows to place some quick note or comment that can be useful while develop our app. We can have any number of Comment controls in the <a href="app-view.html" title="Go to this help topic">app views</a>, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and <a href="app-frame.html" title="Go to this help topic">app frames</a> designers.
+   </p>
+
+   <h2 class="mt-5">
+    Comment at designtime
+   </h2>
+   <p class="mt-3">
+    The Comment control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#comment-variable" title="More information and details">Comment property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#background-variable" title="More information and details">Background property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#foreground-variable" title="More information and details">Foreground property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#foreground-variable" title="More information and details">Kind property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Comment designtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Comment Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. String variable.</span>
+    The Name control property stores the name of the Comment control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "http1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. This value is only take in consideration at designtime, since this is a designer only control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. This value is only take in consideration at designtime, since this is a designer only control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. This value is only take in consideration at designtime, since this is a designer only control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. This value is only take in consideration at designtime, since this is a designer only control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. This value is only take in consideration at designtime, since this is a designer only control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="comment-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Comment property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Comment property stores the comment text, which can be a multiline text.
+   </p>
+
+   <h3 id="background-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Background property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. String variable.</span>
+    The Background property stores an HTML color to be applied to the control background.
+   </p>
+
+   <h3 id="foreground-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Foreground property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. String variable.</span>
+    The Foreground property stores an HTML color to be applied to the control foreground.
+   </p>
+
+   <h3 id="kind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Comment Kind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. String variable.</span>
+    The Kind property can be one of the available "kind" values and can be used to automatically change the Background and Foreground colors accordingly to the selected "kind".
+   </p>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

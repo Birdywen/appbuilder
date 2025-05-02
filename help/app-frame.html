@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App frame</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App frame
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App frame
+   </h2>
+
+   <p class="mt-3">
+    The app frames are intended to share app controls and their behaviour across different <a title="Go to this help topic" href="app-view.html">app views</a> and <a title="Go to this help topic" href="app-dialog.html">app dialogs</a>. There is an app <a title="Go to this help topic" href="control-frame.html">Frame control</a>, which is designed to contain and show the controls placed in an specific app frame.
+   </p>
+   <p>
+    So you can use Frame controls in app views and app dialogs in order to show the controls of the app frames. Remember that an app can have any number of app views, app dialogs, app controls, and, also, any number of app frames.
+   </p>
+   <p>
+    Take a look at the below animated GIF image, in which you can see how an app frame is prepared to be show in a couple of app views.
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/app-frames.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container">
+
+   <h2 class="mt-5">
+    App frame properties
+   </h2>
+
+   <p class="mt-3">
+    All the app frames provides to you the below properties, ready to be used:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#framewidth-variable" title="More information and details">FrameWidth property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#frameheight-variable" title="More information and details">FrameHeight property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App frame events
+   </h2>
+
+   <p class="mt-3">
+    The app frames don't provide events by itself, however, you can use all the events provided by the <a title="Go to this help topic" href="control-frame.html">Frame control</a> used to show the app frame.
+   </p>
+
+   <h2 class="mt-5">
+    App frame properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App frame Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app frame Name property stores the name of the frame as you set it at designtime. Almost all events in the app provides a "frames" JavaScript variable, which you can use to access to the app frame contained controls.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the kind property of a "button1" which is inside an app frame "frame1"
+
+if (frames.frame1.button1.kind === app.KIND.SUCCESS) {
+
+  frames.frame1.button1.kind = app.KIND.PRIMARY;
+
+} else {
+
+  frames.frame1.button1.kind = app.KIND.SUCCESS;
+}
+</textarea>
+
+   <h3 id="framewidth-variable" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App frame FrameWidth property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime only. String variable.</span>
+    The app frame FrameWidth property allows you to specify an specific with for the app frame. This width determines the default <a title="Go to this help topic" href="control-frame.html">Frame control</a> width, so the app frames scales (see the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>) in the same way than the app views.
+   </p>
+
+   <h3 id="frameheight-variable" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App frame FrameHeight property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime only. String variable.</span>
+    The app frame FrameHeight property allows you to specify an specific height for the app frame. This height determines the default <a title="Go to this help topic" href="control-frame.html">Frame control</a> height, so the app frames scales (see the <a href="app-styles.html" title="Go to this help topic">app styles help topic</a>) in the same way than the app views.
+   </p>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App properties</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App properties
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App properties
+   </h2>
+
+   <p class="mt-3">
+    An "app" object JavaScript variable is available in all app events, <a href="app-view.html" title="Go to this help topic">app views</a> events, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> events and all the controls events. The "app" variable provide several <a href="app-methods.html" title="Go to this help topic">app methods</a>, as well the below referred app properties, ready to be used.
+   </p>
+
+   <div class="mt-4">
+    <strong>Variables</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#store-property" title="More information and details">Store</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#query-property" title="More information and details">Query</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>Information</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#id-property" title="More information and details">ID property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#version-property" title="More information and details">Version property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#name-property" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#language-property" title="More information and details">Language property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#languagename-property" title="More information and details">LanguageName property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#shortname-property" title="More information and details">ShortName property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#description-property" title="More information and details">Description property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#authorname-property" title="More information and details">Author name property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#authoremail-property" title="More information and details">Author E-Mail property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#authorurl-property" title="More information and details">Author URL property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#textdirection-property" title="More information and details">TextDirection property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#buildnumber-property" title="More information and details">BuildNumber property</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>Errors</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#error-property" title="More information and details">Error property</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>Themes</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#style-property" title="More information and details">Style</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#theme-property" title="More information and details">Theme</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#themes-property" title="More information and details">Themes</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>Sidebar</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebardirection-property" title="More information and details">Sidebar.Direction</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarheader-property" title="More information and details">Sidebar.Header</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarheaderalign-property" title="More information and details">Sidebar.HeaderAlign</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarheaderkind-property" title="More information and details">Sidebar.HeaderKind</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebarimageurl-property" title="More information and details">Sidebar.ImageUrl</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebaritems-property" title="More information and details">Sidebar.Items</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebaritem-property" title="More information and details">Sidebar.Item</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebaritemindex-property" title="More information and details">Sidebar.Item.Index</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#sidebaritemsubindex-property" title="More information and details">Sidebar.Item.Subindex</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>Events</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#event-property" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#event-nextViewName-property" title="More information and details">Event.nextViewName property</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#event-prevViewName-property" title="More information and details">Event.prevViewName property</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>App plugins</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#plugins-property" title="More information and details">Plugins property</a></li>
+   </ul>
+
+   <div class="mt-4">
+    <strong>Apache Cordova</strong>
+   </div>
+   <ul class="mt-3">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#cordova-property" title="More information and details">Cordova property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App properties
+   </h2>
+
+   <h2 id="store-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Store property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span> This variable stores all the app global variables that you sets by using the <a href="app-methods.html#setreactivevar-method" title="Go to this help topic">app.setReactiveVar()</a>. These variables are available in all the app views, app dialogs and app frames, ready to be used.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Creates a "userName" app global reactive variable
+app.setReactiveVar('userName', 'John Doe');
+
+// Show "John Doe"
+alert(app.store.userName);
+</textarea>
+
+   <h2 id="query-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Query property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean false or Object variable.</span> It's possible to call to the app views including arguments in the URL. For example, suposing you host the app in "yourdomain.com", you can call to the "view1" passing arguments in the URL, like in the below one:
+   </p>
+
+<textarea class="code-editor" data-mode="text">
+
+https://www.yourdomain.com/#/view1?a=hello&b=world
+</textarea>
+
+   <p class="mt-3">
+    When the "view1" is shown, the "app.query" variable stores an object with two properties: "a" and "b", with the "hello" and "world" values, respectively. You can also pass arguments to another views using the <a href="app-methods.html#showview-method" title="Go to this help topic">app.showView() method</a> and the <a href="app-methods.html#replaceview-method" title="Go to this help topic">app.replaceView() method</a>. If the URL has no arguments, then "app.query" is set to Boolean "false".
+   </p>
+
+   <h2 id="id-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ID property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app ID property stores the ID that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#id-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app ID
+alert(app.id);
+</textarea>
+
+   <h2 id="version-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Version property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Version property stores the version that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#version-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app version
+alert(app.version);
+</textarea>
+
+   <h2 id="name-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Name property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Name property stores the name that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#name-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app name
+alert(app.name);
+</textarea>
+
+   <h2 id="language-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Language property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Language property stores the app language code that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#language-variable" title="Go to this help topic">app options</a>. This app property helps to <a href="app-languages.html" title="Go to this help topic">translate your app</a> and also to get the right <a href="app-resources.html" title="Go to this help topic">app resource</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app language code
+alert(app.language);
+</textarea>
+
+   <h2 id="languagename-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App LanguageName property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app LanguageName property stores the app language name that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#languagename-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app language name
+alert(app.languageName);
+</textarea>
+
+   <h2 id="shortname-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App ShortName property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app ShortName property stores the name that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#shortname-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app short name
+alert(app.shortName);
+</textarea>
+
+   <h2 id="description-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Description property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Description property stores the description that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#description-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app description
+alert(app.description);
+</textarea>
+
+   <h2 id="authorname-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App AuthorName property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app AuthorName property stores the author name that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#authorname-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app author name
+alert(app.authorName);
+</textarea>
+
+   <h2 id="authoremail-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App AuthorEmail property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app AuthorEmail property stores the author E-Mail address that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#authoremail-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app author E-Mail address
+alert(app.authorEmail);
+</textarea>
+
+   <h2 id="authorurl-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App AuthorUrl property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app AuthorUrl property stores the author website URL that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html#authorurl-variable" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app author website URL
+alert(app.authorUrl);
+</textarea>
+
+   <h2 id="textdirection-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App TextDirection property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app TextDirection property stores the text direction that you set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html" title="Go to this help topic">app options</a>. This variable can be "ltr" (left to right) or "rtl" (right to left). You can use the app <a href="app-methods.html#setapptextdirection-method" title="Go to this help topic">setAppTextDirection() method</a> to change the app text direction at runtime.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app TextDirection
+alert(app.textDirection);
+</textarea>
+
+   <h2 id="buildnumber-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App BuildNumber property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Number. Object variable.</span> The app BuildNumber property is "0" (zero) by default and can be set from the <a href="app-options.html#buildnumber-variable" title="Go to this help topic">app options</a>. Also from the app options we can check the "Auto increment build number" checkbox, so the app builder number is incremented everytime than the app is successfully compiled. Well, this build number is available in runtime in this app property.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app builder number
+alert(app.builderNumber);
+</textarea>
+
+   <h2 id="error-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Error property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span> The app Error property is null by default, but is filled with information about the error in the app <a href="app-events.html#javascripterror-event" title="Go to this help topic">JavascriptError event</a> and the app <a href="app-events.html#rendererror-event" title="Go to this help topic">RenderError event</a>. Please, refer to these app events to see what information you can expect in the app Error property.
+   </p>
+
+   <h2 id="style-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Style property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Style property stores the app style that has been set at designtime by using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html" title="Go to this help topic">app options</a>. This variable can be "fixed" or "scaled", and, can change at runtime if you call to the app <a href="app-methods.html#appsetfixedstyle" title="Go to this help topic">setAppFixedStyle() method</a> or the <a href="app-methods.html#appsetscaledstyle" title="Go to this help topic">setAppScaledStyle() method</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the current app style
+alert(app.style);
+
+// Change to the app scaled style
+app.setAppScaledStyle();
+</textarea>
+
+   <h2 id="theme-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Theme property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Theme property stores the current app theme, as you can set to the app at designtime using the <a href="ide-controls-inspector.html" title="Go to this help topic">IDE controls inspector</a> or the <a href="app-options.html" title="Go to this help topic">app options</a>. You can change the app theme to be used at runtime by using the app <a href="" title="Go to this help topic">setAppTheme() method</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the app theme name
+alert(app.theme);
+
+// Change to another app theme
+app.setAppTheme('sketchy');
+</textarea>
+
+   <h2 id="themes-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Themes property
+   </h2>
+   <p class="mt-3">
+    <strong>Array variable.</strong> The app Themes property stores the included and availables app themes, as you can set to the app at designtime using the <a href="app-options.html" title="Go to this help topic">app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the number of included themes
+alert('There is ' + app.themes.length + ' available app themes');
+</textarea>
+
+   <h2 id="sidebardirection-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.Direction property
+   </h2>
+   <p class="mt-3">
+    <strong>String variable.</strong> "left" by default. You can set this variable to "left" or "right" in order to establish the app sidebar direction at designtime. To set the direction of the app sidebar at runtime you can use the <a href="app-methods.html#sidebarsetdirection-method" title="Go to this help topic">app.sidebarSetDirection() method</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Toogle the app sidebar direction
+if (app.sidebar.direction === 'left') {
+  app.sidebarSetDirection('right');
+} else {
+  app.sidebarSetDirection('left');
+}
+</textarea>
+
+   <h2 id="sidebarheader-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.Header property
+   </h2>
+   <p class="mt-3">
+    <strong>String variable.</strong> Empty by default. You can set this variable with a small text to be placed at the app sidebar header. This variable can include some HTML tags if needed. On the other hand, the app sidebar header text is optional.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the app sidebar header
+app.sidebar.header = 'My new header';
+</textarea>
+
+   <h2 id="sidebarheaderalign-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.HeaderAlign property
+   </h2>
+   <p class="mt-3">
+    <strong>String variable.</strong> "left" by default. You can set this variable with one of the <a href="app-constants.html#align-constant" title="Go to this help topic">"app.align.*" constants</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the app sidebar header to center
+app.sidebar.headerAlign = app.align.center;
+</textarea>
+
+   <h2 id="sidebarheaderkind-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.HeaderKind property
+   </h2>
+   <p class="mt-3">
+    <strong>String variable.</strong> "light" by default. You can set this variable with one of the <a href="app-constants.html#kind-constant" title="Go to this help topic">"app.kind.*" constants</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the app sidebar header kind to secondary
+app.sidebar.headerKind = app.kind.secondary;
+</textarea>
+
+   <h2 id="sidebarimageurl-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.ImageUrl property
+   </h2>
+   <p class="mt-3">
+    <strong>String variable.</strong> "empty" by default. You can set this variable with an image URL to be placed at the header of the optional app sidebar.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the app sidebar image URL
+app.sidebar.imageUrl = 'app/images/Brand.png';
+</textarea>
+
+   <h2 id="sidebaritems-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.Items property
+   </h2>
+   <div class="mt-3">
+    <p>
+     <strong>Array variable.</strong> "empty" by default. You can set the app sidebar items and subitems at designtime by using the <a href="dialog-sidebar-items.html" title="Go to this help topic">sidebar items dialog</a>. This dialog is available from the <a href="app-options.html#sidebar-options" title="Go to this help topic">app sidebar options</a> and also from the app <a href="ide-controls-inspector.html" title="Go to this help topic">designer controls inspector</a>.
+    </p>
+    <p>
+     Additionally, it's possible to use this app property at runtime to establish the app sidebar to add more items as well to change existing items. This app property is an Array of objects, every one representing a sidebar item or subitem.
+    </p>
+    <p>
+     The below table show the properties of every sidebar item or subitem, however, if you set the items at runtime, you can also set more properties to the items, so you get it ready to use in the app <a href="app-events.html#sidebaritemclick-event" title="Go to this help topic">SidebarItemClick event</a>.
+    </p>
+   </div>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">item.text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The text to be show in the sidebar item or subitem.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">item.kind</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The kind (background color) of the sidebar item or subitem. This variable is one of the <a href="app-constants.html#kind-constant" title="Go to this help topic">"app.kind.*" constants</a>.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">item.class</td>
+       <td class="text-secondary">String</td>
+       <td>
+        Some additional CSS class to be assigned to the sidebar item or subitem.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">item.icon</td>
+       <td class="text-secondary">String</td>
+       <td>
+        One of the available icon CSS class to be used. You can use the <a title="Go to this help topic" href="dialog-icon-picker.html">Icon picker dialog</a> to set this at designtime.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">item.actived</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Determine if the sidebar item or subitem is actived or not. Actived items appear with a hard background color.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">item.disabled</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        Determine if the sidebar item or subitem is disabled or not. A disabled item or subitem cannot be clicked by the user.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">item.items</td>
+       <td class="text-secondary">Array of objects</td>
+       <td>
+        Every sidebar item (not subitems) can stores one or more subitems. The subitems has the same properties than the items and appear in an slide menu when the user click on the item.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Add a new item to the app sidebar
+
+app.sidebar.items.push({text: "My new item"});
+
+// Add a new item to the app sidebar with an specific kind
+
+app.sidebar.items.push({
+  text: "My new item",
+  kind: app.kind.primary
+});
+
+// Add a new item to the app sidebar with some subitems
+
+app.sidebar.items.push({
+  text: "My new item",
+  items: [
+    {text: "My subitem 1"},
+    {text: "My subitem 2", kind: app.kind.primary}
+  ]
+});
+</textarea>
+
+   <h2 id="sidebaritem-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.Item property
+   </h2>
+   <p class="mt-3">
+    <strong>Object variable.</strong> "empty" by default. This app property is available at the app <a href="app-events.html#sidebaritemclick-event" title="Go to this help topic">SidebarItemClick event</a> and stores the item or subitem clicked by the user.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app SidebarItemClick event
+
+alert('You clicked the item with text: ' + app.sidebar.item.text);
+</textarea>
+
+   <h2 id="sidebaritemindex-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.Item.Index property
+   </h2>
+   <p class="mt-3">
+    <strong>Number variable.</strong> "-1" by default. This app property is available at the app <a href="app-events.html#sidebaritemclick-event" title="Go to this help topic">SidebarItemClick event</a> and stores the index of the item clicked by the user.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app SidebarItemClick event
+
+alert('You clicked the item with index: ' + app.sidebar.item.index);
+</textarea>
+
+   <h2 id="sidebaritemsubindex-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Sidebar.Item.Subindex property
+   </h2>
+   <p class="mt-3">
+    <strong>Number variable.</strong> "-1" by default. This app property is available at the app <a href="app-events.html#sidebaritemclick-event" title="Go to this help topic">SidebarItemClick event</a> and stores the subindex of the subitem clicked by the user. Note this property is not available when the user click an item.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app SidebarItemClick event
+
+if (app.sidebar.item.subindex !== undefined) {
+  alert('You clicked the subitem with index: ' + app.sidebar.item.index + ' and subindex: ' + app.sidebar.item.subindex);
+}
+</textarea>
+
+
+
+   <h2 id="event-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Event property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Mixed variable.</span> The app Event property is null by default, but it's filled with useful information almost all the <a href="app-events.html" title="Go to this help topic">app events</a>. The app Event property is a DOM element object in the <a href="app-events.html#click-event" title="More information and details">app Click event</a>, but stores another kind of information in the <a href="app-events.html#viewchange-event" title="More information and details">app ViewChange event</a>, for example.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app Click event, for example
+
+alert('You press the element with the ID: ' + app.event.target.id);
+</textarea>
+
+   <h2 id="event-nextViewName-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Event.nextViewName property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Event.nextViewName is filled in the <a href="app-events.html#viewchange-event" title="More information and details">app ViewChange event</a> and store the app view name that is going to be show. Since the referred event allows to prevent the app view change, you can use this variable in order to decide if the app view change is allowed or not.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app ViewChange event
+
+alert('The app is going to the app view: ' + app.event.nextViewName);
+</textarea>
+
+   <h2 id="event-prevViewName-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App Event.prevViewName property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span> The app Event.prevViewName is filled in the <a href="app-events.html#viewchange-event" title="More information and details">app ViewChange event</a> and store the app view name that is going to be leaved. Since the referred event allows to prevent the app view change, you can use this variable in order to decide if the app view change is allowed or not.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// This code is suposed to be in the app ViewChange event
+
+alert('The app is going to leave the app view: ' + app.event.prevViewName);
+</textarea>
+
+   <h2 id="plugins-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Plugins property
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span> The "app.plugins" property is a JavaScript object which contains all the <a href="app-plugins.html" title="Go to this help topic">app plugins</a> stuff that are used by the app. By default is an empty objects, but, the app plugins can add to this variable all their stuff.
+   </p>
+
+   <h2 id="cordova-property" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    Apache Cordova
+   </h2>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span> The "app.cordova" property is a JavaScript object which contains all the <a href="apache-cordova.html" title="Go to this help topic">Apache Cordova plugins</a> stuff that are used by the app. By default is an empty objects, but, the the Apache Cordova plugins can add to this variable all their stuff.
+   </p>
+
+
+
+   <div class="alert alert-primary text-center mt-5">
+    Remember that in addition to the above app properties, the "app" JavaScript object variable provide to you several <a href="app-constants.html" title="Go to this help topic">app constants</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

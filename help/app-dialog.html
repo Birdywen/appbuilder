@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App dialog</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App dialog
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App dialog
+   </h2>
+
+   <p class="mt-3">
+    The DecSoft App Builder apps can have any number of app dialogs. You can show an specific dialog by using the <a href="app-methods.html#showdialog-method" title="Go go this help topic">app.showDialog() method</a>, and, can hide a showing dialog by using the <a href="app-methods.html#hidedialog-method" title="Go go this help topic">app.hideDialog() method</a> or the <a href="app-methods.html#hidedialogs-method" title="Go go this help topic">app.hideDialogs() method</a>.
+   </p>
+   <p>
+    An app dialog is intended to be the container of one or more app controls, in the same way than the <a href="app-view.html" title="Go to this help topic">app views</a> can be used. The difference is that the app dialog is show over the current app view. Look below an animated GIF image with the Dialog sample app running:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/dialog-app-sample.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container mt-5">
+
+   <p>
+    To add a new dialog into the app you can use the provided IDE main toolbar button, IDE main menu element and also the contextual menu (right click) of the <a href="ide-controls-lists.html" title="Go to this help topic">IDE dialogs list</a>, as you can see in the belo animated GIF image:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/ide-new-dialog.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container">
+
+   <h2 class="pt-5" id="style-options">
+    App dialog CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     In addition to the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the app dialog, you can also set custom CSS rules for the app dialog by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>, and, even include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the app view, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    App dialog properties
+   </h2>
+
+   <p class="mt-3">
+    All the app dialog provides to you the below properties, ready to be used:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#size-variable" title="More information and details">Size property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#fullscreen-variable" title="More information and details">Fullscreen property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App dialog events
+   </h2>
+
+   <p class="mt-3">
+    All the app dialogs provides to you the below events, ready to be used:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#show-event" title="More information and details">Show event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#hide-event" title="More information and details">Hide event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#created-event" title="More information and details">Created event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#swipeup-event" title="More information and details">SwipeUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#swiperight-event" title="More information and details">SwipeRight event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#swipedown-event" title="More information and details">SwipeDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#swipeleft-event" title="More information and details">SwipeLeft event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#keyup-event" title="More information and details">KeyUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#keydown-event" title="More information and details">KeyDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    App dialog properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app dialog Name property stores the name of the view as you set it at designtime.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the dialog1 name
+alert(dialogs.dialog1.name);
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App dialog Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app dialog Classes property stores one or more additionals CSS classes (space separated) to be applied to the app dialog HTML container.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the app dialog
+dialogs.dialog1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="size-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App dialog Size property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app dialog Size property determines the size of the app dialog. You can set this variable to one of the available "app.size.*" variables.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the dialog size to "sm" (small size)
+dialogs.dialog1.size = app.size.sm;
+
+// Set the dialog size to "md" (medium size)
+dialogs.dialog1.size = app.size.md;
+
+// Set the dialog size to "lg" (large size)
+dialogs.dialog1.size = app.size.lg;
+
+// Set the dialog size to "xl" (extra large size)
+dialogs.dialog1.size = app.size.xl;
+</textarea>
+
+   <h3 id="fullscreen-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    App dialog Fullscreen property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The app dialog Fullscreen property determines the size of the app dialog and when. You can set this variable to one of the available "app.dialogFullscreen.*" variables.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Don't use fullscreen: use the dialog's size
+dialogs.dialog1.fullscreen = app.dialogFullscreen.none;
+
+// Use fullscreen in all screen sizes
+dialogs.dialog1.fullscreen = app.dialogFullscreen.all;
+
+// Set the dialog fullscreen for small screens
+dialogs.dialog1.fullscreen = app.dialogFullscreen.sm;
+
+// Set the dialog fullscreen for medium screens and down
+dialogs.dialog1.fullscreen = app.dialogFullscreen.md;
+
+// Set the dialog fullscreen for large screens and down
+dialogs.dialog1.fullscreen = app.dialogFullscreen.lg;
+
+// Set the dialog fullscreen for extra large screens and down
+dialogs.dialog1.fullscreen = app.dialogFullscreen.xl;
+
+// Set the dialog fullscreen for very extra large screens and down
+dialogs.dialog1.fullscreen = app.dialogFullscreen.xxl;
+</textarea>
+
+   <h2 class="mt-5">
+    App dialog events
+   </h2>
+
+   <h3 id="show-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog Show event
+   </h3>
+   <p class="mt-3">
+    The app dialog Show event handler is fired everytime than the app dialog is show to the user. At this time all the controls HTML markup (DOM) are ready to be used if needed.
+   </p>
+
+   <h3 id="hide-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog Hide event
+   </h3>
+   <p class="mt-3">
+    The app dialog Created event is fired when the dialog internal component is created. You will be tempted to use this event instead of the app dialog <a href="#show-event" title="More information and details">Show event</a>, but don't do it! The app dialog Created event is intended only for advanced users who want, for example, to prepare some component (to be used inside an <a href="control-html.html" title="Go to this help topic">HTML control</a>, for example, placed in the app dialog) established in the app <a href="#created-event" title="More information and details">Created event</a>. See the app <a href="#created-event" title="More information and details">Created event</a> for more information about this.
+   </p>
+
+   <h3 id="created-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog Created event
+   </h3>
+   <p class="mt-3">
+    The app dialog Created event is fired when the app dialog internal component is created. <strong>You will be tempted to use this event instead of the app dialog <a href="#show-event" title="More information and details">Show event</a>, but don't do it!</strong> The app dialog Created event is intended only for advanced users who want, for example, to prepare some JavaScript object for a component (to be used inside an <a href="control-html.html" title="Go to this help topic">HTML control</a>, for example, placed in the app dialog) established in the app <a href="app-events.html#instanced-event" title="More information and details">Instanced event</a>. See the app <a href="app-events.html#instanced-event" title="More information and details">Instanced event</a> for more information about this.
+   </p>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog Click event
+   </h3>
+   <p class="mt-3">
+    The app dialog Click event handler is fired when the user click or tap into the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog DblClick event
+   </h3>
+   <p class="mt-3">
+    The app dialog DblClick (Double Click) event handler is fired when the user double click or double tap into the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swipeup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeUp event
+   </h3>
+   <p class="mt-3">
+    The SwipeUp event handler is fired when the user made the swipe up gesture with the mouse (browsers) or with the finger (devices) in the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swiperight-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeRight event
+   </h3>
+   <p class="mt-3">
+    The SwipeRight event handler is fired when the user made the swipe right gesture with the mouse (browsers) or with the finger (devices) in the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swipedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeDown event
+   </h3>
+   <p class="mt-3">
+    The SwipeDown event handler is fired when the user made the swipe down gesture with the mouse (browsers) or with the finger (devices) in the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="swipeleft-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App SwipeLeft event
+   </h3>
+   <p class="mt-3">
+    The SwipeLeft event handler is fired when the user made the swipe left gesture with the mouse (browsers) or with the finger (devices) in the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog MouseUp event
+   </h3>
+   <p class="mt-3">
+    The app dialog MouseUp event handler is fired when the user up the mouse into the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog MouseDown event
+   </h3>
+   <p class="mt-3">
+    The app dialog MouseDown event handler is fired when the user down the mouse into the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog MouseMove event
+   </h3>
+   <p class="mt-3">
+    The app dialog MouseMove event handler is fired when the user move the mouse into the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    App dialog ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The app dialog ContextMenu event handler is fired when the browser must shown the context menu of the the app, which occur when the user click with the right mouse button into the app dialog. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h2 id="events-variables" class="pt-5">
+    <i class="fas fa-caret-right text-danger"></i>
+    App events variables
+   </h2>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred App events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all app events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the app object. This is a shortcut to the "view" variable, and it's available since we are talking about specific app dialog events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-dialog.html" title="Go to this help topic">app dialog</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

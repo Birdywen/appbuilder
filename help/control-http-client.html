@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Http client</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Http client</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Http client description
+   </h2>
+   <p class="mt-3">
+    The Http client is a non visual (don't appear in the screen at runtime) control that allows to made HTTP request from the app, so we can get information from a remote server, as well to upload information to it. It's a fundamental piece of the client apps, because, allows to download and upload remote information to be used in the app.
+   </p>
+   <p>
+    No matter what server software or server database is used, what the app do are HTTP calls with the right arguments, in order to retrieve information, and, in a similar way, made HTTP calls, with the right arguments, to upload information to the server, for example, to be inserted in a database: the client app is completely abstracted from what server software nor server database is used.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Http client sample app included with the installation of DecSoft App Builder. Take a look to see this control in action!
+   </div>
+
+   <h2 class="mt-5">
+    Http client at designtime
+   </h2>
+   <p class="mt-3">
+    The Http client control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Http client at runtime
+   </h2>
+   <p class="mt-3">
+    The Http client control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#url-variable" title="More information and details">Url property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#method-variable" title="More information and details">Method property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#cache-variable" title="More information and details">Cache property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#contenttype-variable" title="More information and details">ContentType property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#responsetype-variable" title="More information and details">ResponseType property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#timeout-variable" title="More information and details">Timeout property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#username-variable" title="More information and details">UserName property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#password-variable" title="More information and details">Password property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#response-variable" title="More information and details">Response property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#statuscode-variable" title="More information and details">StatusCode property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#textstatus-variable" title="More information and details">TextStatus property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#request-variable" title="More information and details">Request property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#errorthrown-variable" title="More information and details">ErrorThrown property</a></li>
+   </ul>
+
+   <h2 class="pt-5" id="control-methods">
+    Http methods
+   </h2>
+   <p class="mt-3">
+    The Http client control put at your disposition the below methods. You can use these methods in runtime in order to perform various control related tasks.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#execute-method" title="More information and details">execute() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#setheader-method" title="More information and details">setHeader() method</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Http client events
+   </h2>
+   <p class="mt-3">
+    The Http client control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#done-event" title="More information and details">Done event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#fail-event" title="More information and details">Fail event</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Http client designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Http client Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. This value is only take in consideration at designtime, since this is a non visual control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Http client Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. This value is only take in consideration at designtime, since this is a non visual control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Http client Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. This value is only take in consideration at designtime, since this is a non visual control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Http client Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. This value is only take in consideration at designtime, since this is a non visual control, which do not appear in the screen at runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Http client Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Http client runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Http client control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "http1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="url-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Url property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Url control property stores the URL that is used when you made the HTTP call, by using the control <a href="#execute-method" title="More information and details">execute() method</a>. You can change the Url property at runtime anytime you need: the latest one is used when the next HTTP call is made.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set another URL for the Http client control
+views.view1.http1.url = 'https://www.myappserver.com/my-resource/';
+</textarea>
+
+   <h3 id="method-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Method property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Method control property stores the HTTP method to be used when execute the HTTP call. You can use one of the "app.httpMethod.*" constants values to set this variable.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the HTTP GET method
+views.view1.http1.method = app.httpMethod.get; // By default
+
+// Set the HTTP POST method
+views.view1.http1.method = app.httpMethod.post;
+
+// Set the HTTP PUT method
+views.view1.http1.method = app.httpMethod.put;
+
+// Set the HTTP HEAD method
+views.view1.http1.method = app.httpMethod.head;
+
+// Set the HTTP DELETE method
+views.view1.http1.method = app.httpMethod.delete;
+</textarea>
+
+   <h3 id="cache-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Cache property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Cache control property determines if the HTTP call server response must be cached or not. This variable is "false" by default, but you can set it to "true" in order to cache the server response of the HTTP call.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Cache the next HTTP call
+views.view1.http1.cache = true;
+
+// Don't cache the next HTTP call
+views.view1.http1.cache = false;
+</textarea>
+
+   <h3 id="contenttype-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client ContentType property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The ContentType control property determines how the data is send to the server. Default is "application/x-www-form-urlencoded", which is fine for most cases. Note: For cross-domain requests, setting the content type to anything other than "application/x-www-form-urlencoded", "multipart/form-data", or "text/plain" will trigger the browser to send a preflight OPTIONS request to the server. You can set this variable to "false" in order to not send any content type to the server.
+   </p>
+
+   <h3 id="responsetype-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client ResponseType property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The ResponseType control property determines how the response is retrieved from the server. The default value is an empty string: no specific response type. Set it to "blob" in order to deal with the response server's as a blob. This last one can be useful to download files and then store it into the user's device using the <a href="apache-cordova.html#app.cordova.file.writeFile" title="More information and details">app.cordova.file.writeFile() method</a>.
+   </p>
+
+   <h3 id="timeout-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Timeout property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    The Timeout control property can be established to a number of milliseconds to be taken as the HTTP call timeout. This variable is "0" (zero) by default, means no timeout is established.
+   </p>
+
+   <h3 id="username-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client UserName property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The UserName control property can be established to set the user name to be used in a basic HTTP call authentication.
+   </p>
+
+   <h3 id="password-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Password property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Password control property can be established to set the user password to be used in a basic HTTP call authentication.
+   </p>
+
+   <h3 id="response-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Response property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Response control property stores the response retrieved from the server for the made HTTP call. This property is available in both the control <a href="#done-event" title="More information and details">Done event</a> and the <a href="#fail-event" title="More information and details">Fail event</a>. The Response variable can be whatever the server send to the app, as simple as a string, or a more or less complex JSON object ready to be used by the app.
+   </p>
+
+   <h3 id="statuscode-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client StatusCode property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Number variable.</span>
+    The StatusCode control property stores HTTP code of the made HTTP call. This property is available in both the control <a href="#done-event" title="More information and details">Done event</a> and the <a href="#fail-event" title="More information and details">Fail event</a>.
+   </p>
+
+   <h3 id="textstatus-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client TextStatus property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The TextStatus control property stores the text status of the HTTP call after has been made. This property is available in both the control <a href="#done-event" title="More information and details">Done event</a> and the <a href="#fail-event" title="More information and details">Fail event</a>. Possible values for the TextStatus variable (besides "null") can be "timeout", "error", "abort" and "parsererror". When an HTTP error occurs, the <a href="errorthrown-variable" title="More information and details">ErrorThrown property</a> receives the textual portion of the HTTP status, such as "Not Found" or "Internal Server Error."
+   </p>
+
+   <h3 id="errorthrown-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client ErrorThrown property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The ErrorThrown control property stores the text status of the HTTP call after has been made. This property is available in the control <a href="#fail-event" title="More information and details">Fail event</a>. Possible values for this variable are "Not Found" or "Internal Server Error."
+   </p>
+
+   <h3 id="request-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client Request property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span>
+    The Request control property stores the "jQuery Xhr" object that has been used to made the HTTP call. This property is available in both the control <a href="#done-event" title="More information and details">Done event</a> and the <a href="#fail-event" title="More information and details">Fail event</a>
+   </p>
+
+   <h2 class="mt-5">
+    Http client runtime methods
+   </h2>
+
+   <h3 id="execute-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client execute() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Http control method to execute an HTTP call. See below how easy is to use the control <a href="#data-variable" title="More information and details">Data property</a> to set the arguments for the HTTP call. After the execute method is called and when we get the server response, the control <a href="#done-event" title="More information and details">Done event</a> or the control <a href="#fail-event" title="More information and details">Fail event</a> are fired.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the required HTTP call method
+views.view1.http1.method = app.httpMethod.post;
+
+// Set the URL to be called
+views.view1.http1.url = 'https://www.myappserver.com/upload-handler/';
+
+// Check if the user already select the desired file
+if (views.view1.file1.value === null) {
+  alert('Please, choose a file first');
+  return;
+}
+
+// Set the input1 value into the control data
+views.view1.http1.data.input1 = views.view1.input1.value;
+
+// Set the file1 value (the file) into the control data
+views.view1.http1.data.file1 = views.view1.file1.value[0];
+
+// Send the file1 and input1 values to the app server
+views.view1.http1.execute();
+</textarea>
+
+   <h3 id="setheader-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Http client setHeader() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Http control method to set an specific HTTP header to be send with the HTTP call. This method admits the below arguments, both of them required:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">headerName</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The header name to be established for the HTTP call.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">headerValue</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The header value to be established for the HTTP call.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Set an specific HTTP header to be used in the HTTP call
+views.view1.http1.setHeader('Header name', 'Header value');
+
+// Execute the HTTP call
+views.view1.http1.execute();
+</textarea>
+
+   <h2 class="mt-5">
+    Http client events
+   </h2>
+
+   <h3 id="done-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Http client Done event
+   </h3>
+   <p class="mt-3">
+    The Done event handler is fired when the HTTP call has been executed and the server response is ready for the app. The server response is available in the control <a href="#response-variable" title="More information and details">Response property</a> and you have the HTTP status code in the <a href="#status-variable" title="More information and details">Status property</a>.
+   </p>
+
+   <h3 id="fail-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Http client Fail event
+   </h3>
+   <p class="mt-3">
+    The Fail event handler is fired if an error occurs. The server response is available in the control <a href="#response-variable" title="More information and details">Response property</a> and you have the HTTP status code in the <a href="#status-variable" title="More information and details">Status property</a>. Look also at the <a href="#errorthrown-variable" title="More information and details">ErrorThrown property</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Http client events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Http client control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

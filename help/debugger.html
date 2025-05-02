@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Debugging apps</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      Debugging apps
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Debugging apps
+   </h2>
+   <p class="mt-3">
+    DecSoft App Builder incorporates an internal debugger browser based in Chromium (an open source derived from Google Chrome) ready to be use to debug your apps. The debugger show your app running and also a complete developer console which you can use to debug your apps, integrating such browsers' icons in the DecSoft App Builder IDE toolbar, as you can see below.
+   </p>
+
+   <div class="mt-5">
+    <strong>Debugging apps</strong>
+    <ul class="mt-2">
+     <li><a href="#toolbarbuttons" title="More information and details">Compile, Debug and Run</a></li>
+     <li><a href="#internal-browser" title="More information and details">Using the internal browser</a></li>
+     <li><a href="#external-browser" title="More information and details">Using an external browser</a></li>
+     <li><a href="#apachecordova" title="More information and details">Debugging Apache Cordova apps</a></li>
+     <li><a href="#apachecordova-notes" title="More information and details">Some notes about Apache Cordova</a></li>
+    </ul>
+   </div>
+
+   <h2 class="pt-5" id="toolbarbuttons">
+    Compile, Debug and Run
+   </h2>
+   <p class="mt-3">
+    In the DecSoft App Builder IDE main toolbar, you can see the below four buttons, that must be well explained, from left to right:
+   </p>
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/captures/ide/ide-runtoolbarbuttons.png" class="img-fluid" alt="">
+   </div>
+
+   <h3 class="mt-4">
+    Run button
+   </h3>
+   <p class="mt-3">
+    The Run button is intended to launch the app in the internal debugger browser without save nor compile it first. In other words, the Run button launch the latest compilation of the app, if any. Just this can be useful, because allows to launch the app as fast as possible, since is not saved nor compiled before launch.
+   </p>
+   <p>
+    However, the Run button is particularly useful because DecSoft App Builder allows to open the compiled "app.js" in the code editor <strong class="text-muted">(Main Menu -> App -> Open app.js)</strong>. So the point is that you can perform changes in the "app.js" file, save it, and then launch the app using the Run button.
+   </p>
+   <p>
+    Since the app is not compiled, what you can see running when the app is launched, is your modify "app.js" file. And that's exactly wnat you wanted: made some changes in the "app.js" and then launch the app is a very good way to debug some specific things.
+   </p>
+
+   <h3 class="mt-4">
+    Stop button
+   </h3>
+   <p class="mt-3">
+    Not too much to say, the Stop button just stop the internal HTTP Server and close the debugger internal browser window.
+   </p>
+
+   <h3 class="mt-4">
+    Compile button
+   </h3>
+   <p class="mt-3">
+    The Compile button compile the app without save it firstly. Sometimes you don't want to debug the very latest changes, but the "current state" of the app, to say like that, so you can press the Compile button, without firstly save the app.
+   </p>
+   <p>
+    The Compile button is what you must use when want to deploy the app, that is, to made the "to be deployed" compilation of your app, you must save it first, and then, press the Compile button. What you get is an app compilation ready to be deployed, without including any debug code related.
+   </p>
+
+   <h3 class="mt-4">
+    Debug button
+   </h3>
+   <p class="mt-3">
+    The Debug button save the app, if it's modified, then compile the app, including some debug related stuff, and finally launch the app in the internal debugger browser. Note that compile the app means also that the "app.js" is rewrited: if you modify it first to debug something... you must use the Run button (see above) instead the Debug button.
+   </p>
+
+   <h3 class="mt-4">
+    External browser buttons
+   </h3>
+   <p class="mt-3">
+    Probably you set <a href="#external-browser" title="More information and details">some external browser</a> to be used to debug the app (see below). The buttons for these external browsers appear at the right of the Debug button, and, when you press one of them, what that button do is the same than the Debug button, except that additionally launch the app in the specified browser.
+   </p>
+
+   <h2 class="pt-5" id="internal-browser">
+    Debugging using the internal browser
+   </h2>
+   <p class="mt-3">
+    Many times the internal browser is enough to debug the app, so, we can simply use it as you can see in the below animated GIF image:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/ide-internal-debugger.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container">
+
+   <h2 class="pt-5" id="external-browser">
+    Debugging using an external browser
+   </h2>
+   <p class="mt-3">
+    Just press in one of the established <a href="ide-options.html#debugger-options" title="Go to this help topic">debugger browsers</a> and then the right browser is opened with the app ready to be debugged. Commonly you can use the <kbd>F12</kbd> key to show the developer console, this is what you can see in the below animated GIF image:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/ide-external-debugger.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container">
+
+   <h2 class="pt-5" id="apachecordova">
+    Debugging Apache Cordova apps
+   </h2>
+   <div class="mt-3">
+    <p>
+     Most of the time its enough to debug the app using the browser: almost all the time we can be sure that something that works in the browser, can works in the same way once our app has been compiled with Apache Cordova.
+    </p>
+    <p>
+     Sometimes, however, we must debug something only available when the app is running in a device like an Android smartphone. In our experience, the best way to debug this kind of things is by using the <a href="apache-cordova.html#batchfiles-integration" title="Go to this help topic">"Run Batch file"</a> that DecSoft App Builder generates, firstly attaching a device to the computer.
+    </p>
+    <p>
+     So you attach a device to the computer via USB, for example, and then execute the "Run Batch file", so the app is going to be compiled with Apache Cordova and then launched in the attached device. It's possible to use emulators too, but, using a device is probably better, and, for sure faster.
+    </p>
+	<p>
+	 After the app is launched in the attached Android device (or emulator) the "Run Batch file" starts the debug console, so we can start to receive information from our app. You can use the "window.console.info()", "window.console.debug()" and "window.console.error()" methods to send your own messages to the debug console.
+	</p>
+   </div>
+
+   <h2 class="pt-5" id="apachecordova-notes">
+    Some notes about Apache Cordova
+   </h2>
+   <div class="mt-3">
+    <p>
+     In the same way than is preferible to debug the app using the browser instead of the device (because it's more faster), when you are debugging an Apache Cordova compiler app, probably can be a good idea to try in just one platform, for example debug the app in an Android device.
+    </p>
+    <p>
+     The idea is that something that works in an Android device, must works in the same way in an Apple iOS device, for example, since the Apache Cordova stuff is the same. In some cases certain Apache Cordova plugin is only available in one platform, so you must debug it in that platform, of course.
+    </p>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

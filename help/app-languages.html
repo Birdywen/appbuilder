@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - App languages</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      App languages
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    App languages
+   </h2>
+
+   <p class="mt-3">
+    DecSoft App Builder want to helps to translate your app into various languages, and, for that the app languages manager is provided, as well other stuff, like some useful language related <a href="app-methods.html" title="Go to this help topic">app methods</a>. The app languages manager allows to add one or more languages to the app, in addition to the language in which you design it, so we can change to one of the available languages at runtime.
+   </p>
+
+   <h2 class="mt-5">
+    At designtime
+   </h2>
+
+   <p class="mt-3">
+    You can prepare your app translations at designtime by using the app languages manager. You can add a new language, by specifying a language code and a language name. These must be uniques in the app, so we can refer to a specific language without problems.
+   </p>
+   <p>
+    Once you add a new language in the app languages manager, you can see the all the existing <a href="app-view.html" title="Go to this help topic">app views</a>, <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and <a href="app-frame.html" title="Go to this help topic">app frames</a>. Just select one view, dialog or frame in order to show their controls, and, finally, select one of the available controls, in order to show their properties, ready to be translated.
+   </p>
+   <p>
+    The app languages manager show to you the original controls properties, so you can see what you must translate at any moment. It's important to note that what you translate is a piece of JavaScript code, so, for example, strings must be quoted. Just remember that what you see in the original piece of code and therefore what the translated piece of code must be is a piece of JavaScript.
+   </p>
+   <p>
+    Basically that's all. You can iterate over the app views, dialogs and frames, their controls and translatable properties, translate it, and, TA-DA! You can then show your app to the users in any of the availables languages.
+   </p>
+   <p>
+    Use the app languages manager is quite easy, as you can see in the below animated GIF image.
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/app-languages.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container mt-5">
+
+   <h2 class="mt-5">
+    Resources and Sidebar
+   </h2>
+
+   <p class="mt-3">
+    In addition to the app interface (app views, dialogs, frames, controls), it's also possible to translate the optional sidebar and the <a href="app-resources.html" title="Go to this help topic">app resources</a>. You can do it by using the app languages manager, as you can see below:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid">
+
+   <div class="text-center mt-5">
+    <img src="../shared/images/gifs/app-languages-resources.gif" class="img-fluid" alt="">
+   </div>
+
+  </div>
+  <!-- /container-fluid -->
+
+  <div class="container mt-5">
+
+   <h2 class="mt-5">
+    At runtime
+   </h2>
+
+   <p class="mt-3">
+    DecSoft App Builder prepares the right stuff in order to made available all the translated languages at runtime. Basically, what you must to do is to call the <a href="app-methods.html#translateview-method" title="More information and details">translateView() method</a>, in order to translate the current app view, dialog, and, of course, the possible used app frames, as well all their contained controls.
+   </p>
+   <p>
+    Before you call to the <a href="app-methods.html#translateview-method" title="More information and details">translateView() method</a>, you can set the <a href="#language-property" title="More information and details">"app.language"</a> to one of the available languages codes, so the method translate the current app view or dialog in the desired language. If the code language do not exists, the method leave the app equals, or translate it to the default app language.
+   </p>
+   <p>
+    There is other languages related methods that you can find useful too: <a href="app-methods.html#getlanguages-method" title="More information and details">getLanguages() method</a>, <a href="app-methods.html#getlanguagesnames-method" title="More information and details">getLanguagesNames() method</a>, <a href="app-methods.html#getlanguagescodes-method" title="More information and details">getLanguagesCodes() method</a>, <a href="app-methods.html#getlanguagecodefromname-method" title="More information and details">getLanguageCodeFromName() method</a> and the <a href="app-methods.html#getlanguagenamefromcode-method" title="More information and details">getLanguageNameFromCode() method</a>.
+   </p>
+
+   <h2 class="mt-5">
+    Default language
+   </h2>
+   <p class="mt-3">
+    When you start a new app in DecSoft App Builder, the <a href="app-properties.html#language-property" title="More information and details">Language property</a> is set to "en", and the <a href="app-properties.html#languagename-property" title="More information and details">LanguageName property</a> is set to "English". You can of course change these language code and name to another, for example, "es" and "Español".
+   </p>
+   <p>
+    The point is that you no need to translate the app into the language in which you are designing it. For example, when you place a <a href="control-push-button.html" title="Go to this help topic">Push button control</a> in an app view, and, you set his "text" property to "Click here", you no need to do anything more.
+   </p>
+   <p>
+    When, at runtime, you translate the app view into the default language (comming back from another language that has been previously used), the "Click here" property become again show, automatically, without the need to prepare a specific language for it.
+   </p>
+
+   <div class="alert alert-primary text-center mt-4 mb-5">
+    There is a Languages sample app included with the installation of DecSoft App Builder. Take a look to see the app resources in action!
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

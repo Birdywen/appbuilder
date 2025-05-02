@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Runtime selectors</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      Runtime selectors
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Runtime selectors
+   </h2>
+   <p class="mt-3">
+    Sooner or later you need to refer in runtime to some specific <a href="app-view.html" title="Go to this help topic">app view</a>, <a href="app-dialog.html" title="Go to this help topic">app dialog</a>, <a href="app-frame.html" title="Go to this help topic">app frame</a> or app control, so you need to know the selectors that you can use in both JavaScript and CSS, in order to refer to the wanted element, so you can perform some JavaScript operation and apply some CSS style rules to that element.
+   </p>
+   <div class="mt-5">
+    <strong>Runtime selectors</strong>
+    <ul class="mt-2">
+     <li><a href="#viewsdialogs" title="More information and details">App views and dialogs</a></li>
+     <li><a href="#appframesandframes" title="More information and details">App frames and Frames controls</a></li>
+     <li><a href="#appcontrols" title="More information and details">App controls</a></li>
+     <li><a href="#controlsinsideframes" title="More information and details">App controls inside app frames</a></li>
+    </ul>
+   </div>
+
+   <h2 class="pt-5" id="viewsdialogs">
+    App views and dialogs
+   </h2>
+   <p class="mt-3">
+    All the app views and dialogs are inside an HTML DIV container with the <code>.app-view</code> and <code>.app-dialog</code> classes, respectively. On the other hand, the referred DIV container has an ID attribute value equals than the contained app view or dialog name.
+   </p>
+   <p>
+    Then, suposing that your app has a view with the name "mainView", you can refer to the view's DIV container element with the ID: <code>mainView</code>, for example:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Attach an event to "mainView"
+
+$('#mainView').on('click', function () {
+  // Your click event handler code
+});
+</textarea>
+
+<textarea class="code-editor" data-mode="css">
+
+/*
+ Set the "mainView" background color to red
+*/
+
+#mainView {
+  background-color: red;
+}
+</textarea>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Attach an event to all the app views
+
+$('body').on('click', '.app-view', function (event) {
+  // Your click event handler code
+});
+
+// Attach an event to all the app dialogs
+
+$('body').on('click', '.app-dialog', function (event) {
+  // Your click event handler code
+});
+</textarea>
+
+<textarea class="code-editor" data-mode="css">
+
+/*
+ Set all views background color to red
+*/
+
+.app-view {
+  background-color: red;
+}
+
+/*
+ Set all dialogs background color to red
+*/
+
+.app-dialog {
+  background-color: red;
+}
+</textarea>
+
+   <h2 class="pt-5" id="appframesandframes">
+    App frames and Frame controls
+   </h2>
+   <p class="mt-3">
+    The case of the <a href="app-frame.html" title="Go to this help topic">app frames</a> is different than the <a href="app-view.html" title="Go to this help topic">app views</a> and the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. As may you already know, the controls of the app frames are placed inside one or more <a href="control-frame.html" title="Go to this help topic">Frame controls</a>, then you can use the Frame control name as the selector of the app frame container.
+   </p>
+   <p>
+    Then, suposing you have an app view with the name "mainView", and, inside that view, you have a <a href="control-frame.html" title="Go to this help topic">Frame control</a> with the name "myFrame", showing an app frame inside, you can refer to the Frame control / app frame container like below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Attach an event to all the the frame control / app frame container
+
+$('#mainView #myFrame').on('click', function (event) {
+  // Your click event handler code
+});
+</textarea>
+
+<textarea class="code-editor" data-mode="css">
+
+/*
+  Set the background color red to the frame control / app frame
+*/
+
+#mainView #myFrame {
+  background-color: red;
+}
+</textarea>
+
+   <div class="alert alert-primary text-center mt-5">
+    The "#mainView" prefix is required, since the app can have, in another app view or app dialog, others Frame controls with the name "myFrame".
+   </div>
+
+   <h2 class="pt-5" id="appcontrols">
+    App controls
+   </h2>
+   <p class="mt-3">
+    All the app controls can be referred from JavaScript and CSS code using their name prefixed by the name of the app view or dialog that contains the control. Thist last is required, because DecSoft App Builder allows to use the same name for controls contained in different app views, dialogs or frames.
+   </p>
+   <p>
+    Then you can refer, for example, to a "button1" <a href="control-push-button.html" title="Go to this help topic">Push button control</a>, placed in an app view with the name "mainView", like below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Attach an event to the "button1" control
+
+$('#mainView #button1').on('click', function (event) {
+  // Your click event handler code
+});
+</textarea>
+
+<textarea class="code-editor" data-mode="css">
+
+/*
+  Set the background color red to the "button1" control
+*/
+
+#mainView #button1 {
+  background-color: red;
+}
+</textarea>
+
+   <h2 class="pt-5" id="controlsinsideframes">
+    App controls inside app frames
+   </h2>
+   <p class="mt-3">
+    The app controls placed in <a href="app-frame.html" title="Go to this help topic">app frames</a> cannot be reached by identifiers. This is because you can show the same app frame (and therefore the same controls) in different <a href="control-frame.html" title="Go to this help topic">Frame controls</a>, inside the same <a href="app-view.html" title="Go to this help topic">app view</a> or <a href="app-dialog.html" title="Go to this help topic">app dialog</a>, but the HTML identifiers must be uniques.
+   </p>
+   <p>
+    To reach app controls placed inside app frames, and therefore inside Frames controls, you can take the controls names and use classes instead of identifiers. Remember to prefix the control name / class with the name of the Frame control's that show the app frame, that contain the control.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Attach an event to the "button1" control inside a "myFrame" Frame control
+
+$('#myFrame .button1').on('click', function (event) {
+  // Your click event handler code
+});
+</textarea>
+
+<textarea class="code-editor" data-mode="css">
+
+/*
+  Set the background color red to the "button1" control
+*/
+
+#myFrame .button1 {
+  background-color: red;
+}
+</textarea>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

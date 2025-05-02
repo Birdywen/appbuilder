@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Develop app plugins</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active" aria-current="page">
+      Develop app plugins
+     </li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Develop app plugins
+   </h2>
+
+   <p class="mt-4">
+    Here in this help topic you will learn how to develop <a href="app-plugins.html" title="Go to this help topic">app plugins</a> for DecSoft App Builder.
+   </p>
+
+   <div class="row mt-4">
+    <div class="col-sm-4">
+     <ul class="mt-3">
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugins-root-folder">App plugins root folder</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugins-vendors-folders">App plugins vendors folders</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugins-folders">App plugins folders</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#inside-app-plugins-folders">Inside app plugins folders</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-xml-file">The "plugin.xml" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-vendor-url">App plugin vendor vendor URL</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-description">App plugin description</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-files">App plugin files</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#location-of-app-plugin-files">Location of app plugin files</a>
+      </li>
+     </ul>
+    </div>
+    <div class="col-sm-4">
+     <ul class="mt-3">
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-object-file">The "object.js" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-object-ini-files">The "object.ini" files</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-object-ini-file">The "object.ini" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-controls">App plugin controls</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-component-tag">The "Component" tag</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-component-props">Component properties</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-component-events">Component events</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-control-js-file">The "*.control.js" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-methods-js-file">The "*.methods.js" file</a>
+      </li>
+     </ul>
+    </div>
+    <div class="col-sm-4">
+     <ul class="mt-3">
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-control-ini-file">The "*.control.ini" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-control-css-file">The "*.control.css" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-control-16-png-file">The "*.control.16.png" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-control-32-png-file">The "*.control.32.png" file</a>
+      </li>
+      <li>
+       <i class="fas fa-caret-right text-primary"></i>
+       <a title="Go to this help topic" href="#app-plugin-documentation">App plugin documentation</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+
+   <h2 class="pt-5" id="app-plugins-root-folder">
+    App plugins root folder
+   </h2>
+
+   <p class="mt-3">
+    All app plugins are placed inside the <span class="text-danger">C:\Users\[PC User]\Documents\DecSoft\AppBuilder\Plugins\</span> folder. DecSoft App Builder iterate this app plugins root folder, searching for app plugins to be integrated into the IDE.
+   </p>
+
+   <h2 class="pt-5" id="app-plugins-vendors-folders">
+    App plugins vendors folders
+   </h2>
+
+   <p class="mt-3">
+    Inside the above referred app plugins root folder, we can see the app plugins vendors folders. A vendor folder, for example, "decsoft", can contain one or more app plugins. So you must start by creating a vendor folder inside the app plugins root folder.
+   </p>
+
+   <h2 class="pt-5" id="app-plugins-folders">
+    App plugins folders
+   </h2>
+
+   <p class="mt-3">
+    You can place one or more app plugins inside your vendor folder. Not all the times you need to add more than one app plugin, for example, an app plugin can provide one or more controls, so, you no need to create a different plugin to provide various controls.
+   </p>
+
+   <h2 class="pt-5" id="inside-app-plugins-folders">
+    Inside app plugins folders
+   </h2>
+
+   <p class="mt-3">
+    Inside every app plugin folder, you can store the app plugin required files, scripts, styles, images and more. DecSoft App Builder expect a <span class="text-danger">plugin.xml</span> file, which includes information about the app plugin as well his capabilities.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-xml-file">
+    The "plugin.xml" file
+   </h2>
+
+   <p class="mt-3">
+    There is a minimum <span class="text-danger">plugin.xml</span> file contents that must be provided in order to consider an app plugin valid to be integrated in the IDE:
+   </p>
+
+   <p class="mt-4">
+    Now take a look at the contents of our <span class="text-danger">\app-plugins-root\decsoft\sample\plugin.xml</span> file:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<?xml version="1.0" encoding="utf-8"?>
+<AppBuilder>
+  <AppPlugin>
+   <Name>Sample</Name>
+   <Vendor>DecSoft</Vendor>
+  </AppPlugin>
+</AppBuilder>
+</textarea>
+
+   <p class="mt-4">
+    The above XML file provide the minimum information for an app plugin: the app plugin name and the app plugin vendor name.
+   </p>
+
+   <div class="alert alert-danger mt-4" id="app-plugin-names-warning">
+    <strong class="alert-heading d-block mt-3">
+     <i class="fas fa-exclamation-triangle"></i>
+     Carefully read this!
+    </strong>
+    <p class="mt-4">
+     For internal purposes, DecSoft App Builder generates a different identifier for every vendor / app plugin / control. This unique identifier is based in the provided vendor name, app plugin name and control names, and, must remain the same for the entire lifecycle of the app plugin.
+    </p>
+    <p>
+     In other words, you need to think twice the vendor name, the app plugin name and the controls names, because, if you changes any of these names, the internally generated identifier become different, so possible apps that are using your app plugin, cannot continue using it.
+    </p>
+   </div>
+
+   <h2 class="pt-5" id="app-plugin-vendor-url">
+    App plugin vendor URL
+   </h2>
+
+   <p class="mt-3">
+    Optionally, you can add a vendor URL into the <span class="text-danger">plugin.xml</span> file, so the user can go to that URL from the <a href="app-options.html#appplugins-options" title="Go to this help topic">inside the right app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<?xml version="1.0" encoding="utf-8"?>
+<AppBuilder>
+  <AppPlugin>
+   <Name>Sample</Name>
+   <Vendor>DecSoft</Vendor>
+   <VendorUrl>https://www.decsoftutils.com</VendorUrl>
+  </AppPlugin>
+</AppBuilder>
+</textarea>
+
+   <h2 class="pt-5" id="app-plugin-description">
+    App plugin description
+   </h2>
+
+   <p class="mt-3">
+    You can also provide an app plugin description, which is good, because the user can read it from the <a href="app-options.html#appplugins-options" title="Go to this help topic">inside the right app options</a>.
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<?xml version="1.0" encoding="utf-8"?>
+<AppBuilder>
+  <AppPlugin>
+   <Name>Sample</Name>
+   <Vendor>DecSoft</Vendor>
+   <VendorUrl>https://www.decsoftutils.com/</VendorUrl>
+   <Description>
+    <en-US>
+     <![CDATA[
+      Sample plugin for DecSoft App Builder
+     ]]>
+    </en-US>
+    <es-ES>
+     <![CDATA[
+      Plugin de ejemplo para DecSoft App Builder
+     ]]>
+    </es-ES>
+   </Description>
+  </AppPlugin>
+</AppBuilder>
+</textarea>
+
+   <p class="mt-4">
+    Above you can see that the app plugin description are placed inside a "language tags". The "en-US" is the default language in the DecSoft App Builder IDE, and, the description placed in "en-US" are used by default too.
+   </p>
+   <p>
+    In other words, supose the language used in the IDE is "es-ES": your app plugin can provide a description for that language (like above) and, if that language description is not provided, then the "en-US" are used by default.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-files">
+    App plugin files
+   </h2>
+
+   <p class="mt-3">
+    Optionally, app plugins can requires some files in order to work properly. Scripts, styles, other files and even entire folders can be required by the app plugin, in order to be available to be used by the app plugin.
+   </p>
+   <p>
+    Take a look at the below <span class="text-danger">plugin.xml</span> file:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<?xml version="1.0" encoding="utf-8"?>
+<AppBuilder>
+  <AppPlugin>
+   <Name>Sample</Name>
+   <Vendor>DecSoft</Vendor>
+   <VendorUrl>https://www.decsoftutils.com/</VendorUrl>
+   <Description>
+    <en-US>
+     <![CDATA[
+      Sample plugin for DecSoft App Builder
+     ]]>
+    </en-US>
+   </Description>
+  <Files>
+   <Scripts>
+    <File Path="scripts\some.js" Query="" />
+   </Scripts>
+   <Styles>
+    <File Path="styles\some.css" Query="" />
+   </Styles>
+   <Images>
+    <File Path="images\some.png" />
+   </Images>
+   <Others>
+    <File Path="files\some.json" />
+   </Others>
+   <Folders>
+    <File Path="files\some-folder" />
+   </Folders>
+  </Files>
+  </AppPlugin>
+</AppBuilder>
+</textarea>
+
+   <p class="mt-4">
+    As you can see, it's possible to add a "Files" tag in the <span class="text-danger">plugin.xml</span> file. That "Files" tag can contains the "Scripts", "Styles, "Images", "Others" and "Folders" tags, and, inside these tags, any number of "File" tags, which defines the files that the app plugin requires.
+   </p>
+   <p class="mt-4">
+    The "Folders" tag allows to specify entire folders (and inside files and subfolders) to be copied into the app compiled directory, to be ready to use by the plugin. Now take a look at one of the "File" tags:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<File Path="scripts\some.js" Query="" />
+</textarea>
+
+   <p class="mt-4">
+    All the "File" tags that can be added into the "Scripts", "Styles", "Others" and "Folders", must have a mandatory "Path" attribute, which indicates the path for the file to be required. This path is relative to the <span class="text-danger">plugin.xml</span> file, so, above you can see that we requrie files that are inside in subfolders of the app plugin folder, named "scripts", "styles", "images" and "files".
+   </p>
+   <p>
+    The "Scripts" and "Styles" files are a bit special for the below reasons:
+   </p>
+
+   <ol class="mt-4">
+    <li>
+     You can specify URLs instead of file paths in the "Path" argument. So you can include a thirdparty JavaScript file indicating the JavaScript URL instead of a script file which is included by your app plugin and therefore must be copied into the app compiled folder to be available.
+    </li>
+    <li class="mt-4">
+     "Scripts" and "Styles" files can also specify an optional "Query" attibute in the "File" tags, so the script or style file or URL include the specified query string. You no need to start the query with the "?" character, just place pairs of keys=values separated by the &amp; (ampersand) character.
+    </li>
+    <li class="mt-4">
+	 The "Scripts" files can also define an optional "Type" attribute, which can be, for example, "module", in case you need such attribute for the script file that you want to include.
+    </li>	
+   </ol>
+
+   <p class="mt-4">
+    So we can prepare a "Scripts" "File" tag like the below one:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<Scripts>
+ <File Path="https://www.yourserver.com/my-script.js" Type="module" Query="key=value&other=value" />
+</Scripts>
+</textarea>
+
+   <p class="mt-4">
+    ... which become linked into the app "index.html" file in the below way:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<script type="module" src="https://www.yourserver.com/my-script.js?key=value&other=value"></script>
+</textarea>
+
+   <div class="text-center alert alert-primary mt-4">
+    <i class="fas fa-info-circle"></i>
+    To facilitate the usage of thirdparty JavaScript libraries, which can include different files (JS, CSS, images, etc.), it's possible to add the library's folder, that is, add the entire folder, and then, add the required scripts and styles by using a plugin's relative path, pointing to the files in the added library directory. For example, take a look at the below plugin's files definition sample:
+   </div>
+
+<textarea class="code-editor" data-mode="xml">
+
+<Files>
+ <Folders>
+  <File Path="thirdparty\" />
+ </Folders>
+ <Scripts>
+  <File Path="app/plugins/VendorName/PluginName/files/thirdparty/my-library-script.js" Query="" />
+ </Scripts>
+</Files>
+</textarea>
+
+   <h2 class="pt-5" id="location-of-app-plugin-files">
+    Location of app plugin files
+   </h2>
+
+   <p class="mt-3">
+    The files that your app plugin requires (that are not script or style URLs) are copied by DecSoft App Builder inside the app compiled directory, so your app plugin can use it at runtime, when the app is running.
+   </p>
+   <p>
+    DecSoft App Builder prepares a vendor folder for you and subfolders for your app plugin in the path: <span class="text-danger">app/plugins/</span>, so your our sample app plugin, so, in the case of our "decsoft" (vendor name) app plugin "Sample" (plugin name), we can see the files availables in the path: <span class="text-danger">app/plugins/DecSoft/Sample/</span>
+   </p>
+   <p>
+    Inside that folder path you can see subfolders like "scripts", "styles", "images" and "files", in which your app plugin required scripts, styles, images and other files are copied. The required "folders" are copied "as is" inside the "files" folder.
+   </p>
+   <p>
+    Supose you include a "cat.png" image file, and you want to use it in your app plugin. The path that you must use is therefore: <span class="text-danger">app/plugins/decsoft/sample/images/cat.png</span>.
+   </p>
+   <p>
+    Supose you include a "Other" "cats.json" file, and you want to use it in your app plugin. The path that you must use is therefore: <span class="text-danger">app/plugins/decsoft/sample/files/cats.json</span>.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-object-file">
+    The "object.js" file
+   </h2>
+
+   <p class="mt-3">
+    The above <span class="text-danger">plugin.xml</span> file do not declare any control / component yet, however, not all the app plugins need to add controls / components. For example, an app plugin can just add some useful global methods to be available in the apps.
+   </p>
+   <p>
+    In addition to controls / components (that we review below in this help topic), the app plugins can add one or more objects into the <a href="app-properties.html#plugins-property" title="Go to this help topic">"app.plugins" variable</a>. These objects must be placed in the <span class="text-danger">object.js</span> file, which must be inside a "scripts" subfolder of your app plugin folder.
+   </p>
+
+   <div class="alert alert-warning text-center mt-4">
+    Finally the <span class="text-danger">object.js</span> file is optional, because an app plugin can provide only one or more controls / components, however, we need to start from some point, so, we leave the app plugins controls / components for now, and, describe the usage of the <span class="text-danger">object.js</span> file, for app plugins that only want to add global methods to the apps. Of course, app plugins can add the two things: global stuff and controls / components.
+   </div>
+
+   <p class="mt-4">
+    Now take a look at the contents of our <span class="text-danger">\app-plugins-root\decsoft\sample\scripts\object.js</span> file:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+app.plugins.decsoft =
+  app.plugins.decsoft ? app.plugins.decsoft : {};
+
+app.plugins.decsoft.sample = {
+
+  getCurrentViewName: function () {
+    var
+      view = app._getCurrentView();
+    return view.name;
+  }
+};
+</textarea>
+
+   <p class="mt-4">
+    Let's take a look at the above file line by line. We can see this first line:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+app.plugins.decsoft =
+  app.plugins.decsoft ? app.plugins.decsoft : {};
+</textarea>
+
+   <p class="mt-4">
+    A good convention can be to use the app plugin vendor name to be added into the "app.plugins" variable. Since a vendor (in this case "decsoft") can provide more than one plugin, what we do in the above first line of the script is to check if the "app.plugins.decsoft" variable has been already created (by another of our plugins). If that variable exists, we use it, and, if not, we declare it as a JavaScript object variable.
+   </p>
+   <p>
+    So we can continue now with the rest of the script contents:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+app.plugins.decsoft.sample = {
+
+  getCurrentViewName: function () {
+    var
+      view = app._getCurrentView();
+    return view.name;
+  }
+};
+</textarea>
+
+   <p class="mt-4">
+    Since we get ready to use the "app.plugins.decsoft" variable, we add the "sample" object inside. The name of this object can be anyone, however, a good convention can be to name the object with the app plugin's name.
+   </p>
+   <p>
+    Inside the "sample" objects, finally, we can add any number of methods / functions, to be used by the user in their apps. Above we add a "getCurrentViewName" method that can retrieve the current app's view.
+   </p>
+   <div class="alert alert-warning text-center mt-4">
+    As you can see, from the <span class="text-danger">object.js</span> file we can access the "app" variable, which offers to us useful methods like "_getCurrentView()". We see more about this below in this help topic.
+   </div>
+   <p class="mt-4">
+    So right now the user can use our app plugin provided method in the below way:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+alert('The current view name is: ' +
+ app.plugins.decsoft.sample.getCurrentViewName());
+</textarea>
+
+   <h2 class="pt-5" id="app-plugin-object-ini-files">
+    The "object.ini" files
+   </h2>
+
+   <p class="mt-3">
+    Your plugin can be good documented (as we see below in this help topic), however, probably you also want to help the user to write code more faster, by adding the above app plugin object and method into the <a title="Go to this help topic" href="ide-quick-code-list.html">IDE Quick Code list</a>.
+   </p>
+   <p>
+    To do that you can use the optional (but recommended) <span class="text-danger">object.ini</span> files, which must be placed in a subfolder "editor" inside your app plugin folder. We talk about <span class="text-danger">object.ini</span> files (in plural) because we can take care about the IDE language which is used by the user.
+   </p>
+   <p>
+    Like for the app plugin description, we can provide <span class="text-danger">object.ini</span> files for different languages, using the "en-US" by default. This can be done by adding an "en-US" subfolder into the "editor" folder. You can add more folders like "es-ES" inside the editor folder. If the right folder / language don't exists, the "en-US" is used by default.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-object-ini-file">
+    The "object.ini" file
+   </h2>
+
+   <p class="mt-3">
+    Now take a look at the contents of our optional (but recommended) <span class="text-danger">\app-plugins-root\decsoft\sample\editor\en-US\object.ini</span> file:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[DecSoft Sample plugin methods]
+head=DecSoft Sample plugin methods
+
+[app.plugins.decsoft.sample.getCurrentViewName]
+exec=app.plugins.decsoft.sample.getCurrentViewName();
+hint=DecSoft Sample plugin method. Use this method to get the current app's view name.
+</textarea>
+
+   <p class="mt-4">
+    Before start to describe the INI file contents, let's see how the above <span class="text-danger">object.ini</span> file contents are show in the <a title="Go to this help topic" href="ide-quick-code-list.html">IDE Quick Code list</a>:
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/ide/ide-app-plugin-quick-code-list.png" class="img-fluid">
+   </div>
+
+   <p class="mt-4">
+    As you can see in the image, we add two items into the IDE Quick code list. The first item is for information purposes (note that is show in another color), and, if the user select that item, no code is placed into the code editor. These informational items are added with the below INI code:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[DecSoft Sample plugin methods]
+head=DecSoft Sample plugin methods
+</textarea>
+
+   <p class="mt-4">
+    If you are more or less familiarized with INI files, you probably already know that the above is an INI "header" with a "head" INI "key". This "head" INI "key" is the only required key for this kind of informational items in the IDE Quick code list. Note that this information items cannot be selected by the user, in other words, don't add any code to the code editor.
+   </p>
+
+   <p class="mt-4">
+    Now take a look at the rest of the contents of our <span class="text-danger">object.ini</span> file:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[app.plugins.decsoft.sample.getCurrentViewName]
+exec=app.plugins.decsoft.sample.getCurrentViewName();
+hint=DecSoft Sample plugin method. Use this method to get the current app's view name.
+</textarea>
+
+   <p class="mt-4">
+    The above is another INI "header", this time with two "keys": "exec" and "hint". The header name itself it's important, because is what the user expect in the IDE Quick code list: the path of an app plugin's method. As you can see above when the <span class="text-danger">object.js</span> file, we provide there exactly the "app.plugins.decsoft.sample.getCurrentViewName" method.
+   </p>
+   <p>
+    The "exec" "key" is what DecSoft App Builder places in the editor code if the user choose this item from the IDE Quick code list. So, after the user select this item, what happen is what the user and us expected: the IDE Quick code list is hidden and the below code is inserted into the code editor:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+app.plugins.decsoft.sample.getCurrentViewName();
+</textarea>
+
+   <p class="mt-4">
+    The "hint" "key" value determines what the user can see below the IDE Quick code list when the item is highlighted. This "hint" value can contain a descriptive yet concise text to describe what the method do.
+   </p>
+
+   <p>
+    With the above we can offer the right stuff for app plugins methods that don't require any argument, however, what if our app plugin method requires some arguments? For this we can use the "args" key in various ways, for example:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[app.plugins.decsoft.sample.sayHello]
+exec=app.plugins.decsoft.sample.sayHello(
+args="name: string"
+hint=DecSoft Sample plugin method. Use this method to show an alert to the specified user name.
+</textarea>
+
+   <p class="mt-4">
+    Above we are suposing that our app plugin provides a "sayHello" method which requires one "name" string argument. It's important to note that this time the "exec" key value specify the method path and the first parenthesis only. So, after that "exec" value is inserted into the code editor, DecSoft App Builder automatically provides to the user information about the arguments that the method expected, as you can see in the below GIF animated image:
+   </p>
+
+  </div>
+  <!-- /container -->
+
+  <div class="container-fluid text-center mt-5">
+   <img src="../shared/images/gifs/ide-arguments-tips.gif" class="img-fluid" alt="">
+  </div>
+
+  <div class="container">
+
+   <p class="mt-5">
+    Since a method can require more than one argument, it's possible to provide their information separating the arguments information with commas, like you can see below:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[app.plugins.decsoft.sample.sayHello]
+exec=app.plugins.decsoft.sample.sayHello(
+args="name: string", "lastName: string"
+hint=DecSoft Sample plugin method. Use this method to show an alert to the specified user name.
+</textarea>
+
+   <p class="mt-4">
+    Finally, a method can work with optionals arguments, so the user no need to provide all of the possible ones. We can also indicate this circumstance by separating the different possible arguments with a tilde character, like you can see below:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[app.plugins.decsoft.sample.sayHello]
+exec=app.plugins.decsoft.sample.sayHello(
+args="name: string"~"name: string", "lastName: string"
+hint=DecSoft Sample plugin method. Use this method to show an alert to the specified user name.
+</textarea>
+
+   <p class="mt-4">
+    The above "args" key value will indicate to the user that the "sayHello" method can be called with a "name" argument, and, optionally, with a "lastName" argument too.
+   </p>
+   <p>
+    And that's all for the <span class="text-danger">object.ini</span> file. As you can imagine, we can add the information for all the methods that our app plugin offer to the user. App plugins which offer one or more controls, can also provide the right stuff for the IDE Quick code list, as you can see explained above in this help topic. However, the INI files follow the same rules for both app plugins global methods and app plugins controls / components, and, you already know how to deal with it.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-controls">
+    App plugins controls
+   </h2>
+
+   <p class="mt-3">
+    You already learn how to create app plugins that can add one or more objects into the "app.plugins" variable. Additionally, the <a title="Go to this help topic" href="#app-plugin-xml-file">"plugin.xml" file</a> allows to declare one or more app plugin components / controls, to be integrated into the IDE, like any other of the "out of the box" included controls.
+   </p>
+   <p>
+    Take a look at the below <span class="text-danger">plugin.xml</span> file, which declares an app plugin, who add a new control / component to the DecSoft App Builder IDE:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<?xml version="1.0" encoding="utf-8"?>
+<AppBuilder>
+ <AppPlugin>
+  <Name>Sample</Name>
+  <Vendor>DecSoft</Vendor>
+  <VendorUrl>https://www.decsoftutils.com/</VendorUrl>
+  <Description>
+   <en-US>
+    <![CDATA[
+     Sample app plugin with controls / components.
+    ]]>
+   </en-US>
+  </Description>
+  <Components>
+   <Component>
+    <Name>SimpleText</Name>
+    <InsertName>simpleText</InsertName>
+	<ModelProperty></ModelProperty>
+    <HtmlName>decsoft-simple-text</HtmlName>
+    <Width>200</Width>
+    <Height>32</Height>
+    <IsVisual>true</IsVisual>
+    <UseLargeImage>false</UseLargeImage>
+    <DegradeFromColor>#ffffff</DegradeFromColor>
+    <DegradeToColor>#ffffff</DegradeToColor>
+    <BevelShadowColor>#999999</BevelShadowColor>
+    <BevelHighlightColor>#999999</BevelHighlightColor>
+    <Description>
+     <en-US>
+      <![CDATA[
+       Description of this sample control / component.
+      ]]>
+     </en-US>
+    </Description>
+   </Component>
+  </Components>
+ </AppPlugin>
+</AppBuilder>
+</textarea>
+
+   <h2 class="pt-5" id="app-plugin-component-tag">
+    The "Component" tag
+   </h2>
+
+   <p class="mt-3">
+    As you can see in the above <span class="text-danger">plugin.xml</span> file we add a "Components" tag to it. Inside this "Components" tag we can specify one or more "Component". Now take a look specifically to the "Component" tag in the <span class="text-danger">plugin.xml</span> file:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<Component>
+ <Name>SimpleText</Name>
+ <InsertName>simpleText</InsertName>
+ <ModelProperty></ModelProperty>
+ <HtmlName>decsoft-simple-text</HtmlName>
+ <Width>200</Width>
+ <Height>32</Height>
+ <IsVisual>true</IsVisual>
+ <UseLargeImage>false</UseLargeImage>
+ <DegradeFromColor>#ffffff</DegradeFromColor>
+ <DegradeToColor>#ffffff</DegradeToColor>
+ <BevelShadowColor>#999999</BevelShadowColor>
+ <BevelHighlightColor>#999999</BevelHighlightColor>
+ <Description>
+  <en-US>
+   <![CDATA[
+    Description of this sample control / component.
+   ]]>
+  </en-US>
+ </Description>
+</Component>
+</textarea>
+
+   <p class="mt-3">
+    Let's to describe the above "Component" tag in deep. Firstly we can see a "Name" tag, which determines the name of the control / component. Please, remember the importance to <a href="#app-plugin-names-warning" title="More information and details">think twice about the app plugin names</a>.
+   </p>
+   <p>
+    Then we can see the "InsertName" tag. Here we must set the name for the app plugin control / component, as is added into the "app.js" file. So what finally we get in the "app.js" (at runtime) is an object with this specified "insert name", as you can see below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+simpleText: {
+
+}
+</textarea>
+
+   <p class="mt-3">
+    We see more about the Vue components in <a title="Go to this help topic" href="#app-plugin-control-js-file">the "*.control.js" file</a> topic, but, for now, you can see that the "HtmlName" tag value is must match the component "name" that we use with Vue component.
+   </p>
+   <p>
+    The next tags "Width" and "Height" determine the default dimensions for the control / component, when it's inserted into the IDE app views, dialogs or frames designer. You can set the width and height that you wanted.
+   </p>
+   <p>
+    The next tag, "IsVisual", determine if the component / control is a visual or a non visual controls. A visual control appear at runtime in the app, but, a non visual control do not have any interface to be shown to the user at runtime. The possibles values for the "IsVisual" tag are "true" or "false".
+   </p>
+   <p>
+    App plugins can specify a 16px and a 32px image to be used as the compoment / control icon. We see this later in this help topic, but, for now, it's enough to know that the "UseLargeImage" tag can determine if you want to use the small or the large image for the control / component, as appear in the IDE designer.
+   </p>
+   <p>
+    The "DegradeFromColor", "DegradeToColor", "BevelShadowColor" and "BevelHighlightColor" tags, allows to specify HTML colors values, to be used by the IDE designer when show the app plugin control / component in the IDE designer.
+   </p>
+   <p>
+    Finally, we can see a "Description" tag, that provides the way to describe the app plugin control / component. This description appear in the right app options, and, can be localized in various languages, following the same rules that you see before for <a href="#app-plugin-description" title="More information and details">the app plugin "Description" tag</a>.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-component-props">
+    Component properties
+   </h2>
+   <p class="mt-3">
+    We see above how it's possible to add one or more "Component" tags inside the "Components" tag of our <span class="text-danger">plugin.xml</span> file. We already see how to specify the component / control name, insert name, HTML name, default dimensions, their colors, etc.
+   </p>
+   <p>
+    Now we see how to add properties to the app plugin component / control. The user can set these properties at designtime and also at runtime, and you can use the properties' values in order to perform whatever thing your component / control does.
+   </p>
+   <p>
+    Inside the "Component" tag, we can add a "Properties" tag, which can contain one or more "Property" tags, with information about a component / control property. For example, take a look at the below XML code:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<Component>
+ <Properties>
+  <Property>
+   <Name>Text</Name>
+   <InsertName>text</InsertName>
+   <Type>string</Type>
+   <Value>
+    <![CDATA[
+     Default text value
+    ]]>
+   </Value>
+   <Translatable>true</Translatable>
+  </Property>
+ </Properties>
+</Component>
+</textarea>
+
+   <p class="mt-3">
+    In the above XML, inside the "Components/Properties" tag, we specify a property for our app plugin component / control. The "Name" of the property is shown to the user at designtime. The "InsertName" tag, must specify the insert name for the property, so, when the component / control become an object in the app.js file, the "InsertName" is used, for example:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+simpleText {
+  text: "Default text value"
+}
+</textarea>
+
+   <p class="mt-3">
+    The "Type" tag determine the type of the property, and can be one of these values, without the quotes: "string", "boolean", "array", "icon", "number", "color", "list" or "json". This last one can be used also if a property must store a JavaScript object, for example. The property type are important because determine how the property value must be compiled, and, also, specify the way in which the property value can be edited at designtime.
+   </p>
+   <p>
+    Then, a property with the type "icon", can be set by the user at designtime using the <a href="dialog-icon-picker.html" title="Go to this help topic">IDE Icon picker dialog</a>. A property with the type "array", can be set by the user at designtime using the <a href="dialog-array-editor.html" title="Go to this help topic">IDE Array editor dialog</a>, a property with the type "color", can be set by the user at designtime using the right color picker dialog, and so on.
+   </p>
+   <p>
+    Continue with the "Component" tags, we can see the "Value" one. This tag can specify the default value for the component / control property. Note that all the properties values are placed inside a XML "CDATA": this is the way for all the properties values.
+   </p>
+   <p>
+    The "Translatable" tag determines if the control / component property can be translate by the user using the <a href="app-languages.html" title="Go to this help topic">IDE App languages manager</a>, in the same way that the user can translate "translatable" properties of the "out of the box" included controls. The "Translatable" tag value can be "true" or "false", depending if you want that the property can be translated or not.
+   </p>
+   <p>
+    The "list" type component / control property is a bit special, and, here is his definition:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<Component>
+ <Properties>
+  <Property>
+   <Name>Size</Name>
+   <InsertName>size</InsertName>
+   <ModelProperty></ModelProperty>
+   <Type>list</Type>
+   <Value>
+    <![CDATA[
+      md
+    ]]>
+   </Value>
+   <ListValue>
+    <![CDATA[
+sm
+md
+lg
+xl
+    ]]>
+   </ListValue>
+   <Translatable>true</Translatable>
+  </Property>
+ </Properties>
+</Component>
+</textarea>
+
+   <p class="mt-3">
+    The properties with the "list" type, can be set by the user by choosing a value from a specified listbox. This listbox show to the user the items that you specify in the "ListValue" tag: one item per line. So the "Value" tag for this type of property refers to the selected item in the list. If you set this type of properties "translatables", what the user can translate are not the list items, but the choosed value from the available list items.
+   </p>
+   <p>
+    So, at designtime, the user can choose for the above "Size" property a value from the provided "sm", "md", "lg" or "xl" values. The default value is "md" in this case. At runtime, this type of properties has one of the items from the list, that is, at runtime, this property is not a list nor array, but a string, which stores one of the list items.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-component-events">
+    Component events
+   </h2>
+   <p class="mt-3">
+    An app plugin component / control can also specify events, so the user can place code to be executed when that events are fired. The app plugin component / control events can be edited by the user exactly in the same way that any of the other "out of the box" controls events can be edited, using the provided IDE JavaScript code editor.
+   </p>
+   <p>
+    Declare the app plugin component / control events in the <span class="text-danger">plugin.xml</span> file is quite easy, just take a look at the below XML code:
+   </p>
+
+<textarea class="code-editor" data-mode="xml">
+
+<Component>
+ <Events>
+  <Event>
+   <Name>Click</Name>
+  </Event>
+ </Events>
+</Component>
+</textarea>
+
+   <p class="mt-3">
+    To add events to our app plugin component / control we must add a "Events" tag inside the "Component" tag. The "Events" tag can contain any number of "Event" tags, and, we only need to specify the name (in the "Name" tag) of the event that we want to add to the app plugin component / control.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-control-js-file">
+    The "*.control.js" file
+   </h2>
+   <p class="mt-3">
+    Above we can see how to declare components / controls to our app plugin using the <span class="text-danger">plugin.xml</span> file. We see, for example, how to specify properties for our component / control, however, what about the JavaScript code?
+   </p>
+   <p>
+    Part of the required app plugin component / control JavaScript code is automatically generated by DecSoft App Builder, based in the information of the <span class="text-danger">plugin.xml</span> file. Another part of the required JavaScript must be provided by the app plugin's developer.
+   </p>
+   <p>
+    Basically, DecSoft App Builder look in the app plugin folder for a "scripts" subfolder, and, inside this, look for a file with a specific name, which must contain the declaration of the component / control. The file name that DecSof App Builder expect to be exists is composed with the component / control "insert name" following by ".control.js".
+   </p>
+   <p>
+    So, for the case of our "SimpleText" component / control, with the "simpleText" insert name, there must be a file named "simpleText.control.js" inside the "scripts" subfolder of the app plugin folder. Here is the contents of this JavaScript file:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+const simpleText = {
+
+  props: {
+    name: String,
+    classes: String,
+    text: String,
+    clickHandler: Function,
+    dblclickHandler: Function
+  },
+  template: `<div id="name" :class="classes" @click="clickHandler" @dblclick="dblclickHandler">{{text}}</div>`
+};
+</textarea>
+
+   <p class="mt-3">
+    In the case of our "SimpleText" component / control, his declaration is more or less easy, but there are various things to consider.
+   </p>
+   <p>
+    First of all, "decsoft-simple-text", is the "HTML name" of our "SimpleText", as we define it in the <span class="text-danger">plugin.xml</span> file. Secondly, you can see that the "props" are the properties that we defined also in the <span class="text-danger">plugin.xml</span> file, just note that we use the properties' "insert names".
+   </p>
+   <p>
+    We also specify in the "props" the component / control events, however, note that the <span class="text-danger">plugin.xml</span> file do not specify any "clickHandler": this is because it's up to you how to name the events handlers methods. We see more about this in <a href="#app-plugin-methods-js-file" title="More information and details">The "*.methods.js" file</a> topic below.
+   </p>
+   <p>
+    The "template" part of the component specify the HTML markup that the app plugin component / control requires, and, basically use one or more of the available properties and also bind the appropriate events with their handlers methods.
+   </p>
+   <p>
+    If you need to perform some operation when the app plugin component / control is mounted (ready in the HTML DOM of the app), you can use the "mounted" method as below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+const simpleText = {
+
+  props: {
+    name: String,
+    classes: String,
+    text: String,
+    clickHandler: Function,
+    dblclickHandler: Function
+  },
+  mounted: function () {
+    // Perform here some operation when the component is ready
+  },
+  template: `<div id="name" :class="classes" @click="clickHandler" @dblclick="dblclickHandler">{{text}}</div>`
+};
+</textarea>
+
+   <p class="mt-3">
+    Finally, note how the component / control specify a "name" and a "classes" properties, that we don't declare in the <span class="text-danger">plugin.xml</span> file. The "name" property is mandatory, and, it's provided internally by DecSoft App Builder. The "classes" property is also mandatory and internaly provided, but, only for visual components / controls. In other words, non visual component controls do not have any "classes" property, except if you declares it.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-methods-js-file">
+    The "*.methods.js" file
+   </h2>
+   <p class="mt-3">
+    In the same way than DecSoft App Builder look for a "simpleText.control.js" file inside a "scripts" subfolder of the app plugin folder, DecSoft App Builder also look for a possible "simpleText.methods.js" file in the same referred folder.
+   </p>
+   <p>
+    The "simpleText.methods.js" file declares the component / control event handlers, and, additionally, can also other methods to be availables. Take a look at the contents of our "simpleText.methods.js" file:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+clickHandler: function (event) {
+  //__APP_PLUGIN_EVENT_START_CODE__
+
+  //__APP_PLUGIN_CLICK_USER_CODE__
+},
+
+dblclickHandler: function (event) {
+  //__APP_PLUGIN_EVENT_START_CODE__
+
+  //__APP_PLUGIN_DBLCLICK_USER_CODE__
+},
+
+setText: function (text) {
+  //__APP_PLUGIN_METHOD_START_CODE__
+
+  self.text = text;
+}
+</textarea>
+
+   <p class="mt-3">
+    As you can see, there are various things to consider in the "simpleText.methods.js" file contents. You can see how the two events handler of our "SimpleText" component / control are declared in this file.
+   </p>
+   <p>
+    <strong>//__APP_PLUGIN_EVENT_START_CODE__</strong> is replaced at runtime with the right DecSoft App Builder stuff as you can see below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+clickHandler: function (event) {
+  var
+    view = app._getCurrentView(),
+    views = app._getLoadedViews(),
+    frames = app._getLoadedFrames(),
+    dialogs = app._getLoadedDialogs(),
+    self = views["view1"].simpleText1;
+  self.event = event;
+
+  //__APP_PLUGIN_CLICK_USER_CODE__
+},
+
+</textarea>
+
+   <p class="mt-3">
+    Note how <strong>//__APP_PLUGIN_EVENT_START_CODE__</strong> become in certain variables declarations, and the assigned of the "self" component / control variable. This means that inside the component / control event we can access to the current app "view", and the other loaded "views", "frames" and "dialogs".
+   </p>
+   <p>
+    This code is replaced at runtime not only for the referred variables declaration, but also because we need to set the "self" variable of the component / control, and, the plugin's author cannot know the name of the control. Note how in our sample, the control is named "simpleText1", but can also be "simpleText2", etc.
+   </p>
+   <p>
+    And what about <strong>//__APP_PLUGIN_CLICK_USER_CODE__</strong>? This is replaced with the user code for the event at runtime. It's important to note that the "flag" to be search must be in the form: //__APP_PLUGIN_EVENTNAME_USER_CODE__, where "EVENTNAME" is the event's name, uppercased. Of course, you can place your own code (if needed) before any of the referred "flags" to be replaced.
+   </p>
+   <p>
+    Finally note the other method that is declared in the "simpleText.methods.js" file:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+setText: function (text) {
+  //__APP_PLUGIN_METHOD_START_CODE__
+
+  self.text = text;
+}
+</textarea>
+
+   <p class="mt-3">
+    The "setText" method is not an event handler, but a method that the app plugin component / control provide to the user. Once the <strong>//__APP_PLUGIN_METHOD_START_CODE__</strong> become replaced at runtime, the "setText" method look like below:
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+setText: function (text) {
+  var
+    view = app._getCurrentView(),
+    views = app._getLoadedViews(),
+    frames = app._getLoadedFrames(),
+    dialogs = app._getLoadedDialogs(),
+    self = views["view1"].simpleText1;
+
+  self.text = text;
+}
+</textarea>
+
+   <p class="mt-3">
+    So in both cases, event handlers and other methods, you have access to the referred variables, and, the most important one, "self", which refers to the component / control itself. Then the "setText" method can be useful right now, because, as you can see, what that method do is to set the "text" property of the app plugin component / control.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-control-ini-file">
+    The "*.control.ini" file
+   </h2>
+   <p class="mt-3">
+    As has been described above in <a title="Go to this help topic" href="#app-plugin-object-ini-files">The "object.ini" files</a> help topic and more specifically in <a title="Go to this help topic" href="#app-plugin-object-ini-file">The "object.ini" file</a> help topic, app plugins can provide the right stuff to be show in the <a title="Go to this help topic" href="ide-quick-code-list.html">IDE Quick Code list</a>.
+   </p>
+   <p>
+    The app plugin provided components / controls has also the ability to add their stuff in the <a title="Go to this help topic" href="ide-quick-code-list.html">IDE Quick Code list</a>, so the user can write Javascript code faster, just like with any other of the "out of the box" included controls.
+   </p>
+   <p>
+    DecSoft App Builder look in an "editor" subfolder in the app plugin folder, and, more specifically, look for a file like "editor/en-US/simpleText.contro.ini". Note that, again, the "en-US" folder means that file is used if the IDE is configured in that language, or, by default, if you did not provide a "es-ES", but the IDE is configured in this language.
+   </p>
+   <p>
+    The syntax for the "simpleText.contro.ini" is similar than the described in the referred help topics, but, have some particular differences. Just take a look above at a sample "simpleText.contro.ini" for our "SimpleText" component -insert name "simpleText":
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[control]
+hint=Object variable. Stores all the properties and methods of the SimpleText control.
+
+[name]
+exec=name
+hint=String variable. Stores the control name.
+
+[event]
+exec=event
+hint=Mixed variable. Stores the latest "event" variable of the control. This variable is available inside the control events.
+
+[classes]
+exec=classes
+hint=String variable. Stores one or more space separated CSS classes to be applied to the SimpleText control.
+
+[text]
+exec=text
+hint=String variable. Stores the text of the SimpleText control. This title is shown when the user put the mouse over the control, for example.
+</textarea>
+
+   <p class="mt-3">
+    As you can see, you only need to specify, in INI headers, the insert names of the provided app plugin component / control. Then you can ad the "exec", "hint" and even the "args" headers key values, which has been described in <a title="Go to this help topic" href="#app-plugin-object-ini-file">The "object.ini" file</a> help topic.
+   </p>
+   <p>
+    The "*.control.ini" file is also the place to add to the IDE Quick code list the methods that your app plugin component / control provides, for example, following the sample of our "SimpleText" component / control, we can add to the INI file the below stuff:
+   </p>
+
+<textarea class="code-editor" data-mode="properties">
+
+[setText]
+exec=setText(
+args="text: string"
+hint=DecSoft Sample plugin method. Use this method to get the current app's view name.
+</textarea>
+
+   <p class="mt-3">
+    Look below how the above INI file is finally placed at the disposition of the user at the IDE Quick code list:
+   </p>
+
+   <div class="text-center mt-4">
+    <img src="../shared/images/captures/ide/ide-app-plugin-control-quick-code-list.png" class="img-fluid">
+   </div>
+
+   <h2 class="pt-5" id="app-plugin-control-css-file">
+    The "*.control.css" file
+   </h2>
+   <p class="mt-3">
+    As you probably already know it's possible to add <a title="Go to this help topic" href="#app-plugin-files">files to our app plugin</a>, also CSS files. However, if what you need is a bit of CSS to be specifically used by your app plugin component / control, then you can use a "*.control.css" file.
+   </p>
+   <p>
+    Exactly in the same way that DecSoft App Builder look for the "simpleText.control.js" and the "simpleText.methods.js" files, in a "scripts" subfolder of the app plugin folder, DecSoft App Builder also look for a possible "simpleText.control.css" file in a subfolder "styles" in the app plugin folder.
+   </p>
+   <p>
+    Remember that "simpleText" is the "insert name" of our app plugin component / control. If the "simpleText.control.css" is found, it's included automatically by DecSoft App Builder and the contained CSS rules are available for you at runtime.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-control-16-png-file">
+    The "*.control.16.png" file
+   </h2>
+   <p class="mt-3">
+    Again, you can also prepare a "simpleText.control.16.png" file inside "images" subfolder of the app plugin folder. This image file is used by DecSoft App Builder as the small icon for the app plugin component / control, and it's show, for example, in the <a title="Go to this help topic" href="ide-tools-panel.html">IDE Tools panel</a>.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-control-32-png-file">
+    The "*.control.32.png" file
+   </h2>
+   <p class="mt-3">
+    Similarly to the "simpleText.control.16.png" file, you can place a "simpleText.control.32.png" file, to be associated with the app plugin component / control. This large image can be used, for example, when the app plugin component / control is show in the IDE designer. Remember there is "UseLargeImage" tag in the <span class="text-danger">"plugin.xml" file</span>, that can be "true", to use this 32px image, or "false", to use the 16px image instead of the larger one.
+   </p>
+
+   <h2 class="pt-5" id="app-plugin-documentation">
+    App plugin documentation
+   </h2>
+   <p class="mt-3">
+    Last, but not least, app plugins can provide (for sure the user appreciate it) the right documentation. DecSoft App Builder integrates the app plugin help file into the "index of contents" of the product help, and, additionally, "call" to that help file with the right "anchor", as you can see below.
+   </p>
+   <p>
+    The app plugin documentation consists in at least one "index.html" file, that must be placed in a "help" subfolder of the app plugin directory. In fact, the "index.html" file must be placed in an "en-US" subfolder inside the "help" subfolder, so DecSoft App Builder use this "en-US/index.html" file in both cases: if the IDE is configured with that language, and, by default, if the plugin do not provide another language for the help, for example, "es-ES/index.html".
+   </p>
+   <p>
+    DecSoft App Builder integrates the "index.html" help file of the app plugin in the product's help <a href="index.html" title="Go to the index of contents">index of contents</a>. When the user press in the right link, the "index.html" of the app plugin become opened in the IDE help browser.
+   </p>
+   <p>
+    If your app plugin provides components / controls, then the user can also press the F1 key when select in the IDE designer one of the app plugin control. In this case, DecSoft App Builder open the "index.html" of the app plugin, with an anchor which specify the "insert name" of the control in which the F1 key has been pressed, for example, if the user press the F1 key with a "SimpleText" control selected, the IDE open the "index.html#simpleText" (note that "simpleText" is the "insert name" of the control), so you can prepare the right help for that specific control.
+   </p>
+   <p>
+    If the user press the F1 key in the object inspector, when set one of the properties provided by the app plugin component / control, DecSoft App Builder open the "index.html" in this way: "index.html#simpleText-text-variable", so, as you can see, the user press the F1 key when the "Text" (insert name "text") property of the app plugin component / control is selected in the controls inspector.
+   </p>
+   <p>
+    Finally, if the user is inside the editor code of one of the provided app plugin component / control event, and then press the F1 key, DecSoft App Builder open the "index.html" in this way: "index.html#simpleText-click-event". As you can see, the anchor is indicating for what event the user want help. Note that "click" is the name of the event, lowercased.
+   </p>
+   <p>
+    The user probably appreciate if you help look more or less than the program help look, so, can be a good idea to use one of the available app plugins help, as a template for your own app plugin help. Specifically, you can take the help of the DecSoft provided plugins as a template for the help of your own app plugin.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    You reach the end of the Develop app plugins help topic: probably it's a good idea to start to playing a bit, in order to create your first app plugin. Remember that you can use the already existing plugins (included by the installation of DecSoft App Builder) as a kind of templates for your own ones: at least your can also learn about the app plugins development by taking a look at the already existing app plugins.
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>

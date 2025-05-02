@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecSoft App Builder - Help - Controls - Dropdown</title>
+  <link rel="stylesheet" type="text/css" href="../shared/styles/thirdparty.min.css">
+  <link rel="stylesheet" type="text/css" href="../shared/styles/help.css">
+  <link rel="icon" type="image/png" href="../shared/images/icons/favicon.png">
+  <link rel="icon" type="image/x-icon" href="../shared/images/icons/favicon.ico">
+ </head>
+ <body>
+
+  <div class="container">
+
+   <div class="mt-3 row">
+    <div class="col-md-9">
+     <h1 class="product-website-link">
+      <a href="https://www.decsoftutils.com/appbuilder/" title="More information and download">DecSoft App Builder</a>
+     </h1>
+	</div>
+	<div class="col-md-3 pt-2">
+	 <input type="text"
+	  id="search-input" class="form-control form-control-sm"
+	   placeholder="Type to search">
+	</div>
+   </div>
+
+   <div class="list-group d-none mt-3" id="search-results"
+    data-no-results="No results found!"></div>
+
+   <nav class="mt-4">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item index-list-item">
+
+      <a href="index.html" title="Press here to back to the index of contents">
+       Index of contents
+      </a>
+     </li>
+     <li class="breadcrumb-item active">Controls</li>
+     <li class="breadcrumb-item active" aria-current="page">Dropdown</li>
+    </ol>
+   </nav>
+
+   <h2 class="mt-5">
+    Dropdown description
+   </h2>
+   <p class="mt-3">
+    A Dropdown control has a similar aspect and share some properties with the <a href="control-push-button.html" title="Go to this help topic">Dropdown control</a>, but, when the Dropdown control is pressed by the user, an associated menu of items appear, so the user can press one of these items, and we can do whatever thing depending on what item has been pressed.
+   </p>
+
+   <div class="alert alert-primary text-center mt-5">
+    There is a Dropdown sample app included with the installation of DecSoft App Builder. Take a look to see this control in action!
+   </div>
+
+   <h2 class="pt-4" id="style-options">
+    Dropdown CSS rules
+   </h2>
+   <div class="mt-3">
+    <p>
+     This control has a default style, and, some control JavaScript properties (see below), can also changes the control style, not to mention the <a href="#classes-variable" title="More information and details">Classes property</a>, that you can use to establish one or more CSS classes to be applied to the control.
+    </p>
+    <p>
+     In addition to that style, you can also set custom CSS rules for the control by using the <a href="ide-controls-style-inspector.html" title="Go to this help topic">IDE controls style inspector</a>. If this is not enough, you can include any number of CSS stylesheets in the app by using the <a href="app-files-manager.html" title="Go to this help topic">app files manager</a>.
+    </p>
+    <p>
+     If you want to use CSS stylesheets, you need to know how to refer to the control, so take a look at the <a href="runtime-selectors.html" title="Go to this help topic">Runtime selectors help topic</a>.
+    </p>
+   </div>
+
+   <h2 class="mt-5">
+    Dropdown at designtime
+   </h2>
+   <p class="mt-3">
+    The Dropdown control put at your disposition the below designtime properties or variables. Designtime means here that these properties are only available in designtime and not in runtime.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#top-variable" title="More information and details">Top property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#left-variable" title="More information and details">Left property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#width-variable" title="More information and details">Width property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#height-variable" title="More information and details">Height property</a></li>
+    <li><i class="fas fa-caret-right text-primary"></i> <a href="#locked-variable" title="More information and details">Locked property</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Dropdown at runtime
+   </h2>
+   <p class="mt-3">
+    The Dropdown control put at your disposition the below runtime properties or variables. You can set almost all these variables in designtime, and, they are also available to be use when the app is running. Note that we named here these variables in a capitalized way, because is like you can see it in the designtime control's inspector, however, at runtime we use the <a href="https://en.wikipedia.org/wiki/Camel_case" title="Press here for more information at Wikipedia.org">lower camel case</a> way.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#name-variable" title="More information and details">Name property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#event-variable" title="More information and details">Event property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#items-variable" title="More information and details">Items property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#item-variable" title="More information and details">Item property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#direction-variable" title="More information and details">Direction property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightaligned-variable" title="More information and details">RightAligned property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#title-variable" title="More information and details">Title property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#classes-variable" title="More information and details">Classes property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#hidden-variable" title="More information and details">Hidden property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#disabled-variable" title="More information and details">Disabled property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#text-variable" title="More information and details">Text property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#kind-variable" title="More information and details">Kind property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#lefticon-variable" title="More information and details">LeftIcon property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#righticon-variable" title="More information and details">RightIcon property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#size-variable" title="More information and details">Size property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#tabindex-variable" title="More information and details">TabIndex property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#autoclose-variable" title="More information and details">AutoClose property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#splitted-variable" title="More information and details">Splitted property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#leftbadge-variable" title="More information and details">LeftBadge property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#leftbadgekind-variable" title="More information and details">LeftBadgeKind property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#leftbadgepilled-variable" title="More information and details">LeftBadgePilled property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightbadge-variable" title="More information and details">RightBadge property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightbadgekind-variable" title="More information and details">RightBadgeKind property</a></li>
+    <li><i class="fas fa-caret-right text-success"></i> <a href="#rightbadgepilled-variable" title="More information and details">RightBadgePilled property</a></li>
+   </ul>
+
+   <h2 class="pt-5" id="control-methods">
+    Dropdown methods
+   </h2>
+   <p class="mt-3">
+    The Dropdown control put at your disposition the below methods. You can use these methods in runtime in order to perform various control related tasks.
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#appenditem-method" title="More information and details">appendItem() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#appendheader-method" title="More information and details">appendHeader() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#appenddivider-method" title="More information and details">appendDivider() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#insertitem-method" title="More information and details">insertItem() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#insertheader-method" title="More information and details">insertHeader() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#insertdivider-method" title="More information and details">insertDivider() method</a></li>
+    <li><i class="fas fa-caret-right text-warning"></i> <a href="#removeitem-method" title="More information and details">removeItem() method</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Dropdown events
+   </h2>
+   <p class="mt-3">
+    The Dropdown control put at your disposition the below events handlers:
+   </p>
+
+   <ul class="mt-4">
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#itemclick-event" title="More information and details">ItemClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#click-event" title="More information and details">Click event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#dblclick-event" title="More information and details">DblClick event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#focus-event" title="More information and details">Focus event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#blur-event" title="More information and details">Blur event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseup-event" title="More information and details">MouseUp event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousedown-event" title="More information and details">MouseDown event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mousemove-event" title="More information and details">MouseMove event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseenter-event" title="More information and details">MouseEnter event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#mouseleave-event" title="More information and details">MouseLeave event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#contextmenu-event" title="More information and details">ContextMenu event</a></li>
+    <li><i class="fas fa-caret-right text-danger"></i> <a href="#events-variables" title="More information and details">Events variables</a></li>
+   </ul>
+
+   <h2 class="mt-5">
+    Dropdown designtime properties
+   </h2>
+
+   <h3 id="top-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Dropdown Top property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Top property stores the top position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="left-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Dropdown Left property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Left property stores the left position of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="width-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Dropdown Width property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Width property stores the width of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="height-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Dropdown Height property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Integer variable.</span>
+    The Height property stores the height of the control in pixels. The pixels are relative to the app view, dialog or frame, and, is used "as is" if the app have the "Scale" app option is set to "false". Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h3 id="locked-variable" class="pt-4">
+    <i class="fas fa-caret-right text-primary"></i>
+    Dropdown Locked property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Designtime. Boolean variable.</span>
+    The Locked property determines if the control can be moved or resized in app view designer or not. Set a "false" value mean the control can be moved and resized. Set a "true" value (by default) mean the control cannot be moved nor resized. Remember that this control property is only for designtime and is not available in runtime.
+   </p>
+
+   <h2 class="mt-5">
+    Dropdown runtime properties
+   </h2>
+
+   <h3 id="name-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Name property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Name control property stores the name of the Dropdown control as you set in designtime. The Name property value must be unique for the same app view, dialog or frame, that is, it's possible to have more than one "dropdown1" in the app, if that controls resides in different <a href="app-view.html" title="Go to this help topic">app views</a>, dialogs or frames. Note that you must consider this variable as read only: change the name of a control in runtime can cause unexpected results.
+   </p>
+
+   <h3 id="event-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Event property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Mixed variable.</span>
+    The Event control property stores the "event" variable received in all the control events. This variable can contain the target (HTML element of the control) that fire the event and more useful stuff.
+   </p>
+
+   <h3 id="items-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Items property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. Array variable.</span>
+     The Items control property stores the items of the Dropdown menu. This is an array of objects variable, and every object represent an item in the Dropdown menu.
+    </p>
+    <p>
+     You can set this variable at designtime using the <a href="dialog-dropdown-items.html" title="Go to this help topic">Dropdown items dialog</a>.
+    </p>
+    <p>
+     At runtime, you can manipulate this variable like any other, and, additionally, you can also use the <a href="#control-methods" title="Go to this help topic">Dropdown control methods</a>.
+    </p>
+   </div>
+
+   <h3 id="item-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Item property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Object variable.</span>
+    The Item control property is an empty object by default but is filled in the control <a href="#itemclick-event" title="More information and details">ItemClick event</a> and stores the item that has been pressed by the user.
+   </p>
+   <p>
+    The Item object variable has the below properties at your disposition:
+   </p>
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">class</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The item class that has been pressed. This variable can have the values "item" or "header", since the "divider" items cannot be pressed by the user.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The item text that has been pressed. This variable stores the item or header text pressed by the user.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">index</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The Dropdown menu item index that has been pressed. The Dropdown menu items starts by zero, so the first item has the index "0", the second item has the index "1", and so on.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <h3 id="direction-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Direction property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Direction control property determines the direction in which the Dropdown menu items appear. By default this variable has a "dropdown" value, and, you can use one of the available "app.dropdownDir.*" constants in order to set this variable.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// All possible values for the Dropdown Direction property
+
+views.view1.dropdown1.direction = app.dropdownDir.down; // By default
+
+views.view1.dropdown1.direction = app.dropdownDir.up;
+
+views.view1.dropdown1.direction = app.dropdownDir.right;
+</textarea>
+
+   <h3 id="rightaligned-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown RightAligned property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    By default the Dropdown menu appear aligned to the left of the Dropdown button, but, you can set this variable to "true" so the Dropdown menu appear right aligned.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Show the Dropdown menu aligned to the right
+views.view1.dropdown1.rightAligned = true;
+</textarea>
+
+   <h3 id="title-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Title property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Title Dropdown control property stores some small but descriptive text, mainly to be used to be show that text when the user place the mouse cursor into the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new title for the control
+views.view1.dropdown1.title = 'My new title';
+</textarea>
+
+   <h3 id="classes-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Classes property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Classes control property stores one or more additionals CSS classes (space separated) to be applied to the control.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set some additional classes for the control
+views.view1.dropdown1.classes = 'one-class another-class';
+</textarea>
+
+   <h3 id="hidden-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Hidden property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Hidden control property determines if the control appear visible to the user or not. Set to "true" to hide the control, or to "false" to show the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Hide dropdown1
+views.view1.dropdown1.hidden = true;
+
+// Show dropdown1
+views.view1.dropdown1.hidden = false;
+
+// Toggle dropdown1
+views.view1.dropdown1.hidden = !views.view1.dropdown1.hidden;
+</textarea>
+
+   <h3 id="disabled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Disabled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Disabled control property determines if the control appear disabled to the user or not. Set to "true" to disable the control, or to "false" to enable the control (by default).
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Disable dropdown1
+views.view1.dropdown1.disabled = true;
+
+// Enable dropdown1
+views.view1.dropdown1.disabled = false;
+</textarea>
+
+   <h3 id="text-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Text property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Text control property stores the text that is shown in the control, like "Press me", "Click me", etc. This variable can contain some HTML if required.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set a new text for dropdown1
+views.view1.dropdown1.text = 'My new text is here!';
+
+// It's also possible to use a bit of HTML
+views.view1.dropdown1.text = 'My new text <strong>is here!</strong>';
+</textarea>
+
+   <h3 id="kind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Kind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Kind control property determine the style, to say like that, of the Dropdown, shown it "green", "red", etc. You can use one of the available app constants "app.kind.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button kind to "success"
+views.view1.dropdown1.kind = app.kind.success;
+
+// Set the button kind to "danger"
+views.view1.dropdown1.kind = app.kind.danger;
+</textarea>
+
+   <h3 id="lefticon-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown LeftIcon property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The LeftIcon control property allows to establish an optional icon to be show at the left of the Dropdown text. Remember that you are free to use any of the available icons in the Font Awesome library, which is one of the available libraries in the DecSoft App Builder created apps.
+   </p>
+   <div class="alert alert-primary text-center">
+    An <a href="dialog-icon-picker.html" title="Go to this help topic">icon picker dialog</a> is available to set this variable and also ni the code editor.
+   </div>
+
+   <h3 id="righticon-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown RightIcon property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The RightIcon control property allows to establish an optional icon to be show at the right of the Dropdown text. Remember that you are free to use any of the available icons in the Font Awesome library, which is one of the available libraries in the DecSoft App Builder created apps.
+   </p>
+   <div class="alert alert-primary text-center">
+    An <a href="dialog-icon-picker.html" title="Go to this help topic">icon picker dialog</a> is available to set this variable and also ni the code editor.
+   </div>
+
+   <h3 id="size-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Size property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The Size control property determines the size of the Dropdown button font. By default the Dropdown have the "sm" (small) size, and, you can use the available app constansts "app.size.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button size to "md" (medium)
+views.view1.dropdown1.size = app.size.md;
+
+// Set the button size to "lg" (large)
+views.view1.dropdown1.size = app.size.lg;
+</textarea>
+
+   <h3 id="tabindex-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown TabIndex property
+   </h3>
+   <div class="mt-3">
+    <p>
+     <span class="text-danger">Runtime. Number variable.</span>
+     The TabIndex control property determines how the browser / platform must deal with the control when the user press the TAB key. The default value for this variable is "0" (zero), which means that the control should be focusable in sequential keyboard navigation, but its order is defined by the document's order.
+    </p>
+    <p>
+     You can set this variable to a value of "-1", which means that the element should not be reachable via sequential keyboard navigation, but could be focused with JavaScript or visually. It's mostly useful to create accessible widgets with JavaScript.
+    </p>
+    <p>
+     A positive value for this variable means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, tabindex="4" would be focused before tabindex="5", but after tabindex="3". If multiple elements share the same positive tabindex value, their order relative to each other follows their position in the document source.
+    </p>
+   </div>
+
+   <div class="alert alert-primary text-center mt-3">
+    You can use the <a href="dialog-tabindex-order.html" title="Go to this help topic">TabIndex order dialog</a> to set this variable.
+   </div>
+
+   <h3 id="autoclose-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown AutoClose property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The AutoClose control property determines the auto close behaviour of the Dropdown control. By default the Dropdown have the "true" auto close behaviour, which means that the dropdown menu will be closed when the user press a menu item or outside the menu. You can use the "app.dropdownAutoClose.*" constants to set the value of this property. Below you have an example with all of the possible values:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Close the menu when press the dropdown button, 
+// a menu item or outside the menu and button.
+views.view1.dropdown1.autoClose = 'true';
+
+// Close the menu when press the dropdown button
+// or a menu item.
+views.view1.dropdown1.autoClose = 'inside';
+
+// Close the menu when press the dropdown button
+// or outside the menu and button.
+views.view1.dropdown1.autoClose = 'inside';
+
+// Close the menu when press the dropdown button.
+views.view1.dropdown1.autoClose = 'false';
+</textarea>
+
+   <div class="alert alert-primary text-center mt-3">
+    Take a look at the Dropdown2 sample app to see the Dropdown auto close behaviour in action.
+   </div>
+
+   <h3 id="splitted-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown Splitted property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The Splitted control property determines if the dropdown control must be show in a split way. If this property is set to "false" (by default) then the dropdown control is just a button which show a menu when pressed. If this property is "true", then the control is shown splitted in two buttons: the left one do not open the associated menu, and the right one open the associated menu.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Toogle the splitted property of the Dropdown control
+views.view1.dropdown1.splitted = !views.view1.dropdown1.splitted;
+</textarea>
+
+   <div class="alert alert-primary text-center mt-3">
+    Take a look at the Dropdown3 sample app to see the Dropdown splitted behaviour in action.
+   </div>
+
+   <h3 id="leftbadge-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown LeftBadge property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property stores an optional text or number to be show at the left of the control <a href="#text-variable" title="More information and details">Text property</a>.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button left badge to 4 (unread messages, for example)
+views.view1.dropdown1.leftBadge = 4;
+</textarea>
+
+   <h3 id="leftbadgekind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown LeftBadgeKind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The LeftBadgeKind control property determine the style, to say like that, of the optional button left badge, shown it "green", "red", etc. You can use one of the available app constants "app.kind.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the left badge kind to "success"
+views.view1.dropdown1.leftBadgeKind = app.kind.success;
+
+// Set the left badge kind to "danger"
+views.view1.dropdown1.leftBadgeKind = app.kind.danger;
+</textarea>
+
+   <h3 id="leftbadgepilled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown LeftBadgePilled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The LeftBadgePilled property determines if the optional left badge must be show a bit more rounded and with a bit more left and right padding.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the left pilled badge
+views.view1.dropdown1.leftBadgePilled = true;
+
+// Set the left "normal" badge (not pilled)
+views.view1.dropdown1.leftBadgePilled = false;
+</textarea>
+
+   <h3 id="rightbadge-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown RightBadge property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    This property stores an optional text or number to be show at the right of the control <a href="#text-variable" title="More information and details">Text property</a>.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the button right badge to 4 (unread messages, for example)
+views.view1.dropdown1.rightBadge = 4;
+</textarea>
+
+   <h3 id="rightbadgekind-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown RightBadgeKind property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. String variable.</span>
+    The RightBadgeKind control property determine the style, to say like that, of the optional button right badge, shown it "green", "red", etc. You can use one of the available app constants "app.kind.*" to set this variable, for example:
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the right badge kind to "success"
+views.view1.dropdown1.rightBadgeKind = app.kind.success;
+
+// Set the right badge kind to "danger"
+views.view1.dropdown1.rightBadgeKind = app.kind.danger;
+</textarea>
+
+   <h3 id="rightbadgepilled-variable" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown RightBadgePilled property
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime. Boolean variable.</span>
+    The RightBadgePilled property determines if the optional right badge must be show a bit more rounded and with a bit more left and right padding.
+   </p>
+<textarea class="code-editor" data-mode="javascript">
+
+// Set the right pilled badge
+views.view1.dropdown1.rightBadgePilled = true;
+
+// Set the right "normal" badge (not pilled)
+views.view1.dropdown1.rightBadgePilled = false;
+</textarea>
+
+   <h2 class="mt-5">
+    Dropdown runtime methods
+   </h2>
+
+   <h3 id="appenditem-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown appendItem() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to append a new text item at the end of the Dropdown menu. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The item text for the new Dropdown menu item. Can contain a bit of HTML if needed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">actived</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        This is an optional boolean argument that determine if the item must appear actived or not. An actived text item appear with a different background color in the Dropdown menu.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">disabled</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        This is an optional boolean argument that determine if the item must appear disabled or not. A disabled text item appear grayed in the Dropdown menu and cannot be pressed by the user.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Append a new text item at the end of the Dropdown menu
+views.view1.dropdown1.appendItem('My new item text');
+
+// Append a new text item at the end of the Dropdown menu (and activated it)
+views.view1.dropdown1.appendItem('My new item text', true);
+
+// Append a new text item at the end of the Dropdown menu (and disabled it)
+views.view1.dropdown1.appendItem('My new item text', false, true);
+</textarea>
+
+   <h3 id="appendheader-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown appendHeader() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to append a new header item at the end of the Dropdown menu. This method admits the below argument:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The item text for the new Dropdown menu header. Can contain a bit of HTML if needed.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Append a new header item at the end of the Dropdown menu
+views.view1.dropdown1.appendHeader('My new header text');
+</textarea>
+
+   <h3 id="appenddivider-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown appendDivider() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to append a new divider item at the end of the Dropdown menu. This method has no arguments.
+   </p>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Append a new divider item at the end of the Dropdown menu
+views.view1.dropdown1.appendDivider();
+</textarea>
+
+   <h3 id="insertitem-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown insertItem() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to insert a new text item at the specified index of the Dropdown menu. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">index</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The item index for the new Dropdown menu item. The Dropdown menu items started by zero, so the first item is the zero index, the second item is the first index and so on.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The item text for the new Dropdown menu item. Can contain a bit of HTML if needed.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">actived</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        This is an optional boolean argument that determine if the item must appear actived or not. An actived text item appear with a different background color in the Dropdown menu.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">disabled</td>
+       <td class="text-secondary">Boolean</td>
+       <td>
+        This is an optional boolean argument that determine if the item must appear disabled or not. A disabled text item appear grayed in the Dropdown menu and cannot be pressed by the user.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Insert a new text item at the first position of the Dropdown menu
+views.view1.dropdown1.insertItem(0, 'My new item text');
+
+// Insert a new text item at the first position of the Dropdown menu (and activated it)
+views.view1.dropdown1.insertItem(0, 'My new item text', true);
+
+// Insert a new text item at the first position of the Dropdown menu (and disabled it)
+views.view1.dropdown1.insertItem(0, 'My new item text', false, true);
+</textarea>
+
+   <h3 id="insertheader-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown insertHeader() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to insert a new header item at the specified index of the Dropdown menu. This method admits the below arguments:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">index</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The item index for the new Dropdown menu header item. The Dropdown menu items started by zero, so the first item is the zero index, the second item is the first index and so on.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">text</td>
+       <td class="text-secondary">String</td>
+       <td>
+        The item text for the new Dropdown menu header. Can contain a bit of HTML if needed.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Insert a new header item at the first position of the Dropdown menu
+views.view1.dropdown1.insertHeader(0, 'My new header text');
+</textarea>
+
+   <h3 id="insertdivider-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown insertDivider() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to insert a new divider item at the specified index of the Dropdown menu. This method admits the below argument:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">index</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The item index for the new Dropdown menu divider item. The Dropdown menu items started by zero, so the first item is the zero index, the second item is the first index and so on.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Insert a new header item at the second position of the Dropdown menu
+// that is, between the first and the second Dropdown menu items.
+views.view1.dropdown1.insertDivider(1);
+</textarea>
+
+   <h3 id="removeitem-method" class="pt-4">
+    <i class="fas fa-caret-right text-success"></i>
+    Dropdown removeItem() method
+   </h3>
+   <p class="mt-3">
+    <span class="text-danger">Runtime method.</span>
+    You can use this Dropdown control method in order to remove a specific menu item of the Dropdown menu. This method admits the below argument:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">index</td>
+       <td class="text-secondary">Number</td>
+       <td>
+        The index of the item to be removed. The Dropdown menu items started by zero, so the first item is the zero index, the second item is the first index and so on.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// Remove the first item of the Dropdown menu
+views.view1.dropdown1.removeItem(0);
+</textarea>
+
+   <h2 class="mt-5">
+    Dropdown events
+   </h2>
+
+   <h3 id="itemclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown ItemClick event
+   </h3>
+   <div class="mt-3">
+    <p>
+     The ItemClick event handler is fired when the user click or tap one of the items of the Dropdown menu. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+    </p>
+    <p>
+     Inside the ItemClick event we have at our disposition the Dropdown control <a href="#item-variable" title="More information and details">Item variable</a>. We can identify what item has been pressed by the user using this variable.
+    </p>
+   </div>
+
+<textarea class="code-editor" data-mode="javascript">
+
+// We can use the Dropdown control Item variable to
+// identify what item has been pressed by the user
+
+if (views.view1.dropdown1.item.index === 0) {
+  alert("You pressed the first item of the Dropdown menu");
+}
+
+if (views.view1.dropdown1.item.class === 'header') {
+  alert('A header item has been pressed in the Dropdown menu');
+}
+
+switch (views.view1.dropdown1.item.index) {
+  case 0:
+    alert('You pressed the first Dropdown menu item');
+    break;
+  case 1:
+    alert('You pressed the second Dropdown menu item');
+    break;
+}
+</textarea>
+
+   <h3 id="click-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown Click event
+   </h3>
+   <p class="mt-3">
+    The Click event handler is fired when the user click or tap into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="dblclick-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown DblClick event
+   </h3>
+   <p class="mt-3">
+    The DblClick (Double Click) event handler is fired when the user double click or double tap into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="focus-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown Focus event
+   </h3>
+   <p class="mt-3">
+    The Focus event handler is fired when the when the Dropdown control receive the user focus. This event is the partner of the Blur event that you can see below. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="blur-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown Blur event
+   </h3>
+   <p class="mt-3">
+    The Blur event handler is fired when the when the Dropdown control loss the user focus. This event is the partner of the Focus event that you can see above. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseup-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown MouseUp event
+   </h3>
+   <p class="mt-3">
+    The MouseUp event handler is fired when the user up the mouse into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousedown-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown MouseDown event
+   </h3>
+   <p class="mt-3">
+    The MouseDown event handler is fired when the user down the mouse into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mousemove-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown MouseMove event
+   </h3>
+   <p class="mt-3">
+    The MouseMove event handler is fired when the user move the mouse into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseenter-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown MouseEnter event
+   </h3>
+   <p class="mt-3">
+    The MouseEnter event handler is fired when the user enter the mouse into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="mouseleave-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown MouseLeave event
+   </h3>
+   <p class="mt-3">
+    The MouseLeave event handler is fired when the user leave the mouse from the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="contextmenu-event" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown ContextMenu event
+   </h3>
+   <p class="mt-3">
+    The ContextMenu event handler is fired when the browser must shown the context menu of the the Dropdown control, which occur when the user click with the right mouse button into the Dropdown control. <a href="#events-variables" title="Go to this help topic">See also the available events variables</a>.
+   </p>
+
+   <h3 id="events-variables" class="pt-4">
+    <i class="fas fa-caret-right text-danger"></i>
+    Dropdown events variables
+   </h3>
+   <p class="mt-3">
+    The below JavaScript variables are available in all the referred Dropdown control events handlers:
+   </p>
+
+   <div class="table-responsive">
+    <table class="table table-bordered mt-4">
+     <thead class="thead-light">
+      <tr>
+       <th>Name</th>
+       <th>Type</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-danger">event</td>
+       <td class="text-secondary">Mixed</td>
+       <td>
+        This variable is received in almost all control events. You can use this variable to stop the propagation of the event, to access the HTML element who fire the event and more.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">self</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores the control object. This is a shortcut to the control variable, and it's available since we are talking about specific control events.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">view</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        <p>
+         Stores the current app view or dialog. This variable allow us to access to that view or dialog properties and methods and also their controls properties and methods. For example, you can access to a control properties using the variable "view.yourControlName", suposing the control is named "yourControlName".
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">views</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the loaded <a href="app-view.html" title="Go to this help topic">app views</a>. Note that loaded views mean that the <a href="app-view.html" title="Go to this help topic">app views</a> has been previously show to the user. It's possible to access to the app view controls properties like "views.view1.yourControlName", suposing the view is named "view1" and the control is named "yourControlName". In the same way we can access to other controls of the view and to other loaded views and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">frames</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app frames. You can use this variable to access to all the app frames and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">dialogs</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a>. You can use this variable to access to all the <a href="app-dialog.html" title="Go to this help topic">app dialogs</a> and their controls.
+       </td>
+      </tr>
+      <tr>
+       <td class="text-danger">app</td>
+       <td class="text-secondary">Object</td>
+       <td>
+        Stores all the app properties and methods. You can use this variable to access to all the <a href="app-properties.html" title="Go to this help topic">app properties</a> and <a href="app-methods.html" title="Go to this help topic">app methods</a>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <hr class="mt-4">
+
+   <footer class="text-center text-muted my-4">
+    ©<span id="copyright-year"></span> DecSoft App Builder. All rights reserved.
+   </footer>
+
+  </div>
+  <!-- /container -->
+
+  <div id="top-links">
+   <a class="d-block" href="index.html" title="Press here to back to the index of contents"><i class="fas fa-home fa-2x text-muted"></i></a>
+   <a class="d-block mt-3" href="#" title="Go to the top of this page" id="top-link"><i class="fas fa-arrow-alt-circle-up fa-2x text-muted"></i></a>
+  </div>
+
+  <script src="../shared/scripts/thirdparty.min.js"></script>
+  <script src="app_builder_help.js"></script>
+  <script src="../shared/scripts/help.js"></script>
+ </body>
+</html>
